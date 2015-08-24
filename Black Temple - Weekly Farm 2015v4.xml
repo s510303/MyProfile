@@ -68,8 +68,28 @@
 			<CustomBehavior File="UserDialog" AllowBotStop="False" SoundCue="Exclamation" SoundCueInterval="5" ExpiryTime="15" ExpiryAction="InputEnabled_Continue" 
 			Text="Do not stop the bot, i will take you where you want to go, just sit back and relax." Title="WARNING" />	
 			<If Condition="Me.IsAlliance" >
+        <!--要塞-->
+        <If Condition="Me.ZoneId == 7078">
+          <!--<RunTo X="1957.809" Y="85.04769" Z="86.26516" />
+         <RunTo X="1963.19" Y="69.7935" Z="98.73251" />
+         <RunTo X="1967.695" Y="69.79959" Z="108.9127" />-->
+          <MoveTo X="3685.313" Y="-3836.29" Z="44.98112"/>
+          <!--<CustomBehavior File="InteractWith" MobId="233610" ObjectType="Gameobject" Range="4" X="1966.385" Y="66.29166" Z="108.92" />
+         <CustomBehavior File="WaitTimer" WaitTime="8000" GoalText="Waiting for port {TimeRemaining}" />-->
+        </If>
+        <!--戰爭之矛-->
+        <If Condition =" Me.ZoneId == 7332">
+          <RunTo X="3730.06" Y="-4044.52" Z="44.4461" />
+          <CustomBehavior File="InteractWith" MobId="235883" ObjectType="Gameobject" Range="4" X="3734.65" Y="-4042.976" Z="44.81873" />
+          <CustomBehavior File="WaitTimer" WaitTime="8000" GoalText="Waiting for port {TimeRemaining}" />
+        </If>
+        <!--暴風城-->
+        <If Condition="Me.MapId == 0" >
+          <CustomBehavior File="InteractWith" MobId="195141" ObjectType="Gameobject" PreInteractMountStrategy="Dismount" Range="4" X="-9003.66" Y="855.3229" Z="29.62067" />
+          <CustomBehavior File="WaitTimer" WaitTime="8000" GoalText="Waiting for port {TimeRemaining}" />
+        </If>
 			<!-- Outland move to and use portal in shat -->
-				<If Condition="Me.MapId == 530" >
+				<!--<If Condition="Me.MapId == 530" >
 				<CustomBehavior File="Message" Text="Going to Stormwind." LogColor="Lime" />
 					<CustomBehavior File="FlyTo" X="-248.064" Y="930.2079" Z="84.37978" DestName="BC Portal" />
 					<CustomBehavior File="MyCTM" X="-247.1655" Y="897.484" Z="84.3497" />
@@ -80,7 +100,7 @@
 					</While>
 					<CustomBehavior File="WaitTimer" WaitTime="10000"/>
 				</If>
-				<!-- Northrend, go home from borean -->
+				--><!-- Northrend, go home from borean --><!--
 				<If Condition="Me.MapId == 571" >
 				<CustomBehavior File="Message" Text="Going to Stormwind." LogColor="Lime" />
 					<If Condition="(HasSpell(54197))">
@@ -93,7 +113,7 @@
 									TransportEndX="-8288.816" TransportEndY="1424.703" TransportEndZ="0.04" 
 									GetOffX="-8300.08" GetOffY="1405.158" GetOffZ="4.422395" />
 				</If>
-				<!-- Kalimdor boat from Ratchet. -->
+				--><!-- Kalimdor boat from Ratchet. --><!--
 				<If Condition="Me.MapId == 1" >
 				<CustomBehavior File="Message" Text="Going to Stormwind." LogColor="Lime" />
 					<If Condition="SpellManager.HasSpell(&quot;Flight Master's License&quot;)">
@@ -109,7 +129,7 @@
 									TransportEndX="-14277.75" TransportEndY="582.8661" TransportEndZ="0.03330701"
 									GetOffX="-14280.88" GetOffY="566.6268" GetOffZ="6.979454" />
 				</If>
-				<!-- Deepholm, Taking portal. -->
+				--><!-- Deepholm, Taking portal. --><!--
 				<If Condition="Me.MapId == 646" >
 				<CustomBehavior File="Message" Text="Going to Stormwind." LogColor="Lime" />
 					<CustomBehavior File="FlyTo" X="846.4727" Y="483.7805" Z="-19.13363" />
@@ -118,7 +138,7 @@
 					<CustomBehavior File="InteractWith" MobId="205272" ObjectType="Gameobject" Range="4" X="973.6232" Y="570.9096" Z="-46.0024" />
 					<CustomBehavior File="WaitTimer" WaitTime="8000" GoalText="Waiting for port {TimeRemaining}" />
 				</If>
-				<!-- Pandaland, Taking portal. -->
+				--><!-- Pandaland, Taking portal. --><!--
 				<If Condition="Me.MapId == 870" >
 				<CustomBehavior File="Message" Text="Going to Stormwind." LogColor="Lime" />
 					<CustomBehavior File="FlyTo" X="-311.6545" Y="-1776.63" Z="62.67051" />
@@ -126,9 +146,9 @@
 					<CustomBehavior File="InteractWith" MobId="210805" ObjectType="Gameobject" Range="4" />
 					<CustomBehavior File="WaitTimer" WaitTime="5000" GoalText="Waiting for zone {TimeRemaining}" />
 				</If>
-				<!-- Homeland, Ally Eastern Kingdom -->
+				--><!-- Homeland, Ally Eastern Kingdom --><!--
 				<If Condition="Me.MapId == 0" >
-					<!--
+					--><!--
 					"Ally going to!!!"
 					*********OBS*********
 					Set true will go there.
@@ -139,9 +159,9 @@
 					Set true only on one, the rest should be false.
 					Set all false if your farming map is Eastern Kingdom.
 					*********End OBS********
-					-->	
+					--><!--	
 					
-					<If condition="false"><!-- If Set true will go to Northrend -->
+					<If condition="false">--><!-- If Set true will go to Northrend --><!--
 					<CustomBehavior File="Message" Text="Going to Vikingland." LogColor="Lime" />
 					
 					<If Condition="SpellManager.HasSpell(&quot;Flight Master's License&quot;)">
@@ -156,7 +176,7 @@
 					<CustomBehavior File="WaitTimer" WaitTime="5000" />
 					</If>
 					
-					<If condition="true"><!-- If Set true will go to Outland -->
+					<If condition="true">--><!-- If Set true will go to Outland --><!--
 					<CustomBehavior File="Message" Text="Going to Outland." LogColor="Lime" />
 					
 					<While Condition="Me.MapId == 0" >
@@ -177,7 +197,7 @@
 					</While>
 					</If>
 					
-					<If condition="false"> <!-- If Set true will go to Kalimdor -->
+					<If condition="false"> --><!-- If Set true will go to Kalimdor --><!--
 					<CustomBehavior File="Message" Text="Going to Kalimdor." LogColor="Lime" />
 					
 					<If Condition="SpellManager.HasSpell(&quot;Flight Master's License&quot;)">
@@ -187,7 +207,7 @@
 						<Runto X="-14288.29" Y="549.3284" Z="8.689642" />
 					</If>
 					<CustomBehavior File="ForcedDismount" />
-					<!-- BB dock to Ratchet -->
+					--><!-- BB dock to Ratchet --><!--
 					<CustomBehavior File="UseTransport" TransportId="20808"
 									WaitAtX="-14280.88" WaitAtY="566.6268" WaitAtZ="6.979454" 
 									TransportStartX="-14277.75" TransportStartY="582.8661" TransportStartZ="0.01553879"
@@ -196,23 +216,43 @@
 									GetOffX="-996.8669" GetOffY="-3826.07" GetOffZ="5.536246" />
 					</If>
 					
-					<If condition="false"><!-- If Set true will go to Pandaland -->
+					<If condition="false">--><!-- If Set true will go to Pandaland --><!--
 					<CustomBehavior File="Message" Text="Going to Pandaland." LogColor="Lime" />
 					
 					<CustomBehavior File="FlyTo" X="-8200.323" Y="527.858" Z="116.7516"  />
 					<CustomBehavior File="InteractWith" MobId="215457" ObjectType="Gameobject" Range="4" />
 					<CustomBehavior File="WaitTimer" WaitTime="5000" GoalText="Waiting for zone {TimeRemaining}" />
-					<!-- Going to Pandaland Stop -->
+					--><!-- Going to Pandaland Stop --><!--
 					</If>	
 					
-					<!-- No profiles in deepholm-->
+					--><!-- No profiles in deepholm--><!--
 						
-				</If>
+				</If>-->
 			</If>
 			<!-- Horde part -->
 			<If Condition="Me.IsHorde" >
+        <If Condition="Me.ZoneId == 7004">
+          <!--要塞-->
+          <MoveTo X="5592.42" Y="4568.17" Z="135.7166" />
+          <MoveTo X="5572.122" Y="4507.008" Z="130.083" />
+          <MoveTo X="5622.694" Y="4470.612" Z="130.103" />
+          <MoveTo X="5584.143" Y="4359.814" Z="160.7936" />
+          <CustomBehavior File="InteractWith" MobId="233600" ObjectType="Gameobject" Range="4" X="5586.819" Y="4357.713" Z="161.427" />
+          <CustomBehavior File="WaitTimer" WaitTime="8000" GoalText="Waiting for port {TimeRemaining}" />
+
+          <!--艾斯蘭-->
+          <MoveTo X="5265.908" Y="-4071.956" Z="21.31483" />
+          <CustomBehavior File="InteractWith" MobId="235880" ObjectType="Gameobject" Range="4" X="5266.4" Y="-4075.891" Z="21.13024" />
+          <CustomBehavior File="WaitTimer" WaitTime="8000" GoalText="Waiting for port {TimeRemaining}" />
+        </If>
+        <!--奧格瑪-->
+        <If Condition="Me.ZoneId == 1637">
+          <MoveTo X="1791.493" Y="-4277.93" Z="7.545744" />
+          <CustomBehavior File="InteractWith" MobId="195142" ObjectType="Gameobject" PreInteractMountStrategy="Dismount" Range="4" X="1791.696" Y="-4273.472" Z="7.674594"/>
+          <CustomBehavior File="WaitTimer" WaitTime="8000" GoalText="Waiting for port {TimeRemaining}" />
+        </If>
 				<!-- Outland move to and use portal in shat -->
-				<If Condition="Me.MapId == 530" >
+				<!--<If Condition="Me.MapId == 530" >
 				<CustomBehavior File="Message" Text="Going to Kalimdor." LogColor="Lime" />
 					<While Condition="Me.MapId == 530" >
 						<CustomBehavior File="FlyTo" DestName="Org portal" X="-1956.413" Y="5383.551" Z="-12.42774" />
@@ -225,7 +265,7 @@
 					<Moveto X="1896.122" Y="-4489.93" Z="23.84045" />
 					<CustomBehavior File="FlyTo" X="1882.573" Y="-4548.733" Z="110.4602" />
 				</If>
-				<!-- Northrend, go home from borean -->
+				--><!-- Northrend, go home from borean --><!--
 				<If Condition="Me.MapId == 571" >
 				<CustomBehavior File="Message" Text="Going to Kalimdor." LogColor="Lime" />
 					<If Condition="(HasSpell(54197))">
@@ -242,7 +282,7 @@
 									TransportEndX="1775.066" TransportEndY="-4299.745" TransportEndZ="151.0326" 
 									GetOffX="1763.203" GetOffY="-4284.529" GetOffZ="133.1072" />
 				</If>
-				<!-- From Eastern Kingdom going home -->
+				--><!-- From Eastern Kingdom going home --><!--
 				<If Condition="Me.MapId == 0" >
 				<CustomBehavior File="Message" Text="Going to Kalimdor." LogColor="Lime" />
 					<If Condition="SpellManager.HasSpell(&quot;Flight Master's License&quot;)">
@@ -258,7 +298,7 @@
 									StandOnX="2067.979" StandOnY="295.2747" StandOnZ="97.23677" 
 									GetOffX="1840.225" GetOffY="-4390.912" GetOffZ="135.2337" />
 				</If>
-				<!-- Deepholm, Taking portal. -->
+				--><!-- Deepholm, Taking portal. --><!--
 				<If Condition="Me.MapId == 646" >
 				<CustomBehavior File="Message" Text="Going to Kalimdor." LogColor="Lime" />
 					<CustomBehavior File="FlyTo" X="846.4727" Y="483.7805" Z="-19.13363" />
@@ -267,7 +307,7 @@
 					<CustomBehavior File="InteractWith" MobId="205273" ObjectType="Gameobject" Range="4" X="990.1199" Y="457.7099" Z="-44.2598" />
 					<CustomBehavior File="WaitTimer" WaitTime="8000" GoalText="Waiting for port {TimeRemaining}" />
 				</If>
-				<!-- Pandaland, Taking portal. -->
+				--><!-- Pandaland, Taking portal. --><!--
 				<If Condition="Me.MapId == 870" >
 				<CustomBehavior File="Message" Text="Going to Kalimdor." LogColor="Lime" />
 				
@@ -276,9 +316,9 @@
 					<CustomBehavior File="InteractWith" MobId="210804" ObjectType="Gameobject" Range="4" />
 					<CustomBehavior File="WaitTimer" WaitTime="5000" GoalText="Waiting for zone {TimeRemaining}" />
 				</If>
-				<!-- Homeland, Horde Kalimdor -->
+				--><!-- Homeland, Horde Kalimdor --><!--
 				<If Condition="Me.MapId == 1" >
-					<!--
+					--><!--
 					"Horde Going to!!!"
 					*********OBS*********
 					Set true will go there.
@@ -289,9 +329,9 @@
 					Set true only on one, the rest should be false.
 					Set all false if your farming map is Kalimdor.
 					*********End OBS********
-					-->	
-					<!-- -->
-					<If condition="false"><!-- If Set true will go to Northrend -->
+					--><!--	
+					--><!-- --><!--
+					<If condition="false">--><!-- If Set true will go to Northrend --><!--
 					<CustomBehavior File="Message" Text="Going to Northrend." LogColor="Lime" />
 					
 						<If Condition="SpellManager.HasSpell(&quot;Flight Master's License&quot;)">
@@ -312,7 +352,7 @@
 						<Moveto X="2740.837" Y="6097.529" Z="76.88604" />
 					</If>
 					
-					<If condition="true"><!-- If Set true will go to Outland -->
+					<If condition="true">--><!-- If Set true will go to Outland --><!--
 					<CustomBehavior File="Message" Text="On out way to Outland." LogColor="Lime" />
 					<CustomBehavior File="Message" Text="Going by boat in Ratchet." LogColor="Lime" />
 					
@@ -328,7 +368,7 @@
 									StandOnX="-997.3311" StandOnY="-3836.707" StandOnZ="6.030852"
 									TransportEndX="-14277.75" TransportEndY="582.8661" TransportEndZ="0.03330701"
 									GetOffX="-14280.88" GetOffY="566.6268" GetOffZ="6.979454" />
-									<!-- Should now be in Eastern Kingdom -->
+									--><!-- Should now be in Eastern Kingdom --><!--
 						<While Condition="Me.MapId == 0" >
 							<If Condition="Me.MapId == 0" >
 								<If Condition="SpellManager.HasSpell(&quot;Flight Master's License&quot;)">
@@ -347,7 +387,7 @@
 						</While>
 					</If>
 					
-					<If condition="false"><!-- If Set true will go to Eastern Kingdom -->
+					<If condition="false">--><!-- If Set true will go to Eastern Kingdom --><!--
 					<CustomBehavior File="Message" Text="Going to Eastern Kingdom." LogColor="Lime" />
 					
 						<If Condition="SpellManager.HasSpell(&quot;Flight Master's License&quot;)">
@@ -364,7 +404,7 @@
 										GetOffX="2066.773" GetOffY="288.873" GetOffZ="97.03159" />
 					</If>
 					
-					<If condition="false"><!-- If Set true will go to Pandaland -->
+					<If condition="false">--><!-- If Set true will go to Pandaland --><!--
 					<CustomBehavior File="Message" Text="Going to Pandaland." LogColor="Lime" />
 					
 						<CustomBehavior File="FlyTo" X="2012.948" Y="-4698.641" Z="28.60529" />
@@ -373,9 +413,9 @@
 						
 					</If>	
 					
-					<!-- No profiles in deepholm-->
+					--><!-- No profiles in deepholm--><!--
 						
-				</If>
+				</If>-->
 			</If>
 		</While>
 		<!-- 
@@ -423,9 +463,9 @@
     <MoveTo X="436.4205" Y="775.0575" Z="11.94632" />
 
     <CustomBehavior File="Message" Text="Pull Warlord Najentus" LogColor="Lime" />	
-	<CustomBehavior File="SwitchTarget" BossId="22887" />	<!--Pull High Warlord Naj'entus-->
+	<CustomBehavior File="SwitchTarget" BossId="22887" />	--><!--Pull High Warlord Naj'entus-->
 
-	<!-- <While Condition="Object(22887, o => o.ToUnit().IsAlive)">   -->
+	    <!--<While Condition="Object(22887, o => o.ToUnit().IsAlive)">-->  
       <While Condition="Unit(22887, u => u.IsAlive) != null ">	
  	       <!-- GOOGE to force kill -->
 	       <CustomBehavior File="GetOutOfGroundEffectAndAuras" 
@@ -454,7 +494,7 @@
     <!--<MoveTo X="696.8702" Y="650.6951" Z="74.9661"  />-->
     	
       <CustomBehavior File="Message" Text="Pull Supremus" LogColor="Lime" />
-	<!--<CustomBehavior File="SwitchTarget" BossId="22898" />-->	<!--Pull Supremus-->
+	<!--<CustomBehavior File="SwitchTarget" BossId="22898" />--><!--Pull Supremus-->
   <If Condition="(Me.Class == WoWClass.Monk)">
     <CustomBehavior File="InteractWith" MobId="22898" IgnoreLoSToTarget="True" MinRange="25" IgnoreCombat="True" MobState="Alive" InteractByCastingSpellId="117952" WaitForNpcs="false" ObjectType="Npc" Range="40" X="696.8702" Y="650.6951" Z="74.9661"/>
   </If>
@@ -524,16 +564,16 @@
 	
     <CustomBehavior File="Message" Text="Kill Shade of Akama" LogColor="Lime" />
 
-	<MoveTo X="451.9593" Y="407.7261" Z="118.5378" />
+	<MoveTo X="451.9593" Y="407.7261" Z="118.5378" />-->
 
 	<!--<Custombehavior File="KillOrder" KillOrder1="23421" />-->
   <If Condition="(Me.Class == WoWClass.Monk)">
-    <CustomBehavior File="InteractWith" MobId="23421" IgnoreLoSToTarget="True" MinRange="3" IgnoreCombat="True" MobState="Alive" InteractByCastingSpellId="6603" WaitForNpcs="false" ObjectType="Npc" Range="5" X="463.7257" Y="401.5936" Z="118.538"/>
-    <CustomBehavior File="InteractWith" MobId="23421" IgnoreLoSToTarget="True" MinRange="3" IgnoreCombat="True" MobState="Alive" InteractByCastingSpellId="6603" WaitForNpcs="false" ObjectType="Npc" Range="5" X="457.9456" Y="389.6228" Z="118.538"/>
-    <CustomBehavior File="InteractWith" MobId="23421" IgnoreLoSToTarget="True" MinRange="3" IgnoreCombat="True" MobState="Alive" InteractByCastingSpellId="6603" WaitForNpcs="false" ObjectType="Npc" Range="5" X="444.1863" Y="389.1276" Z="118.538"/>
-    <CustomBehavior File="InteractWith" MobId="23421" IgnoreLoSToTarget="True" MinRange="3" IgnoreCombat="True" MobState="Alive" InteractByCastingSpellId="6603" WaitForNpcs="false" ObjectType="Npc" Range="5" X="438.1626" Y="400.9247" Z="118.538"/>
-    <CustomBehavior File="InteractWith" MobId="23421" IgnoreLoSToTarget="True" MinRange="3" IgnoreCombat="True" MobState="Alive" InteractByCastingSpellId="6603" WaitForNpcs="false" ObjectType="Npc" Range="5" X="443.2104" Y="413.9362" Z="118.538"/>
-    <CustomBehavior File="InteractWith" MobId="23421" IgnoreLoSToTarget="True" MinRange="3" IgnoreCombat="True" MobState="Alive" InteractByCastingSpellId="6603" WaitForNpcs="false" ObjectType="Npc" Range="5" X="456.4948" Y="413.7039" Z="118.538" />
+    <CustomBehavior File="InteractWith" MobId="23421" IgnoreLoSToTarget="True" IgnoreCombat="True" MobState="Alive" InteractByCastingSpellId="100780" WaitForNpcs="false" ObjectType="Npc" X="463.7257" Y="401.5936" Z="118.538"/>
+    <CustomBehavior File="InteractWith" MobId="23421" IgnoreLoSToTarget="True" IgnoreCombat="True" MobState="Alive" InteractByCastingSpellId="100780" WaitForNpcs="false" ObjectType="Npc" X="457.9456" Y="389.6228" Z="118.538"/>
+    <CustomBehavior File="InteractWith" MobId="23421" IgnoreLoSToTarget="True" IgnoreCombat="True" MobState="Alive" InteractByCastingSpellId="100780" WaitForNpcs="false" ObjectType="Npc" X="444.1863" Y="389.1276" Z="118.538"/>
+    <CustomBehavior File="InteractWith" MobId="23421" IgnoreLoSToTarget="True" IgnoreCombat="True" MobState="Alive" InteractByCastingSpellId="100780" WaitForNpcs="false" ObjectType="Npc" X="438.1626" Y="400.9247" Z="118.538"/>
+    <CustomBehavior File="InteractWith" MobId="23421" IgnoreLoSToTarget="True" IgnoreCombat="True" MobState="Alive" InteractByCastingSpellId="100780" WaitForNpcs="false" ObjectType="Npc" X="443.2104" Y="413.9362" Z="118.538"/>
+    <CustomBehavior File="InteractWith" MobId="23421" IgnoreLoSToTarget="True" IgnoreCombat="True" MobState="Alive" InteractByCastingSpellId="100780" WaitForNpcs="false" ObjectType="Npc" X="456.4948" Y="413.7039" Z="118.538" />
   </If>
   <If Condition="(Me.Class == WoWClass.Warrior)">
     <CustomBehavior File="InteractWith" MobId="23421" IgnoreLoSToTarget="True" MinRange="25" IgnoreCombat="True" MobState="Alive" InteractByCastingSpellId="57755" WaitForNpcs="false" ObjectType="Npc" Range="30" X="463.7257" Y="401.5936" Z="118.538"/>
@@ -591,14 +631,14 @@
 
       <MoveTo X="494.00" Y="400.00" Z="112.99" />
 
-	<While Condition="(Object(22841, o => o.Location.Distance(new WoWPoint(512.4877, 400.8283, 112.784)) &gt; 5) != null)" >
+  <While Condition="(Object(22841, o => o.Location.Distance(new WoWPoint(512.4877, 400.8283, 112.784)) &gt; 5) != null)" >
 		<CustomBehavior File="InteractWith" MobState="Alive" WaitForNpcs="false" MobId1="23215" MobId2="23421" /> <!-- Kill Ashtongue Channeler + Sorcerer -->
 	</While>
 	
 	<CustomBehavior File="WaitTimer" WaitTime="300" />    
       <!--<CustomBehavior File="SwitchTarget" BossId="23215" />-->
   <If Condition="(Me.Class == WoWClass.Monk)">
-    <CustomBehavior File="InteractWith" MobId="23215" IgnoreLoSToTarget="True" MinRange="25" IgnoreCombat="True" MobState="Alive" InteractByCastingSpellId="117952" WaitForNpcs="false" ObjectType="Npc" Range="40" />
+    <CustomBehavior File="InteractWith" MobId="23215" IgnoreLoSToTarget="True" IgnoreCombat="True" MobState="Alive" InteractByCastingSpellId="100780" WaitForNpcs="false" ObjectType="Npc" />
   </If>
   <If Condition="(Me.Class == WoWClass.Warrior)">
     <CustomBehavior File="InteractWith" MobId="23215" IgnoreLoSToTarget="True" MinRange="25" IgnoreCombat="True" MobState="Alive" InteractByCastingSpellId="57755" WaitForNpcs="false" ObjectType="Npc" Range="30" />
@@ -633,7 +673,7 @@
       <MoveTo X="501.5047" Y="383.7455" Z="112.784" />
       <!--<CustomBehavior File="SwitchTarget" BossId="23215" />-->
   <If Condition="(Me.Class == WoWClass.Monk)">
-    <CustomBehavior File="InteractWith" MobId="23215" IgnoreLoSToTarget="True" MinRange="25" IgnoreCombat="True" MobState="Alive" InteractByCastingSpellId="117952" WaitForNpcs="false" ObjectType="Npc" Range="40" />
+    <CustomBehavior File="InteractWith" MobId="23215" IgnoreLoSToTarget="True" IgnoreCombat="True" MobState="Alive" InteractByCastingSpellId="100780" WaitForNpcs="false" ObjectType="Npc" />
   </If>
   <If Condition="(Me.Class == WoWClass.Warrior)">
     <CustomBehavior File="InteractWith" MobId="23215" IgnoreLoSToTarget="True" MinRange="25" IgnoreCombat="True" MobState="Alive" InteractByCastingSpellId="57755" WaitForNpcs="false" ObjectType="Npc" Range="30" />
@@ -673,7 +713,7 @@
 	
 	<!--<CustomBehavior File="SwitchTarget" BossId="22841" />-->	<!--Pull Shade of Akama-->
   <If Condition="(Me.Class == WoWClass.Monk)">
-    <CustomBehavior File="InteractWith" MobId="22841" IgnoreLoSToTarget="True" MinRange="3" IgnoreCombat="True" MobState="Alive" InteractByCastingSpellId="6603" WaitForNpcs="false" ObjectType="Npc" Range="5"/>
+    <CustomBehavior File="InteractWith" MobId="22841" IgnoreLoSToTarget="True" IgnoreCombat="True" MobState="Alive" InteractByCastingSpellId="100780" WaitForNpcs="false" ObjectType="Npc"/>
   </If>
   <If Condition="(Me.Class == WoWClass.Warrior)">
     <CustomBehavior File="InteractWith" MobId="22841" IgnoreLoSToTarget="True" MinRange="25" IgnoreCombat="True" MobState="Alive" InteractByCastingSpellId="57755" WaitForNpcs="false" ObjectType="Npc" Range="30"/>
