@@ -1,0 +1,213 @@
+﻿<HBProfile>
+  <Name>太陽井單刷副本</Name>
+  <MinDurability>0.3</MinDurability>
+  <MinFreeBagSlots>0</MinFreeBagSlots>
+
+  <MinLevel>54</MinLevel>
+  <MaxLevel>1001</MaxLevel>
+
+  <MailGrey>False</MailGrey>
+  <MailWhite>False</MailWhite>
+  <MailGreen>False</MailGreen>
+  <MailBlue>False</MailBlue>
+  <MailPurple>False</MailPurple>
+
+  <SellGrey>True</SellGrey>
+  <SellWhite>True</SellWhite>
+  <SellGreen>True</SellGreen>
+  <SellBlue>True</SellBlue>
+  <SellPurple>False</SellPurple>
+
+  <TargetElites>True</TargetElites>
+
+  <!-- Protected Items list, can add to these as you see fit, if you are looking for specific items -->
+
+  <ProtectedItems>
+
+  </ProtectedItems>
+
+  <Vendors>
+
+  </Vendors>
+
+  <Mailboxes>
+
+  </Mailboxes>
+
+
+  <AvoidMobs>
+
+  </AvoidMobs>
+
+
+  <Blackspots>
+  </Blackspots>
+
+
+  <QuestOrder>
+    <While Condition ="!(Me.ZoneId == 4075)" >
+      <CustomBehavior File="UserSettings" UseFlightPaths="true" GroundMountFarmingMode="True"
+                KillBetweenHotspots="false" />
+      <While Condition ="!(Me.ZoneId == 4080)">
+      <!--部落-->
+      <If Condition="Me.IsHorde" >
+        <If Condition="Me.ZoneId == 7004">
+          <!--要塞-->
+          <MoveTo X="5592.42" Y="4568.17" Z="135.7166" />
+          <MoveTo X="5572.122" Y="4507.008" Z="130.083" />
+          <MoveTo X="5622.694" Y="4470.612" Z="130.103" />
+          <MoveTo X="5584.143" Y="4359.814" Z="160.7936" />
+          <CustomBehavior File="InteractWith" MobId="233600" ObjectType="Gameobject" Range="4" X="5586.819" Y="4357.713" Z="161.427" />
+          <CustomBehavior File="WaitTimer" WaitTime="8000" GoalText="Waiting for port {TimeRemaining}" />
+
+          <!--艾斯蘭-->
+          <MoveTo X="5265.908" Y="-4071.956" Z="21.31483" />
+          <CustomBehavior File="InteractWith" MobId="235880" ObjectType="Gameobject" Range="4" X="5266.4" Y="-4075.891" Z="21.13024" />
+          <CustomBehavior File="WaitTimer" WaitTime="8000" GoalText="Waiting for port {TimeRemaining}" />
+        </If>
+          <!--奧格瑪-->
+          <If Condition="Me.ZoneId == 1637">
+          <MoveTo X="1791.493" Y="-4277.93" Z="7.545744" />
+          <CustomBehavior File="InteractWith" MobId="195142" ObjectType="Gameobject" PreInteractMountStrategy="Dismount" Range="4" X="1791.696" Y="-4273.472" Z="7.674594"/>
+          <CustomBehavior File="WaitTimer" WaitTime="8000" GoalText="Waiting for port {TimeRemaining}" />
+        </If>
+     </If>
+     <If Condition="Me.IsAlliance" >
+       <!--要塞-->
+       <If Condition="Me.ZoneId == 7078">
+         <!--<RunTo X="1957.809" Y="85.04769" Z="86.26516" />
+         <RunTo X="1963.19" Y="69.7935" Z="98.73251" />
+         <RunTo X="1967.695" Y="69.79959" Z="108.9127" />-->
+         <MoveTo X="3685.313" Y="-3836.29" Z="44.98112"/>
+         <!--<CustomBehavior File="InteractWith" MobId="233610" ObjectType="Gameobject" Range="4" X="1966.385" Y="66.29166" Z="108.92" />
+         <CustomBehavior File="WaitTimer" WaitTime="8000" GoalText="Waiting for port {TimeRemaining}" />-->
+       </If>
+       <!--戰爭之矛-->
+       <If Condition =" Me.ZoneId == 7332">
+         <RunTo X="3730.06" Y="-4044.52" Z="44.4461" />
+         <CustomBehavior File="InteractWith" MobId="235883" ObjectType="Gameobject" Range="4" X="3734.65" Y="-4042.976" Z="44.81873" />
+         <CustomBehavior File="WaitTimer" WaitTime="8000" GoalText="Waiting for port {TimeRemaining}" />
+       </If>
+       <!--暴風城-->
+       <If Condition="Me.MapId == 0" >
+         <CustomBehavior File="InteractWith" MobId="195141" ObjectType="Gameobject" PreInteractMountStrategy="Dismount" Range="4" X="-9003.66" Y="855.3229" Z="29.62067" />
+         <CustomBehavior File="WaitTimer" WaitTime="8000" GoalText="Waiting for port {TimeRemaining}" />
+       </If>
+     </If>
+        <!--地獄火-->
+        <If Condition="Me.MapId == 530" >
+          <MoveTo X="-1837.23" Y="5301.9" Z="-12.43" />
+          <MoveTo X="-1840.749" Y="5497.775" Z="-12.42794" />
+          <CustomBehavior File="InteractWith" MobId="187056" ObjectType="Gameobject" PreInteractMountStrategy="Dismount" Range="4" X="-1839.877" Y="5500.596" Z="-12.42793"/>
+          <CustomBehavior File="WaitTimer" WaitTime="8000" GoalText="Waiting for port {TimeRemaining}" />
+        </If>
+      </While>
+      <!--太陽井-->
+      <While Condition ="Me.ZoneId == 4080">
+        <CustomBehavior File="Misc\RunLua" Lua="MoveForwardStart();" WaitTime="3000" />
+        <CustomBehavior File="Misc\RunLua" Lua="MoveForwardStop();" />
+        <MoveTo X="12733.2" Y="-6912.391" Z="12.23583" />
+        <MoVeTo X="12604.05" Y="-6774.789" Z="14.06431" />
+        <MoveTo X="12558.95" Y="-6774.816" Z="15.01803" />
+        <CustomBehavior File="MyCTM" X="12552.15" Y="-6775.22" Z="15.05"  />
+        <CustomBehavior File="WaitTimer" WaitTime="8000" GoalText="Waiting for port {TimeRemaining}" />
+      </While>
+   </While>
+    <While Condition ="Me.ZoneId == 4075" >
+      <CustomBehavior File="UserSettings" LootMobs="True" PullDistance="50" KillBetweenHotspots="True" />
+      <CustomBehavior File="Message" Text="開始擔刷太陽之井." LogColor="Lime" />
+      <MoveTo X="1706.587" Y="873.5855" Z="18.02957" />
+      <MoveTo X="1657.903" Y="930.253" Z="17.07755" />
+      <MoveTo X="1704.463" Y="1056.869" Z="18.02945" />
+      <MoveTo X="1808.895" Y="937.5173" Z="35.05845" />
+      <MoveTo X="1798.337" Y="838.3011" Z="35.9459" />
+      <MoveTo X="1609.577" Y="841.896" Z="36.07137" />
+      <MoveTo X="1611.299" Y="1018.952" Z="36.07173" />
+      <MoveTo X="1610.97" Y="1052.586" Z="35.71094" />
+      <MoveTo X="1647.441" Y="1094.417" Z="44.59085" />
+      <MoveTo X="1707.135" Y="1097.335" Z="52.83679" />
+      <MoveTo X="1707.401" Y="989.467" Z="53.02592" />
+      <CustomBehavior File="ForcedDismount" />
+      <CustomBehavior File="Message" Text="一王開始." LogColor="Lime" />
+      <MoveTo X="1705.093" Y="955.2429" Z="53.07642" />
+      <If Condition="(Me.Class == WoWClass.Hunter)">
+        <CustomBehavior File="InteractWith" MobId="24850" IgnoreLoSToTarget="False" MinRange="10" IgnoreCombat="False" MobState="Alive" InteractByCastingSpellId="75" WaitForNpcs="false" ObjectType="Npc" Range="15" />
+        <CustomBehavior File="WaitTimer" WaitTime="10000" GoalText="Waiting for Boss {TimeRemaining}" />
+        <CustomBehavior File="InteractWith" MobId="24892" IgnoreLoSToTarget="True" MinRange="10" IgnoreCombat="True" MobState="Alive" InteractByCastingSpellId="75" WaitForNpcs="false" ObjectType="Npc" Range="15" />
+      </If>
+      <If Condition="(Me.Class == WoWClass.Warrior)">
+        <CustomBehavior File="InteractWith" MobId="24850" IgnoreLoSToTarget="False" MinRange="8" IgnoreCombat="False" MobState="Alive" InteractByCastingSpellId="57755" WaitForNpcs="false" ObjectType="Npc" Range="30" />
+        <CustomBehavior File="WaitTimer" WaitTime="10000" GoalText="Waiting for Boss {TimeRemaining}" />
+        <CustomBehavior File="InteractWith" MobId="24892" IgnoreLoSToTarget="True" MinRange="8" IgnoreCombat="True" MobState="Alive" InteractByCastingSpellId="57755" WaitForNpcs="false" ObjectType="Npc" Range="30" />
+      </If>
+      <CustomBehavior File="WaitTimer" WaitTime="60000" GoalText="Waiting for Boss {TimeRemaining}" />
+      <MoveTo X="1699.308" Y="744.5372" Z="53.42635" />
+      <MoveTo X="1652.815" Y="738.4966" Z="53.40255" />
+      <MoveTo X="1567.545" Y="633.6786" Z="50.77777" />
+      <CustomBehavior File="Message" Text="二王開始." LogColor="Lime" />
+      <CustomBehavior File="WaitTimer" WaitTime="90000" />
+      <MoveTo X="1529.839" Y="630.2953" Z="50.45435" />
+      <CustomBehavior File="Misc\RunLua" Lua="MoveForwardStart();" WaitTime="3000" />
+      <CustomBehavior File="Misc\RunLua" Lua="MoveForwardStop();" />
+      <CustomBehavior File="WaitTimer" WaitTime="3000" />
+      <MoveTo X="1473.438" Y="616.0412" Z="22.93551" />
+      <If Condition="(Me.Class == WoWClass.Hunter)">
+        <CustomBehavior File="InteractWith" MobId="24882" IgnoreLoSToTarget="False" MinRange="25" IgnoreCombat="False" MobState="Alive" InteractByCastingSpellId="75" WaitForNpcs="false" ObjectType="Npc" Range="40"/>
+      </If>
+      <If Condition="(Me.Class == WoWClass.Warrior)">
+        <CustomBehavior File="InteractWith" MobId="24882" IgnoreLoSToTarget="False" MinRange="8" IgnoreCombat="False" MobState="Alive" InteractByCastingSpellId="57755" WaitForNpcs="false" ObjectType="Npc" Range="30"/>
+      </If>
+      <CustomBehavior File="Message" Text="三王開始." LogColor="Lime" /> 
+      <If Condition="(Me.Class == WoWClass.Hunter)">
+        <CustomBehavior File="InteractWith" MobId="25038" IgnoreLoSToTarget="False" MinRange="25" IgnoreCombat="False" MobState="Alive" InteractByCastingSpellId="75" WaitForNpcs="True" ObjectType="Npc" Range="40" />
+      </If>
+      <If Condition="(Me.Class == WoWClass.Warrior)">
+        <CustomBehavior File="InteractWith" MobId="25038" IgnoreLoSToTarget="False" MinRange="8" IgnoreCombat="False" MobState="Alive" InteractByCastingSpellId="57755" WaitForNpcs="True" ObjectType="Npc" Range="30"/>
+      </If>
+      <CustomBehavior File="WaitTimer" WaitTime="60000" />
+      <CustomBehavior File="UserSettings" GroundMountFarmingMode="true" KillBetweenHotspots="false" />
+      <MoveTo X="1593.049" Y="505.6296" Z="32.71803" />
+      <MoveTo X="1566.46" Y="581.678" Z="50.63452" />
+      <MoveTo X="1663.259" Y="523.7686" Z="50.57539" />
+      <MoveTo X="1594.405" Y="596.4624" Z="85.10715" />
+      <MoveTo X="1691.23" Y="520.2627" Z="85.27165" />
+      <MoveTo X="1697.718" Y="510.5842" Z="85.27165" />
+      <CustomBehavior File="ForcedDismount" />
+      <CustomBehavior File="UserSettings" KillBetweenHotspots="true" />
+      <CustomBehavior File="UserSettings" KillBetweenHotspots="false" />
+      <MoveTo X="1735.94" Y="548.3495" Z="85.07442" />
+      <CustomBehavior File="Misc\RunLua" Lua="MoveForwardStart();" WaitTime="10000" />
+      <CustomBehavior File="Misc\RunLua" Lua="MoveForwardStop();" />
+      <MoveTo X="1791.808" Y="499.9274" Z="74.13437" />
+      <MoveTo X="1772.078" Y="544.2574" Z="62.09314" />
+      <MoveTo X="1797.6" Y="575.5645" Z="51.50303" />
+      <MoveTo X="1799.904" Y="655.4484" Z="34.20794"  />
+      <CustomBehavior File="UserSettings" KillBetweenHotspots="true" />
+      <CustomBehavior File="Message" Text="四王開始." LogColor="Lime" />
+      <If Condition="(Me.Class == WoWClass.Hunter)">
+        <CustomBehavior File="InteractWith" MobId="25165" IgnoreLoSToTarget="True" MinRange="15" IgnoreCombat="True" MobState="Alive" InteractByCastingSpellId="75" WaitForNpcs="false" ObjectType="Npc" Range="20" X="1814.271" Y="626.4523" Z="33.40385"/>
+      </If>
+      <If Condition="(Me.Class == WoWClass.Warrior)">
+        <CustomBehavior File="InteractWith" MobId="25165" IgnoreLoSToTarget="True" MinRange="8" IgnoreCombat="True" MobState="Alive" InteractByCastingSpellId="57755" WaitForNpcs="false" ObjectType="Npc" Range="30" X="1814.271" Y="626.4523" Z="33.40385"/>
+      </If>
+      <MoveTo X="1813.97" Y="623.5732" Z="33.40393" />
+      <MoveTo X="1822.715" Y="621.8255" Z="33.40393" />
+      <MoveTo X="1809.594" Y="624.0717" Z="33.40393" />
+      <CustomBehavior File="WaitTimer" WaitTime="10000" />
+      <MoveTo X="1836.259" Y="679.6807" Z="32.0323" />
+      <MoveTo X="1874.668" Y="590.2009" Z="32.03094" />
+      <MoveTo X="1843.256" Y="522.085" Z="42.12187" />
+      <MoveTo X="1900.703" Y="486.2668" Z="58.23598" />
+      <MoveTo X="1917.335" Y="538.9551" Z="71.29514" />
+      <MoveTo X="1850.263" Y="598.0889" Z="71.31433" />
+      <CustomBehavior File="Message" Text="五王開始." LogColor="Lime" />
+      <MoveTo X="1814.737" Y="627.0567" Z="69.61432" />
+      <CustomBehavior File="WaitTimer" WaitTime="40000" />
+      <MoveTo X="1695.026" Y="711.4616" Z="69.63298" />
+      <CustomBehavior File="Message" Text="機而夾蛋開始." LogColor="Lime" />
+      <MoveTo X="1690.396" Y="627.0346" Z="27.78082" />
+      <CustomBehavior File="WaitTimer" WaitTime="60000" />
+      <CustomBehavior File="UseItem" ItemId="110560" WaitTime="20000" />
+    </While>
+  </QuestOrder>
+</HBProfile>
