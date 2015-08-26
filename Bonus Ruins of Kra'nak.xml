@@ -1,0 +1,49 @@
+<HBProfile>
+<Name>[Q]Bonus Ruins of Ruins of Kra'nak - OppLy</Name>
+
+<MinDurability>0.4</MinDurability>
+<MinFreeBagSlots>1</MinFreeBagSlots>
+
+<MinLevel>97</MinLevel>
+<MaxLevel>101</MaxLevel>
+
+<MailGrey>false</MailGrey>
+<MailWhite>false</MailWhite>
+<MailGreen>false</MailGreen>
+<MailBlue>false</MailBlue>
+<MailPurple>false</MailPurple>
+
+<SellGrey>true</SellGrey>
+<SellWhite>false</SellWhite>
+<SellGreen>false</SellGreen>
+<SellBlue>false</SellBlue>
+<SellPurple>false</SellPurple>
+
+<AvoidMobs>
+</AvoidMobs>
+
+<Vendors>
+</Vendors>
+
+<Mailboxes>
+</Mailboxes>
+
+<Blackspots>
+</Blackspots>
+
+<QuestOrder>
+
+	<CustomBehavior File="InteractWith" MobIds="90795, 90300, 90706, 90790, 90791, 90796, 90792, 243852" NumOfTimes="100" WaitTime="1500" TerminateWhen="IsQuestCompleted(39447)" >
+		<HuntingGrounds WaypointVisitStrategy="Random" >
+			<Hotspot X="4546.808" Y="486.0171" Z="226.6106" />
+			<Hotspot X="4639.002" Y="608.1016" Z="204.4243" />
+			<Hotspot X="4523.261" Y="653.3411" Z="175.3183" />
+			<Hotspot X="4409.374" Y="820.7141" Z="175.4831" />
+		</HuntingGrounds>
+	</CustomBehavior>
+	
+	<CustomBehavior File="NoCombatMoveTo" X="4572.857" Y="336.026" Z="221.5237"  />
+
+	<CustomBehavior File="RunCode" Code="Styx.CommonBot.TreeRoot.Stop(&quot;Profile complete...&quot;)" />
+</QuestOrder>
+</HBProfile>

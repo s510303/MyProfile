@@ -1,0 +1,68 @@
+<HBProfile>
+<Name>[Q]Bonus Ruins of Ruins of Kra'nak - OppLy</Name>
+
+<MinDurability>0.4</MinDurability>
+<MinFreeBagSlots>1</MinFreeBagSlots>
+
+<MinLevel>97</MinLevel>
+<MaxLevel>101</MaxLevel>
+
+<MailGrey>false</MailGrey>
+<MailWhite>false</MailWhite>
+<MailGreen>false</MailGreen>
+<MailBlue>false</MailBlue>
+<MailPurple>false</MailPurple>
+
+<SellGrey>true</SellGrey>
+<SellWhite>false</SellWhite>
+<SellGreen>false</SellGreen>
+<SellBlue>false</SellBlue>
+<SellPurple>false</SellPurple>
+
+<AvoidMobs>
+</AvoidMobs>
+
+<Vendors>
+</Vendors>
+
+<Mailboxes>
+</Mailboxes>
+
+<Blackspots>
+</Blackspots>
+
+<QuestOrder>
+
+<!--GameObject Name="Siege Equipment Blueprints" Entry="241669" X="4411.943" Y="-634.5677" Z="31.49386" /-->
+<!--GameObject Name="Ironbound Crate" Entry="241507" X="4309.943" Y="-722.0823" Z="42.04132" /-->
+<!--WoWUnit Name="Hellfire Shell" Entry="91901" X="4410.452" Y="-854.9774" Z="44.54209" / Then click enemy--> 
+	<SetGrindArea>
+		<GrindArea>
+			<TargetMinLevel>99</TargetMinLevel>
+			<TargetMaxLevel>101</TargetMaxLevel>
+			<MaxDistance>50</MaxDistance>
+			<LootRadius>60</LootRadius>
+			<TargetElites>false</TargetElites>
+			<RandomizeHotspots>true</RandomizeHotspots>
+			<MobIds></MobIds>
+			<Factions>16 2718</Factions>
+			<Hotspots>
+				<Hotspot X="4431.598" Y="-696.8158" Z="29.25032" />
+				<Hotspot X="4401.309" Y="-634.6718" Z="30.38467" />
+				<Hotspot X="4369.518" Y="-671.563" Z="30.59381" />
+				<Hotspot X="4308.313" Y="-700.6304" Z="42.05642" />
+				<Hotspot X="4308.89" Y="-790.7899" Z="30.06496" />
+				<Hotspot X="4277.179" Y="-879.3702" Z="26.63812" />
+				<Hotspot X="4247.092" Y="-933.0215" Z="20.16998" />
+				<Hotspot X="4317.044" Y="-995.9095" Z="21.85527" />
+				<Hotspot X="4292.503" Y="-1045.243" Z="20.95871" />
+			</Hotspots>
+			</GrindArea>    
+		</SetGrindArea>
+	<GrindUntil Nav="Fly" Condition="IsQuestCompleted(39445)" />
+	
+	<CustomBehavior File="NoCombatMoveTo" X="4455.004" Y="-570.0504" Z="49.80917"  />
+
+	<CustomBehavior File="RunCode" Code="Styx.CommonBot.TreeRoot.Stop(&quot;Profile complete...&quot;)" />
+</QuestOrder>
+</HBProfile>

@@ -1,0 +1,16 @@
+<HBProfile xsi:noNamespaceSchemaLocation="../../Schemas/QuestProfileSchema.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    
+    <Name>Tanaan AutoLoader</Name>
+
+    <QuestOrder>
+        
+        <If Condition="Me.IsHorde">
+            <CustomBehavior File="LoadProfile" ProfileName="[Q][H]Tanaan Jungle Oil Daily - Opply"  />
+        </If>
+
+        <If Condition="Me.IsAlliance">
+            <CustomBehavior File="LoadProfile" ProfileName="[Q][A]Tanaan Jungle Oil Daily - Opply"  />
+        </If>
+
+    </QuestOrder>
+</HBProfile>

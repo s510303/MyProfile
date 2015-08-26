@@ -1,0 +1,76 @@
+<HBProfile>
+<Name>[Q]Bonus Ruins of Ruins of Kra'nak - OppLy</Name>
+
+<MinDurability>0.4</MinDurability>
+<MinFreeBagSlots>1</MinFreeBagSlots>
+
+<MinLevel>97</MinLevel>
+<MaxLevel>101</MaxLevel>
+
+<MailGrey>false</MailGrey>
+<MailWhite>false</MailWhite>
+<MailGreen>false</MailGreen>
+<MailBlue>false</MailBlue>
+<MailPurple>false</MailPurple>
+
+<SellGrey>true</SellGrey>
+<SellWhite>false</SellWhite>
+<SellGreen>false</SellGreen>
+<SellBlue>false</SellBlue>
+<SellPurple>false</SellPurple>
+
+<AvoidMobs>
+</AvoidMobs>
+
+<Vendors>
+</Vendors>
+
+<Mailboxes>
+</Mailboxes>
+
+<Blackspots>
+</Blackspots>
+
+<QuestOrder>
+	<!-- if not in combat, and first aid bandages is less or equal 2 and medical supplies within 30 yard range, pick up medical supplies -->
+	<CustomBehavior File="Hooks\DoWhen" ActivityName="PickUpBandage" 
+					UseWhen="(!Me.Combat) &amp;&amp; (GetItemCount(122139) == 0) &amp;&amp; (Object(239971, o =&gt; o.Distance &lt; 30) != null)" >
+		<CustomBehavior File="InteractWith" WaitTime="3000" MobId="239971" NumOfTimes="100" CollectionDistance="45" PreInteractMountStrategy="Dismount" 
+						TerminateWhen="GetItemCount(122139) != 0 || Object(239971, o =&gt; o.Distance &lt; 45) == null" />
+	</CustomBehavior>
+
+	<!-- if not in combat, and first aid bandages is greater or equal 1 and injured footsoldier or iron horde banner within 30 yard range, pick up medical supplies -->
+	<CustomBehavior File="Hooks\DoWhen" ActivityName="InteractWithObject" 
+					UseWhen="(!Me.Combat) &amp;&amp; (GetItemCount(122139) &gt;= 1) &amp;&amp; ((Unit(90443, o =&gt; o.Distance &lt; 30 &amp;&amp; o.HealthPercent &lt; 50 ) != null) || (Unit(90370, o =&gt; o.Distance &lt; 30) != null))" >
+		<CustomBehavior File="InteractWith" WaitTime="3000" MobIds="90443, 90370" NumOfTimes="100" Range="3" CollectionDistance="45" PreInteractMountStrategy="Dismount" 
+						TerminateWhen="(GetItemCount(122139) &lt;= 0) || ((Unit(90443, o =&gt; o.Distance &lt; 45 &amp;&amp; o.HealthPercent &lt;= 50 ) == null) &amp;&amp; (Unit(90370, o =&gt; o.Distance &lt; 45) == null))" />
+	</CustomBehavior>
+		
+	<SetGrindArea>
+		<GrindArea>
+			<TargetMinLevel>99</TargetMinLevel>
+			<TargetMaxLevel>101</TargetMaxLevel>
+			<MaxDistance>50</MaxDistance>
+			<LootRadius>60</LootRadius>
+			<TargetElites>false</TargetElites>
+			<RandomizeHotspots>true</RandomizeHotspots>
+			<MobIds></MobIds>
+			<Factions>14</Factions>
+			<Hotspots>
+				<Hotspot X="3973.398" Y="1147.4" Z="162.937" />
+				<Hotspot X="3897.893" Y="1019.773" Z="161.0709" />
+				<Hotspot X="3945.316" Y="917.3094" Z="152.7068" />
+				<Hotspot X="3973.105" Y="1025.8" Z="162.672" />
+			</Hotspots>
+			</GrindArea>    
+		</SetGrindArea>
+	<GrindUntil Nav="Fly" Condition="IsQuestCompleted(38051)" />
+	
+	<CustomBehavior File="Hooks\DoWhen" ActivityName="PickUpBandage" Command="Remove" />
+	<CustomBehavior File="Hooks\DoWhen" ActivityName="InteractWithObject" Command="Remove" />
+	
+	<CustomBehavior File="NoCombatMoveTo" X="4076.012" Y="1181.747" Z="160.929"  />
+
+	<CustomBehavior File="RunCode" Code="Styx.CommonBot.TreeRoot.Stop(&quot;Profile complete...&quot;)" />
+</QuestOrder>
+</HBProfile>

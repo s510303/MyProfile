@@ -1,0 +1,560 @@
+<HBProfile>
+<Name>[Q]Tanaan Jungle Other Daily - OppLy</Name>
+
+<MinDurability>0.4</MinDurability>
+<MinFreeBagSlots>1</MinFreeBagSlots>
+
+<MinLevel>97</MinLevel>
+<MaxLevel>101</MaxLevel>
+
+<MailGrey>false</MailGrey>
+<MailWhite>false</MailWhite>
+<MailGreen>false</MailGreen>
+<MailBlue>false</MailBlue>
+<MailPurple>false</MailPurple>
+
+<SellGrey>true</SellGrey>
+<SellWhite>false</SellWhite>
+<SellGreen>false</SellGreen>
+<SellBlue>false</SellBlue>
+<SellPurple>false</SellPurple>
+
+<AvoidMobs>
+</AvoidMobs>
+
+<Vendors>
+</Vendors>
+
+<Mailboxes>
+</Mailboxes>
+
+<Blackspots>
+</Blackspots>
+
+<QuestOrder>
+	<!-- Pick up quest -->
+	<If Condition="!(HasQuest(39581) || HasQuest(39582) || HasQuest(39586) || HasQuest(39433) || HasQuest(39568) || HasQuest(39567) || HasQuest(39569) || HasQuest(39571) || HasQuest(39573) || HasQuest(39570))" >
+		<CustomBehavior File="RunCode" Code="Logging.Write(System.Windows.Media.Colors.DeepSkyBlue, &quot;[Profile]: Moving to Lions Watch to pick up quests.&quot;);"/>
+		
+		<!-- One quest from Parvink -->
+		<CustomBehavior File="InteractWith"  MobId="96147" WaitTime="500" X="3840.701" Y="-1327.689" Z="94.02091" />
+		<CustomBehavior File="Misc\RunLua" Lua="SelectGossipAvailableQuest(1)" />
+		<CustomBehavior File="WaitTimer" WaitTime="1500" />
+		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()"  />
+		
+		<!-- One quest from Dawn-Seeker Krisek -->
+		<CustomBehavior File="InteractWith"  MobId="95424" WaitTime="500" X="3855.705" Y="-1335.908" Z="91.15343" />
+		<CustomBehavior File="Misc\RunLua" Lua="SelectGossipAvailableQuest(1)" />
+		<CustomBehavior File="WaitTimer" WaitTime="1500" />
+		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()"  />
+		
+		<!-- Two quests from Vindicator Krethos -->
+		<CustomBehavior File="InteractWith"  MobId="90974" WaitTime="500" X="3816.47" Y="-1359.184" Z="94.92266" />
+		<CustomBehavior File="Misc\RunLua" Lua="SelectGossipAvailableQuest(1)" />
+		<CustomBehavior File="WaitTimer" WaitTime="1500" />
+		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()"  />
+		
+		<CustomBehavior File="InteractWith"  MobId="90974" WaitTime="500" X="3816.47" Y="-1359.184" Z="94.92266" />
+		<CustomBehavior File="Misc\RunLua" Lua="SelectGossipAvailableQuest(1)" />
+		<CustomBehavior File="WaitTimer" WaitTime="1500" />
+		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()"  />
+	</If>
+	
+	<!-- DO THE QUESTS -->
+	
+	<!-- Demonslayer of Tanaan -->
+	<If Condition="HasQuest(39581) &amp;&amp; !IsQuestCompleted(39581)" >
+		<CustomBehavior File="RunCode" Code="Logging.Write(System.Windows.Media.Colors.DeepSkyBlue, &quot;[Profile]: Doing Demonslayer of Tanaan.&quot;);"/>
+		
+		<CustomBehavior File="UserSettings" KillBetweenHotspots="false" />
+		
+		<SetGrindArea>
+			<GrindArea>
+				<TargetMinLevel>90</TargetMinLevel>
+				<TargetMaxLevel>101</TargetMaxLevel>
+				<MaxDistance>100</MaxDistance>
+				<LootRadius>60</LootRadius>
+				<TargetElites>false</TargetElites>
+				<RandomizeHotspots>true</RandomizeHotspots>
+				<MobIds>93024</MobIds>
+				<Factions></Factions>
+				<Hotspots>
+					<Hotspot X="4325.084" Y="-1171.347" Z="26.00255" />
+					<Hotspot X="4398.52" Y="-1118.235" Z="25.16836" />
+					<Hotspot X="4485.704" Y="-1187.429" Z="29.54398" />
+					<Hotspot X="4718.439" Y="-1171.345" Z="70.50551" />
+					<Hotspot X="4712.101" Y="-1287.346" Z="48.69128" />
+				</Hotspots>
+			</GrindArea>    
+		</SetGrindArea>
+		<GrindUntil Nav="Fly" Condition="IsQuestCompleted(39581)" />
+		
+		<CustomBehavior File="UserSettings" Preset="UserOriginal" />
+	</If>
+	
+	<!-- Bringing Down the Iron Horde -->
+	<If Condition="HasQuest(39586) &amp;&amp; !IsQuestCompleted(39586)" >
+		<CustomBehavior File="RunCode" Code="Logging.Write(System.Windows.Media.Colors.DeepSkyBlue, &quot;[Profile]: Doing Bringing Down the Iron Horde.&quot;);"/>
+		<SetGrindArea>
+		<GrindArea>
+			<TargetMinLevel>90</TargetMinLevel>
+			<TargetMaxLevel>101</TargetMaxLevel>
+			<MaxDistance>40</MaxDistance>
+			<LootRadius>60</LootRadius>
+			<TargetElites>false</TargetElites>
+			<RandomizeHotspots>false</RandomizeHotspots>
+			<!--MobIds>93269 93258 93263 93267</MobIds-->
+			<Factions>2711 16</Factions>
+			<Hotspots>
+				<Hotspot X="3995.995" Y="-1038.174" Z="10.85424" />
+				<Hotspot X="4009.99" Y="-991.3413" Z="4.151664" />
+				<Hotspot X="4025.978" Y="-954.3328" Z="2.855755" />
+				<Hotspot X="4043.565" Y="-913.6269" Z="-2.421661" />
+				<Hotspot X="4052.599" Y="-880.4154" Z="-3.296646" />
+				<Hotspot X="4055.849" Y="-843.7994" Z="0.6057577" />
+				<Hotspot X="4047.755" Y="-822.9185" Z="0.8956938" />
+				<Hotspot X="4025.47" Y="-822.3809" Z="0.9225026" />
+				<Hotspot X="3987.097" Y="-841.7591" Z="4.442079" />
+				<Hotspot X="3954.15" Y="-868.12" Z="-2.15039" />
+				<Hotspot X="3959.305" Y="-915.7809" Z="-0.2490837" />
+				<Hotspot X="3966.816" Y="-953.5924" Z="3.338539" />
+				<Hotspot X="3977.88" Y="-980.1576" Z="4.45827" />
+				<Hotspot X="3998.951" Y="-1013.056" Z="6.402369" />
+			</Hotspots>
+			</GrindArea>    
+		</SetGrindArea>
+		<GrindUntil Nav="Fly" Condition="IsQuestCompleted(39586)" />
+	</If>
+	
+	<!-- Breaking Their Fel Bonds -->
+	<If Condition="HasQuest(39569) &amp;&amp; !IsQuestCompleted(39569)" >
+		<CustomBehavior File="RunCode" Code="Logging.Write(System.Windows.Media.Colors.DeepSkyBlue, &quot;[Profile]: Doing Breaking Their Fel Bonds.&quot;);"/>
+		<SetGrindArea>
+		<GrindArea>
+			<TargetMinLevel>90</TargetMinLevel>
+			<TargetMaxLevel>101</TargetMaxLevel>
+			<MaxDistance>40</MaxDistance>
+			<LootRadius>60</LootRadius>
+			<TargetElites>false</TargetElites>
+			<RandomizeHotspots>true</RandomizeHotspots>
+			<!--MobIds>93269 93258 93263 93267</MobIds-->
+			<Factions>2711 16</Factions>
+			<Hotspots>
+				<Hotspot X="3995.995" Y="-1038.174" Z="10.85424" />
+				<Hotspot X="4009.99" Y="-991.3413" Z="4.151664" />
+				<Hotspot X="4025.978" Y="-954.3328" Z="2.855755" />
+				<Hotspot X="4043.565" Y="-913.6269" Z="-2.421661" />
+				<Hotspot X="4052.599" Y="-880.4154" Z="-3.296646" />
+				<Hotspot X="4055.849" Y="-843.7994" Z="0.6057577" />
+				<Hotspot X="4047.755" Y="-822.9185" Z="0.8956938" />
+				<Hotspot X="4025.47" Y="-822.3809" Z="0.9225026" />
+				<Hotspot X="3987.097" Y="-841.7591" Z="4.442079" />
+				<Hotspot X="3954.15" Y="-868.12" Z="-2.15039" />
+				<Hotspot X="3959.305" Y="-915.7809" Z="-0.2490837" />
+				<Hotspot X="3966.816" Y="-953.5924" Z="3.338539" />
+				<Hotspot X="3977.88" Y="-980.1576" Z="4.45827" />
+				<Hotspot X="3998.951" Y="-1013.056" Z="6.402369" />
+			</Hotspots>
+			</GrindArea>    
+		</SetGrindArea>
+		<GrindUntil Nav="Fly" Condition="IsQuestCompleted(39569)" />
+	</If>
+	
+	<!-- Tooth and Claw -->
+	<If Condition="HasQuest(39582) &amp;&amp; !IsQuestCompleted(39582)" >
+		<CustomBehavior File="RunCode" Code="Logging.Write(System.Windows.Media.Colors.DeepSkyBlue, &quot;[Profile]: Doing Tooth and Claw.&quot;);"/>
+		
+		<SetGrindArea>
+			<GrindArea>
+				<TargetMinLevel>90</TargetMinLevel>
+				<TargetMaxLevel>101</TargetMaxLevel>
+				<MaxDistance>40</MaxDistance>
+				<LootRadius>60</LootRadius>
+				<TargetElites>false</TargetElites>
+				<RandomizeHotspots>false</RandomizeHotspots>
+				<MobIds>89697 89742 89788 89744 92606</MobIds>
+				<!--Factions>38 16</Factions-->
+				<Hotspots>
+					<Hotspot X="3545.813" Y="-238.422" Z="17.35033" />
+					<Hotspot X="3476.671" Y="-258.6608" Z="17.09329" />
+					<Hotspot X="3437.999" Y="-304.2841" Z="16.53019" />
+					<Hotspot X="3457.557" Y="-351.3437" Z="16.83023" />
+					<Hotspot X="3491.32" Y="-430.5136" Z="17.30825" />
+					<Hotspot X="3473.66" Y="-493.4505" Z="15.88444" />
+					<Hotspot X="3502.665" Y="-543.5599" Z="19.78058" />
+					<Hotspot X="3505.793" Y="-593.2919" Z="16.83832" />
+					<Hotspot X="3558.198" Y="-597.6038" Z="19.39368" />
+					<Hotspot X="3502.949" Y="-614.8532" Z="18.37963" />
+					<Hotspot X="3487.518" Y="-630.1892" Z="15.88437" />
+					<Hotspot X="3477.363" Y="-665.5268" Z="15.88441" />
+					<Hotspot X="3386.677" Y="-610.1742" Z="19.78559" />
+					<Hotspot X="3349.021" Y="-584.3904" Z="17.7913" />
+					<Hotspot X="3301.426" Y="-608.6526" Z="15.86822" />
+					<Hotspot X="3209.956" Y="-585.5847" Z="20.384" />
+					<Hotspot X="3148.828" Y="-574.7529" Z="16.39692" />
+					<Hotspot X="3185.646" Y="-522.7712" Z="18.97603" />
+					<Hotspot X="3273.156" Y="-482.2456" Z="18.90883" />
+					<Hotspot X="3232.796" Y="-446.9804" Z="19.79161" />
+					<Hotspot X="3233.746" Y="-390.7409" Z="20.83533" />
+					<Hotspot X="3244.871" Y="-297.2192" Z="21.67673" />
+					<Hotspot X="3272.605" Y="-290.5277" Z="27.44643" />
+					<Hotspot X="3310.84" Y="-297.4228" Z="34.66513" />
+					<Hotspot X="3355.025" Y="-328.5228" Z="18.88749" />
+					<Hotspot X="3379.393" Y="-338.3979" Z="18.35068" />
+					<Hotspot X="3410.118" Y="-290.3115" Z="17.09831" />
+					<Hotspot X="3451.744" Y="-282.1312" Z="15.88428" />
+					<Hotspot X="3457.834" Y="-237.3469" Z="19.18524" />
+					<Hotspot X="3494.24" Y="-261.0664" Z="18.78366" />
+					<Hotspot X="3515.727" Y="-241.6573" Z="18.7283" />
+				</Hotspots>
+			</GrindArea>    
+		</SetGrindArea>
+		<GrindUntil Nav="Fly" Condition="IsQuestCompleted(39582)" />
+	</If>
+	
+	<!-- A Little Wetwork -->
+	<If Condition="HasQuest(39568) &amp;&amp; !IsQuestCompleted(39568)" >
+		<CustomBehavior File="RunCode" Code="Logging.Write(System.Windows.Media.Colors.DeepSkyBlue, &quot;[Profile]: Doing A Little Wetwork.&quot;);"/>
+		
+		<SetGrindArea>
+			<GrindArea>
+				<TargetMinLevel>99</TargetMinLevel>
+				<TargetMaxLevel>101</TargetMaxLevel>
+				<MaxDistance>40</MaxDistance>
+				<LootRadius>60</LootRadius>
+				<TargetElites>false</TargetElites>
+				<RandomizeHotspots>true</RandomizeHotspots>
+				<MobIds></MobIds>
+				<Factions>14 16 2718</Factions>
+				<Hotspots>
+					<Hotspot X="4497.988" Y="-466.9139" Z="11.97806" />
+					<Hotspot X="4611.969" Y="-487.5433" Z="21.74086" />
+					<Hotspot X="4752.319" Y="-482.5305" Z="36.65261" />
+					<Hotspot X="4681.296" Y="-322.3831" Z="4.258523" />
+					<Hotspot X="4758.266" Y="-242.6821" Z="4.211034" />
+					<Hotspot X="4627.497" Y="-258.9672" Z="10.5943" />
+					<Hotspot X="4480.781" Y="-347.3628" Z="31.56784" />
+				</Hotspots>
+				</GrindArea>    
+			</SetGrindArea>
+		<GrindUntil Nav="Fly" Condition="IsQuestCompleted(39568)" />
+	</If>
+	
+	<!-- Bloodied Blades of Zeth'Gol -->
+	<If Condition="HasQuest(39567) &amp;&amp; !IsQuestCompleted(39567)" >
+		<CustomBehavior File="RunCode" Code="Logging.Write(System.Windows.Media.Colors.DeepSkyBlue, &quot;[Profile]: Doing Bloodied Blades of Zeth'Gol.&quot;);"/>
+		
+		<SetGrindArea>
+			<GrindArea>
+				<TargetMinLevel>99</TargetMinLevel>
+				<TargetMaxLevel>101</TargetMaxLevel>
+				<MaxDistance>40</MaxDistance>
+				<LootRadius>60</LootRadius>
+				<TargetElites>false</TargetElites>
+				<RandomizeHotspots>true</RandomizeHotspots>
+				<MobIds></MobIds>
+				<Factions>16 2718</Factions>
+				<Hotspots>
+					<Hotspot X="4039.532" Y="552.5905" Z="144.3611" />
+					<Hotspot X="4066.949" Y="510.654" Z="140.3789" />
+					<Hotspot X="4112.651" Y="476.4109" Z="140.7307" />
+					<Hotspot X="4161.684" Y="507.2393" Z="153.9762" />
+					<Hotspot X="4193.787" Y="488.9006" Z="159.3718" />
+					<Hotspot X="4251.705" Y="475.1672" Z="163.5509" />
+					<Hotspot X="4298.61" Y="459.5405" Z="174.2034" />
+					<Hotspot X="4314.555" Y="426.3798" Z="175.1043" />
+					<Hotspot X="4317.249" Y="359.7144" Z="176.6517" />
+					<Hotspot X="4303.318" Y="408.233" Z="175.5474" />
+					<Hotspot X="4301.896" Y="414.9223" Z="176.089" />
+					<Hotspot X="4273.771" Y="462.7543" Z="166.3339" />
+					<Hotspot X="4233.065" Y="481.0231" Z="161.1108" />
+					<Hotspot X="4196.424" Y="494.9789" Z="160.4004" />
+					<Hotspot X="4188.731" Y="497.9092" Z="159.5535" />
+					<Hotspot X="4125.643" Y="540.8347" Z="154.03" />
+					<Hotspot X="4058.341" Y="555.6857" Z="147.6552" />
+				</Hotspots>
+				</GrindArea>    
+			</SetGrindArea>
+		<GrindUntil Nav="Fly" Condition="IsQuestCompleted(39567)" />
+	</If>
+	
+	<!-- Disarming Sha'naar -->
+	<If Condition="HasQuest(39571) &amp;&amp; !IsQuestCompleted(39571)" >
+		<CustomBehavior File="RunCode" Code="Logging.Write(System.Windows.Media.Colors.DeepSkyBlue, &quot;[Profile]: Doing Disarming Sha'naar.&quot;);"/>
+	
+		<While Condition="!IsQuestCompleted(39571)">
+			<CustomBehavior File="InteractWith" MobId="243794" NonCompeteDistance="0" Range="8" WaitTime="1000" >
+				<HuntingGrounds WaypointVisitStrategy="Random" >
+					<Hotspot X="3443.779" Y="185.3316" Z="148.9178" />
+					<Hotspot X="3420.356" Y="197.1355" Z="144.1732" />
+					<Hotspot X="3377.228" Y="191.8258" Z="142.3794" />
+					<Hotspot X="3335.779" Y="238.0359" Z="136.1336" />
+					<Hotspot X="3314.472" Y="262.7877" Z="122.8392" />
+					<Hotspot X="3284.086" Y="296.2958" Z="116.5722" />
+					<Hotspot X="3288.619" Y="313.7424" Z="117.3613" />
+					<Hotspot X="3316.505" Y="324.8571" Z="125.0149" />
+					<Hotspot X="3315.58" Y="365.539" Z="140.3679" />
+					<Hotspot X="3321.931" Y="406.718" Z="141.0809" />
+					<Hotspot X="3285.693" Y="435.3485" Z="141.1996" />
+					<Hotspot X="3241.906" Y="430.3556" Z="141.4139" />
+					<Hotspot X="3197.858" Y="412.4433" Z="141.5382" />
+					<Hotspot X="3174.771" Y="393.1071" Z="142.1201" />
+					<Hotspot X="3165.622" Y="342.0606" Z="142.1883" />
+				</HuntingGrounds>
+			</CustomBehavior>
+		</While>
+	</If>
+	
+	<!-- Harnessing Their Power -->
+	<If Condition="HasQuest(39573) &amp;&amp; !IsQuestCompleted(39573)" >
+		<CustomBehavior File="RunCode" Code="Logging.Write(System.Windows.Media.Colors.DeepSkyBlue, &quot;[Profile]: Doing Harnessing Their Power.&quot;);"/>
+		<SetGrindArea>
+			<GrindArea>
+				<TargetMinLevel>99</TargetMinLevel>
+				<TargetMaxLevel>101</TargetMaxLevel>
+				<MaxDistance>60</MaxDistance>
+				<LootRadius>60</LootRadius>
+				<TargetElites>false</TargetElites>
+				<RandomizeHotspots>true</RandomizeHotspots>
+				<MobIds>90585 90868</MobIds>
+				<Factions></Factions>
+				<Hotspots>
+					<Hotspot X="3965.461" Y="1069.059" Z="161.804" />
+					<Hotspot X="3945.986" Y="990.3648" Z="159.1595" />
+					<Hotspot X="3942.568" Y="938.5754" Z="157.0977" />
+					<Hotspot X="3939.258" Y="875.6943" Z="152.6843" />
+					<Hotspot X="3961.796" Y="926.2985" Z="152.9039" />
+					<Hotspot X="3906.707" Y="923.7256" Z="153.6452" />
+				</Hotspots>
+				</GrindArea>    
+			</SetGrindArea>
+		<GrindUntil Nav="Fly" Condition="IsQuestCompleted(39573)" />
+	</If>
+	
+	<!-- Unseen Influence -->
+	<If Condition="HasQuest(39433) &amp;&amp; !IsQuestCompleted(39433)" >
+		<CustomBehavior File="RunCode" Code="Logging.Write(System.Windows.Media.Colors.DeepSkyBlue, &quot;[Profile]: Doing Unseen Influence.&quot;);"/>
+	
+		<!-- If we are doing pressing the attack, do ruins of kranak and Unseen Influence together -->
+		<If Condition="HasQuest(39574) &amp;&amp; !IsQuestCompleted(39574) &amp;&amp; !IsQuestCompleted(38250)" >
+			<CustomBehavior File="RunCode" Code="Logging.Write(System.Windows.Media.Colors.DeepSkyBlue, &quot;[Profile]: Also doing bonus objective for Pressing the Attack.&quot;);"/>
+			<CustomBehavior File="NoCombatMoveTo" X="4544.962" Y="451.8818" Z="229.8152" />
+			<CustomBehavior File="UserSettings" KillBetweenHotspots="true" />
+			<CustomBehavior File="InteractWith" MobIds="90795, 90300, 90706, 90790, 90791, 90796, 90792, 243852" NumOfTimes="100" WaitTime="1500" TerminateWhen="IsQuestCompleted(39447)" >
+				<HuntingGrounds WaypointVisitStrategy="Random" >
+					<Hotspot X="4546.808" Y="486.0171" Z="226.6106" />
+					<Hotspot X="4639.002" Y="608.1016" Z="204.4243" />
+					<Hotspot X="4523.261" Y="653.3411" Z="175.3183" />
+					<Hotspot X="4409.374" Y="820.7141" Z="175.4831" />
+				</HuntingGrounds>
+			</CustomBehavior>
+		</If>
+		
+		<!-- If we got other quests in this area, kill everything -->
+		<If Condition="(HasQuest(39570) &amp;&amp; !IsQuestCompleted(39570)) || (HasQuest(38250) &amp;&amp; !IsQuestCompleted(38250))" >
+			<CustomBehavior File="UserSettings" KillBetweenHotspots="true" />
+		</If>
+		<Else>
+			<CustomBehavior File="UserSettings" KillBetweenHotspots="false" />
+		</Else>
+		
+		<!-- Do the rest of Unseen Influence if needed -->
+		<CustomBehavior File="InteractWith" MobId="243852" NumOfTimes="100" WaitTime="1500" TerminateWhen="IsQuestCompleted(39433)" >
+			<HuntingGrounds WaypointVisitStrategy="Random" >
+				<Hotspot X="4546.808" Y="486.0171" Z="226.6106" />
+				<Hotspot X="4639.002" Y="608.1016" Z="204.4243" />
+				<Hotspot X="4523.261" Y="653.3411" Z="175.3183" />
+				<Hotspot X="4409.374" Y="820.7141" Z="175.4831" />
+			</HuntingGrounds>
+		</CustomBehavior>
+		
+		<CustomBehavior File="UserSettings" Preset="UserOriginal" />
+	</If>
+	
+	<!-- Secrets of the Shadow Council -->
+	<If Condition="HasQuest(39570) &amp;&amp; !IsQuestCompleted(39570)" >
+		<CustomBehavior File="RunCode" Code="Logging.Write(System.Windows.Media.Colors.DeepSkyBlue, &quot;[Profile]: Doing Secrets of the Shadow Council.&quot;);"/>
+		<SetGrindArea>
+			<GrindArea>
+				<TargetMinLevel>99</TargetMinLevel>
+				<TargetMaxLevel>101</TargetMaxLevel>
+				<MaxDistance>45</MaxDistance>
+				<LootRadius>60</LootRadius>
+				<TargetElites>false</TargetElites>
+				<RandomizeHotspots>false</RandomizeHotspots>
+				<MobIds></MobIds>
+				<Factions>16</Factions>
+				<Hotspots>
+					<Hotspot X="4547.013" Y="449.2588" Z="229.8684" />
+					<Hotspot X="4555.957" Y="536.5192" Z="229.2842" />
+					<Hotspot X="4640.212" Y="578.2678" Z="201.7227" />
+					<Hotspot X="4666.338" Y="619.4261" Z="204.9169" />
+					<Hotspot X="4592.031" Y="621.0432" Z="201.358" />
+					<Hotspot X="4519.438" Y="654.9599" Z="175.5802" />
+					<Hotspot X="4476.47" Y="785.5797" Z="181.1243" />
+					<Hotspot X="4396.728" Y="814.7548" Z="174.9204" />
+					<Hotspot X="4483.399" Y="594.6462" Z="209.2016" />
+					<Hotspot X="4537.519" Y="517.9146" Z="229.2548" />
+				</Hotspots>
+				</GrindArea>    
+			</SetGrindArea>
+		<GrindUntil Nav="Fly" Condition="IsQuestCompleted(39570)" />
+	</If>
+	
+	<!-- Pressing the attack -->
+	<If Condition="HasQuest(39574)" >
+		<CustomBehavior File="UserSettings" KillBetweenHotspots="true" />
+		
+		<!-- Ruins of Kra'nak -->
+		<If Condition="!IsQuestCompleted(39574) &amp;&amp; !IsQuestCompleted(38250)" >
+			<CustomBehavior File="RunCode" Code="Logging.Write(System.Windows.Media.Colors.DeepSkyBlue, &quot;[Profile]: Moving to Ruins of Kra'nak for Pressing the Attack.&quot;);"/>
+			<CustomBehavior File="NoCombatMoveTo" X="4544.962" Y="451.8818" Z="229.8152" />
+			
+			<CustomBehavior File="InteractWith" MobIds="90795, 90300, 90706, 90790, 90791, 90796, 90792, 243852" NumOfTimes="100" WaitTime="1500" TerminateWhen="IsQuestCompleted(39447)" >
+				<HuntingGrounds WaypointVisitStrategy="Random" >
+					<Hotspot X="4546.808" Y="486.0171" Z="226.6106" />
+					<Hotspot X="4639.002" Y="608.1016" Z="204.4243" />
+					<Hotspot X="4523.261" Y="653.3411" Z="175.3183" />
+					<Hotspot X="4409.374" Y="820.7141" Z="175.4831" />
+				</HuntingGrounds>
+			</CustomBehavior>
+		</If>
+	
+		<!-- Iron front -->
+		<If Condition="!IsQuestCompleted(39574) &amp;&amp; !IsQuestCompleted(38046)" >
+			<CustomBehavior File="RunCode" Code="Logging.Write(System.Windows.Media.Colors.DeepSkyBlue, &quot;[Profile]: Moving to The Iron Front for Pressing the Attack.&quot;);"/>
+			<CustomBehavior File="NoCombatMoveTo" X="4040.78" Y="1201.05" Z="156.1725" />
+			
+			<!-- if not in combat, and first aid bandages is less or equal 2 and medical supplies within 30 yard range, pick up medical supplies -->
+			<CustomBehavior File="Hooks\DoWhen" ActivityName="PickUpBandage" 
+							UseWhen="(!Me.Combat) &amp;&amp; (GetItemCount(122139) == 0) &amp;&amp; (Object(239971, o =&gt; o.Distance &lt; 30) != null)" >
+				<CustomBehavior File="InteractWith" WaitTime="3000" MobId="239971" NumOfTimes="100" CollectionDistance="45" PreInteractMountStrategy="Dismount" 
+								TerminateWhen="GetItemCount(122139) != 0 || Object(239971, o =&gt; o.Distance &lt; 45) == null" />
+			</CustomBehavior>
+
+			<!-- if not in combat, and first aid bandages is greater or equal 1 and injured footsoldier or iron horde banner within 30 yard range, pick up medical supplies -->
+			<CustomBehavior File="Hooks\DoWhen" ActivityName="InteractWithObject" 
+							UseWhen="(!Me.Combat) &amp;&amp; (GetItemCount(122139) &gt;= 1) &amp;&amp; ((Unit(90443, o =&gt; o.Distance &lt; 30 &amp;&amp; o.HealthPercent &lt; 50 ) != null) || (Unit(90370, o =&gt; o.Distance &lt; 30) != null))" >
+				<CustomBehavior File="InteractWith" WaitTime="3000" MobIds="90443, 90370" NumOfTimes="100" Range="3" CollectionDistance="45" PreInteractMountStrategy="Dismount" 
+								TerminateWhen="(GetItemCount(122139) &lt;= 0) || ((Unit(90443, o =&gt; o.Distance &lt; 45 &amp;&amp; o.HealthPercent &lt;= 50 ) == null) &amp;&amp; (Unit(90370, o =&gt; o.Distance &lt; 45) == null))" />
+			</CustomBehavior>
+				
+			<SetGrindArea>
+				<GrindArea>
+					<TargetMinLevel>99</TargetMinLevel>
+					<TargetMaxLevel>101</TargetMaxLevel>
+					<MaxDistance>50</MaxDistance>
+					<LootRadius>60</LootRadius>
+					<TargetElites>false</TargetElites>
+					<RandomizeHotspots>true</RandomizeHotspots>
+					<MobIds></MobIds>
+					<Factions>14</Factions>
+					<Hotspots>
+						<Hotspot X="3973.398" Y="1147.4" Z="162.937" />
+						<Hotspot X="3897.893" Y="1019.773" Z="161.0709" />
+						<Hotspot X="3945.316" Y="917.3094" Z="152.7068" />
+						<Hotspot X="3973.105" Y="1025.8" Z="162.672" />
+					</Hotspots>
+					</GrindArea>    
+				</SetGrindArea>
+			<GrindUntil Nav="Fly" Condition="IsQuestCompleted(38866)" />
+			
+			<CustomBehavior File="Hooks\DoWhen" ActivityName="PickUpBandage" Command="Remove" />
+			<CustomBehavior File="Hooks\DoWhen" ActivityName="InteractWithObject" Command="Remove" />
+		</If>
+		
+		<!-- Zeth'gol -->
+		<If Condition="!IsQuestCompleted(39574) &amp;&amp; !IsQuestCompleted(39441)" >
+			<CustomBehavior File="RunCode" Code="Logging.Write(System.Windows.Media.Colors.DeepSkyBlue, &quot;[Profile]: Moving to Zeth'gol for Pressing the Attack.&quot;);"/>
+			<CustomBehavior File="NoCombatMoveTo" X="3963.603" Y="563.5723" Z="126.7109" />
+			
+			<CustomBehavior File="InteractWith" MobId="90704" NumOfTimes="100" WaitTime="1500" TerminateWhen="IsQuestCompleted(39441)" >
+			<HuntingGrounds WaypointVisitStrategy="Random" >
+				<Hotspot X="4039.532" Y="552.5905" Z="144.3611" />
+				<Hotspot X="4066.949" Y="510.654" Z="140.3789" />
+				<Hotspot X="4112.651" Y="476.4109" Z="140.7307" />
+				<Hotspot X="4161.684" Y="507.2393" Z="153.9762" />
+				<Hotspot X="4193.787" Y="488.9006" Z="159.3718" />
+				<Hotspot X="4251.705" Y="475.1672" Z="163.5509" />
+				<Hotspot X="4298.61" Y="459.5405" Z="174.2034" />
+				<Hotspot X="4314.555" Y="426.3798" Z="175.1043" />
+				<Hotspot X="4317.249" Y="359.7144" Z="176.6517" />
+				<Hotspot X="4303.318" Y="408.233" Z="175.5474" />
+				<Hotspot X="4301.896" Y="414.9223" Z="176.089" />
+				<Hotspot X="4273.771" Y="462.7543" Z="166.3339" />
+				<Hotspot X="4233.065" Y="481.0231" Z="161.1108" />
+				<Hotspot X="4196.424" Y="494.9789" Z="160.4004" />
+				<Hotspot X="4188.731" Y="497.9092" Z="159.5535" />
+				<Hotspot X="4125.643" Y="540.8347" Z="154.03" />
+				<Hotspot X="4058.341" Y="555.6857" Z="147.6552" />
+			</HuntingGrounds>
+		</CustomBehavior>
+		</If>
+		
+		<CustomBehavior File="UserSettings" Preset="UserOriginal" />
+	</If>
+	
+	<!-- END OF DO QUESTS -->
+	
+	<While Condition="Me.BagItems.FirstOrDefault(h => h.Entry == 6948).Cooldown == 0"> <!-- HS -->
+		<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(&quot;item:6948&quot;)" WaitTime="15000" />
+	</While>
+	
+	<!-- TURN IN QUESTS -->
+	
+	<!-- Demonslayer of Tanaan -->
+	<If Condition="HasQuest(39581) &amp;&amp; IsQuestCompleted(39581)" >
+		<TurnIn Nav="Fly" QuestName="Demonslayer of Tanaan" QuestId="39581" TurnInName="Parvink" TurnInId="96147" X="3840.701" Y="-1327.689" Z="94.02089" />
+	</If>
+	<!-- Tooth and Claw -->
+	<If Condition="HasQuest(39582) &amp;&amp; IsQuestCompleted(39582)" >
+		<TurnIn Nav="Fly" QuestName="Tooth and Claw" QuestId="39582" TurnInName="Parvink" TurnInId="96147" X="3840.701" Y="-1327.689" Z="94.02089" />
+	</If>
+	<!-- Bringing Down the Iron Horde -->
+	<If Condition="HasQuest(39586) &amp;&amp; IsQuestCompleted(39586)" >
+		<TurnIn Nav="Fly" QuestName="Bringing Down the Iron Horde" QuestId="39586" TurnInName="Parvink" TurnInId="96147" X="3840.701" Y="-1327.689" Z="94.02089" />
+	</If>
+	
+	<!-- Unseen Influence -->
+	<If Condition="HasQuest(39433) &amp;&amp; IsQuestCompleted(39433)" >
+		<TurnIn Nav="Fly" QuestName="Unseen Influence" QuestId="39433" TurnInName="Dawn-Seeker Krisek" TurnInId="95424" X="3855.705" Y="-1335.908" Z="91.15343" />
+	</If>
+
+	<!-- A Little Wetwork -->
+	<If Condition="HasQuest(39568) &amp;&amp; IsQuestCompleted(39568)" >
+		<TurnIn Nav="Fly" QuestName="A Little Wetwork" QuestId="39568" TurnInName="Vindicator Krethos" TurnInId="90974" X="3816.47" Y="-1359.184" Z="94.92266" />
+	</If>
+	
+	<!-- Bloodied Blades of Zeth'Gol -->
+	<If Condition="HasQuest(39567) &amp;&amp; IsQuestCompleted(39567)" >
+		<TurnIn Nav="Fly" QuestName="Bloodied Blades of Zeth'Gol" QuestId="39567" TurnInName="Vindicator Krethos" TurnInId="90974" X="3816.47" Y="-1359.184" Z="94.92266" />
+	</If>
+	
+	<!-- Breaking Their Fel Bonds -->
+	<If Condition="HasQuest(39569) &amp;&amp; IsQuestCompleted(39569)" >
+		<TurnIn Nav="Fly" QuestName="Breaking Their Fel Bonds" QuestId="39569" TurnInName="Vindicator Krethos" TurnInId="90974" X="3816.47" Y="-1359.184" Z="94.92266" />
+	</If>
+	
+	<!-- Disarming Sha'naar -->
+	<If Condition="HasQuest(39571) &amp;&amp; IsQuestCompleted(39571)" >
+		<TurnIn Nav="Fly" QuestName="Disarming Sha'naar" QuestId="39571" TurnInName="Vindicator Krethos" TurnInId="90974" X="3816.47" Y="-1359.184" Z="94.92266" />
+	</If>
+	
+	<!-- Harnessing Their Power -->
+	<If Condition="HasQuest(39573) &amp;&amp; IsQuestCompleted(39573)" >
+		<TurnIn Nav="Fly" QuestName="Harnessing Their Power" QuestId="39573" TurnInName="Vindicator Krethos" TurnInId="90974" X="3816.47" Y="-1359.184" Z="94.92266" />
+	</If>
+
+	<!-- Secrets of the Shadow Council -->
+	<If Condition="HasQuest(39570) &amp;&amp; IsQuestCompleted(39570)" >
+		<TurnIn Nav="Fly" QuestName="Secrets of the Shadow Council" QuestId="39570" TurnInName="Vindicator Krethos" TurnInId="90974" X="3816.47" Y="-1359.184" Z="94.92266" />
+	</If>
+	
+	<!-- Pressing the Attack -->
+	<If Condition="HasQuest(39574) &amp;&amp; IsQuestCompleted(39574)" >
+		<TurnIn Nav="Fly" QuestName="Pressing the Attack" QuestId="39574" TurnInName="Vindicator Krethos" TurnInId="90974" X="3816.47" Y="-1359.184" Z="94.92266" />
+	</If>
+	
+	<CustomBehavior File="RunCode" Code="Styx.CommonBot.TreeRoot.Stop(&quot;Profile complete...&quot;)" />
+</QuestOrder>
+</HBProfile>

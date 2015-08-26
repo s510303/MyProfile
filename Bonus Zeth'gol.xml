@@ -1,0 +1,66 @@
+<HBProfile>
+<Name>[Q]Bonus Ruins of Ruins of Kra'nak - OppLy</Name>
+
+<MinDurability>0.4</MinDurability>
+<MinFreeBagSlots>1</MinFreeBagSlots>
+
+<MinLevel>97</MinLevel>
+<MaxLevel>101</MaxLevel>
+
+<MailGrey>false</MailGrey>
+<MailWhite>false</MailWhite>
+<MailGreen>false</MailGreen>
+<MailBlue>false</MailBlue>
+<MailPurple>false</MailPurple>
+
+<SellGrey>true</SellGrey>
+<SellWhite>false</SellWhite>
+<SellGreen>false</SellGreen>
+<SellBlue>false</SellBlue>
+<SellPurple>false</SellPurple>
+
+<AvoidMobs>
+</AvoidMobs>
+
+<Vendors>
+</Vendors>
+
+<Mailboxes>
+</Mailboxes>
+
+<Blackspots>
+</Blackspots>
+
+<QuestOrder>
+
+	<CustomBehavior File="UserSettings" KillBetweenHotspots="true" />
+	
+	<CustomBehavior File="InteractWith" MobId="90704" NumOfTimes="100" WaitTime="1500" TerminateWhen="IsQuestCompleted(39441)" >
+		<HuntingGrounds WaypointVisitStrategy="Random" >
+			<Hotspot X="4039.532" Y="552.5905" Z="144.3611" />
+			<Hotspot X="4066.949" Y="510.654" Z="140.3789" />
+			<Hotspot X="4112.651" Y="476.4109" Z="140.7307" />
+			<Hotspot X="4161.684" Y="507.2393" Z="153.9762" />
+			<Hotspot X="4193.787" Y="488.9006" Z="159.3718" />
+			<Hotspot X="4251.705" Y="475.1672" Z="163.5509" />
+			<Hotspot X="4298.61" Y="459.5405" Z="174.2034" />
+			<Hotspot X="4314.555" Y="426.3798" Z="175.1043" />
+			<Hotspot X="4317.249" Y="359.7144" Z="176.6517" />
+			<Hotspot X="4303.318" Y="408.233" Z="175.5474" />
+			<Hotspot X="4301.896" Y="414.9223" Z="176.089" />
+			<Hotspot X="4273.771" Y="462.7543" Z="166.3339" />
+			<Hotspot X="4233.065" Y="481.0231" Z="161.1108" />
+			<Hotspot X="4196.424" Y="494.9789" Z="160.4004" />
+			<Hotspot X="4188.731" Y="497.9092" Z="159.5535" />
+			<Hotspot X="4125.643" Y="540.8347" Z="154.03" />
+			<Hotspot X="4058.341" Y="555.6857" Z="147.6552" />
+		</HuntingGrounds>
+	</CustomBehavior>
+	
+	<CustomBehavior File="UserSettings" Preset="UserOriginal" />
+	
+	<CustomBehavior File="NoCombatMoveTo" X="3723.544" Y="156.7639" Z="56.12444"  />
+
+	<CustomBehavior File="RunCode" Code="Styx.CommonBot.TreeRoot.Stop(&quot;Profile complete...&quot;)" />
+</QuestOrder>
+</HBProfile>
