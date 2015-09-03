@@ -656,12 +656,16 @@
 <!-- START Quest Treasure Contract: Gutrek's Cleaver-->
 	<!--Part 1 -->
 	<If Condition="HasQuest(37788) &amp;&amp; !IsQuestCompleted(37788)">
+    <CustomBehavior File="FlyTo" DestName="靈魂熔爐Part01" X="4000.829" Y="7048.848" Z="64.7029"/>
+    <CustomBehavior File="ForcedDismount"/>
 		<CustomBehavior File="NoCombatMoveTo" X="4000.829" Y="7048.848" Z="64.7029" />
 		<Objective QuestName="Treasure Contract: Gutrek's Cleaver" QuestId="37788" Type="CollectItem" ItemId="121822" CollectCount="5" />
 		<CustomBehavior File="CompleteLogQuest" QuestId="37788" />
 	</If>
 	<!--Part 2 -->
 	<While Condition="HasQuest(37797) &amp;&amp; !IsQuestCompleted(37797)">
+    <CustomBehavior File="FlyTo" DestName="靈魂熔爐Part02" X="4361.025" Y="7055.404" Z="119.9126"/>
+    <CustomBehavior File="ForcedDismount"/>
 		<CustomBehavior File="NoCombatMoveTo" X="4361.025" Y="7055.404" Z="119.9126" />
 		<CustomBehavior File="InteractWith" QuestId="37797" MobId="239772" ProactiveCombatStrategy="ClearMobsTargetingUs"
 								NonCompeteDistance="0" Range="5" WaitTime="10000" X="4361.025" Y="7055.404" Z="119.9126"  /> 
@@ -671,7 +675,9 @@
 	</While> <!-- Duplicate while loop because errors when complete was combined -->
 	<!--Part 3 -->
 	<If Condition="HasQuest(37798) &amp;&amp; !IsQuestCompleted(37798)">
-		<CustomBehavior File="NoCombatMoveTo" X="3428.431" Y="7121.698" Z="1.024586" />
+    <CustomBehavior File="FlyTo" DestName="靈魂熔爐Part03" X="3428.431" Y="7121.698" Z="1.024586"/>
+    <CustomBehavior File="ForcedDismount"/>
+		<!--<CustomBehavior File="NoCombatMoveTo" X="3428.431" Y="7121.698" Z="1.024586" />-->
 	</If>
 	<While Condition="HasQuest(37798) &amp;&amp; !IsQuestCompleted(37798)">
 		<CustomBehavior File="InteractWith" QuestId="37798" MobId="239771" ProactiveCombatStrategy="ClearMobsTargetingUs"
@@ -682,21 +688,25 @@
 	</While> 
 	<!--Part 4 -->
 	<If Condition="HasQuest(37799) &amp;&amp; !IsQuestCompleted(37799)">
-		<CustomBehavior File="NoCombatMoveTo" X="4523.706" Y="6104.553" Z="121.6851" />
-		<MoveTo X="4511.001" Y="6144.386" Z="121.1665" /> <!-- get onto ledge to get blade -->
-		<CustomBehavior File="MyCTM" X="4512.603" Y="6145.803" Z="122.7431" />
+		<!--<CustomBehavior File="NoCombatMoveTo" X="4523.706" Y="6104.553" Z="121.6851" />-->
+    <CustomBehavior File="FlyTo" DestName="靈魂熔爐Part04" X="4460.963" Y="6197.349" Z="121.3917"  />
+    <!--<CustomBehavior File="ForcedDismount"/>-->
+		<!--<MoveTo X="4511.001" Y="6144.386" Z="121.1665" />--> <!-- get onto ledge to get blade -->
+		<!--<CustomBehavior File="MyCTM" X="4512.603" Y="6145.803" Z="122.7431" />
 		<CustomBehavior File="MyCTM" X="4513.347" Y="6147.603" Z="122.732" />
 		<CustomBehavior File="MyCTM" X="4510.747" Y="6152.306" Z="121.6186" />
 		<CustomBehavior File="MyCTM" X="4493.614" Y="6183.984" Z="121.2077" />
-		<CustomBehavior File="MyCTM" X="4463.773" Y="6199.372" Z="122.5683" />
+		<CustomBehavior File="MyCTM" X="4463.773" Y="6199.372" Z="122.5683" />-->
 		<CustomBehavior File="ForcedDismount" />
-		<CustomBehavior File="MyCTM" X="4458.646" Y="6190.307" Z="122.523" />
-		<CustomBehavior File="MyCTM" X="4456.374" Y="6187.68" Z="124.7946"  />
-		<CustomBehavior File="MyCTM" X="4454.646" Y="6187.619" Z="125.204" />
+		<CustomBehavior File="MyCTM" X="4457.798" Y="6189.583" Z="122.2963"/>
+    <CustomBehavior File="Misc\RunLua" Lua="JumpOrAscendStart();" WaitTime="200" />
+    <CustomBehavior File="WaitTimer" WaitTime="3000"/>
+		<CustomBehavior File="MyCTM" X="4456.515" Y="6187.287" Z="125.0109"/>
+    <CustomBehavior File="WaitTimer" WaitTime="3000"/>
+    <!--<CustomBehavior File="MyCTM" X="4454.646" Y="6187.619" Z="125.204" />-->
 	</If>
 	<While Condition="HasQuest(37799) &amp;&amp; !IsQuestCompleted(37799)">
-		<CustomBehavior File="InteractWith" QuestId="37799" MobId="239768" CollectionDistance="10"
-					NonCompeteDistance="0" WaitTime="5000" X="4454.646" Y="6187.619" Z="125.204" /> 
+    <CustomBehavior File="InteractWith" QuestId="37799" MobId="239768" PreInteractMountStrategy="Dismount" CollectionDistance="6" WaitTime="5000" X="4454.606" Y="6185.149" Z="129.6265" />
 	</While>
 	<While Condition="HasQuest(37799) &amp;&amp; IsQuestCompleted(37799)">
 		<CustomBehavior File="CompleteLogQuest" QuestId="37799" /> 
@@ -704,11 +714,15 @@
 	<!--Part 5 -->
 <If Condition="Me.IsAlliance">
 	<If Condition="HasQuest(37811) &amp;&amp; !IsQuestCompleted(37811) &amp;&amp; Me.Location.Distance(new WoWPoint(4441.851,6174.493,107.4943)) &lt; 60">
-		<CustomBehavior File="MyCTM" X="4441.851" Y="6174.493" Z="107.4943" />
+		<!--<CustomBehavior File="MyCTM" X="4441.851" Y="6174.493" Z="107.4943" />-->
+    <CustomBehavior File="FlyTo" DestName="靈魂熔爐Part05" X="4441.851" Y="6174.493" Z="107.4943"  />
+    <!--<CustomBehavior File="ForcedDismount"/>-->
 		<CustomBehavior File="WaitTimer" WaitTime="3000" GoalText="Avoiding Mesh Errors" />
 	</If>
 	<If Condition="HasQuest(37811) &amp;&amp; !IsQuestCompleted(37811)" >
-		<CustomBehavior File="NoCombatMoveTo" X="3925.273" Y="6290.81" Z="-17.04812" />
+    <CustomBehavior File="FlyTo" DestName="靈魂熔爐Part05" X="3925.273" Y="6290.81" Z="-17.04812"/>
+    <CustomBehavior File="ForcedDismount"/>
+		<!--<CustomBehavior File="NoCombatMoveTo" X="3925.273" Y="6290.81" Z="-17.04812" />-->
 		<MoveTo X="3914.868" Y="6323.017" Z="-16.20399" />
 		<CustomBehavior File="WaitTimer" WaitTime="3000" GoalText="Hoping to clear aggro {TimeRemaining}" TerminateWhen="!Me.Combat" /> 
 	</If>
