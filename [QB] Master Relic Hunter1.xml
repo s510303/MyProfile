@@ -1,0 +1,1065 @@
+<HBProfile>
+<Name>Master Relic Hunter - by ArmyDr</Name>
+<!-- Version 1.31 Release 24 April 2015-->
+<!-- Now Includes Horde-->
+<MinLevel>99</MinLevel>
+<MaxLevel>1001</MaxLevel>
+
+<MinDurability>0.2</MinDurability>
+<MinFreeBagSlots>1</MinFreeBagSlots>
+
+<SellGrey>true</SellGrey>
+<SellWhite>false</SellWhite>
+<SellGreen>false</SellGreen>
+<SellBlue>false</SellBlue>
+<SellPurple>false</SellPurple>
+
+<MailGrey>false</MailGrey>
+<MailWhite>false</MailWhite>
+<MailGreen>false</MailGreen>
+<MailBlue>false</MailBlue>
+<MailPurple>false</MailPurple>
+
+<Vendors>
+</Vendors>
+
+<Mailboxes>
+</Mailboxes>
+
+<AvoidMobs>
+	<Mob Name="Disturbing Vision" Entry="90268" />
+	<Mob Name="Direfang Alpha" Entry="86932" />
+	<Mob Name="Marsh Anaconda" Entry="87039" />
+	<Mob Name="Vicious Razorclaw" Entry="88956"  />
+	<Mob Name="Deadly Gloomstalker" Entry="86773" />
+	<Mob Name="Hulking Gronn" Entry="86768"  />
+	<Mob Name="Icecrag Mountainbreaker" Entry="87346" />
+</AvoidMobs>
+
+<Blackspots>
+</Blackspots>
+
+<!-- Quest Ids and Hotspots -->
+<Quest Id="37941" Name="Treasure Contract: The Infected Orc" >
+   <Objective Type="KillMob" MobId="90333" KillCount="1" >
+		<Hotspots>
+			<Hotspot X="7971.349" Y="-568.2916" Z="136.15" />
+			<Hotspot X="7954.259" Y="-646.7253" Z="130.5419" />
+			<Hotspot X="7898.982" Y="-704.9903" Z="122.0294" />
+			<Hotspot X="7820.476" Y="-720.8006" Z="117.7847" />
+			<Hotspot X="7743.352" Y="-741.9897" Z="124.0096" />
+			<Hotspot X="7663.469" Y="-757.0162" Z="121.5951" />
+			<Hotspot X="7595.456" Y="-793.0801" Z="98.08349" />
+			<Hotspot X="7656.187" Y="-846.5992" Z="95.64191" />
+			<Hotspot X="7585.432" Y="-885.4657" Z="96.4948" />
+			<Hotspot X="7507.303" Y="-867.292" Z="95.76141" />
+			<Hotspot X="7426.661" Y="-876.585" Z="96.09743" />
+			<Hotspot X="7381.66" Y="-937.228" Z="100.1452" />
+			<Hotspot X="7347.829" Y="-892.8362" Z="99.07923" />
+			<Hotspot X="7316.417" Y="-829.6131" Z="99.31116" />
+			<Hotspot X="7308.623" Y="-822.8181" Z="98.44745" />
+			<Hotspot X="7228.905" Y="-808.6149" Z="97.71107" />
+			<Hotspot X="7221.266" Y="-807.8071" Z="98.21074" />
+			<Hotspot X="7316.796" Y="-809.2117" Z="99.68559" />
+			<Hotspot X="7342.741" Y="-885.6368" Z="99.82996" />
+			<Hotspot X="7416.81" Y="-916.7234" Z="96.94482" />
+			<Hotspot X="7497.297" Y="-911.1669" Z="95.58083" />
+			<Hotspot X="7557.868" Y="-858.5589" Z="95.7636" />
+			<Hotspot X="7607.117" Y="-795.373" Z="98.51937" />
+			<Hotspot X="7669.47" Y="-750.6749" Z="121.5082" />
+			<Hotspot X="7738.869" Y="-709.1497" Z="121.5631" />
+			<Hotspot X="7817.814" Y="-693.8166" Z="117.3643" />
+			<Hotspot X="7895.757" Y="-714.5513" Z="120.7344" />
+			<Hotspot X="7951.098" Y="-656.433" Z="130.5179" />
+			<Hotspot X="7943.52" Y="-539.4052" Z="137.1541" />
+		</Hotspots>
+	</Objective>
+</Quest>
+
+<Quest Id="37848" Name="Treasure Contract: Amulet of Rukhmar">
+        <Objective Type="CollectItem" ItemId="121819" ItemName="Research Notes" CollectCount="5">
+            <Hotspots>
+				<Hotspot X="989.7451" Y="1764.942" Z="309.1845" />
+				<Hotspot X="1056.057" Y="1482.403" Z="307.6382" />
+				<Hotspot X="1028.376" Y="1359.077" Z="279.228" />
+				<Hotspot X="935.326" Y="1381.274" Z="285.829" />
+				<Hotspot X="889.1485" Y="1424.815" Z="277.3955" />
+				<Hotspot X="841.8859" Y="1476.815" Z="327.7555" />
+				<Hotspot X="901.3129" Y="1577.118" Z="310.7788" />
+				<Hotspot X="921.3799" Y="1673.265" Z="306.2461" />
+            </Hotspots>
+        </Objective>
+ </Quest>
+ 
+ <Quest Id="37881" Name="Treasure Contract: Explosive Discoveries">
+		<Objective Type="KillMob" MobId="90107" KillCount="1" >
+            <Hotspots>
+				<Hotspot X="-1534.553" Y="-1605.837" Z="8.595935" />
+				<Hotspot X="-1431.328" Y="-1458.443" Z="4.569629" />
+            </Hotspots>
+        </Objective>
+ </Quest>
+ 
+ <Quest Id="37884" Name="Dark Grimoire: The Final Ingredient">
+		<Objective  Type="CollectItem" ItemId="121832" CollectCount="5" >
+             <Hotspots>
+				<Hotspot X="-925.1317" Y="-913.3357" Z="97.50094" />
+				<Hotspot X="-936.5329" Y="-788.7631" Z="133.6631" />
+				<Hotspot X="-845.9927" Y="-937.8156" Z="94.42501" />
+				<Hotspot X="-734.509" Y="-1016.04" Z="91.18143" />
+				<Hotspot X="-720.0231" Y="-1153.336" Z="76.12836" />
+				<Hotspot X="-914.3391" Y="-1077.412" Z="98.73445" />
+            </Hotspots>
+        </Objective>
+ </Quest>
+
+ <Quest Id="37788" Name="Treasure Contract: Gutrek's Cleaver">
+        <Objective Type="CollectItem" ItemId="121822" CollectCount="5">
+            <Hotspots>
+				<Hotspot X="4013.778" Y="7173.556" Z="68.97031" />
+				<Hotspot X="4157.846" Y="7288.507" Z="97.42833" />
+				<Hotspot X="4320.818" Y="7229.777" Z="108.8382" />
+				<Hotspot X="4413.525" Y="7108.964" Z="133.2433" />
+				<Hotspot X="4317.664" Y="7006.877" Z="133.2448" />
+            </Hotspots>
+        </Objective>
+ </Quest>
+ 
+<!-- .................................................................................................................................. -->
+<QuestOrder>
+<!-- Settings -->
+<CustomBehavior File="UserSettings" KillBetweenHotspots="True"/>
+<CustomBehavior File="UserSettings" AutoEquip="False"/>
+<CustomBehavior File="Misc\RunLua" Lua="LeaveParty()" WaitTime="500" /> <!-- Quests are not done well in party, also to leave raid -->
+<LootMobs Value="true" />
+
+
+<!--Pickup a Treasure Contract Quest if Available -->
+	<If Condition="!HasQuest(37941) &amp;&amp; !HasQuest(37942) &amp;&amp; !HasQuest(37943) &amp;&amp; !HasQuest(37944) &amp;&amp; !HasQuest(37945)
+	 &amp;&amp; !HasQuest(37848) &amp;&amp; !HasQuest(37849) &amp;&amp; !HasQuest(37850) &amp;&amp; !HasQuest(37851) &amp;&amp; !HasQuest(37852)
+	 &amp;&amp; !HasQuest(37881) &amp;&amp; !HasQuest(37882) &amp;&amp; !HasQuest(37883) &amp;&amp; !HasQuest(37884) &amp;&amp; !HasQuest(37885)
+	 &amp;&amp; !HasQuest(37788) &amp;&amp; !HasQuest(37797) &amp;&amp; !HasQuest(37798) &amp;&amp; !HasQuest(37799) &amp;&amp; !HasQuest(37811)	
+	 &amp;&amp; !HasQuest(37973) &amp;&amp; !HasQuest(37976) &amp;&amp; !HasQuest(37977) &amp;&amp; !HasQuest(37978) &amp;&amp; !HasQuest(37979)
+	 &amp;&amp; !HasQuest(37914) &amp;&amp; !HasQuest(37916) &amp;&amp; !HasQuest(37917) &amp;&amp; !HasQuest(37918) &amp;&amp; !HasQuest(37919) 
+	 &amp;&amp; !HasQuest(37993) &amp;&amp; !HasQuest(37992) &amp;&amp; !HasQuest(37997) &amp;&amp; !HasQuest(37994) &amp;&amp; !HasQuest(37995) &amp;&amp; !HasQuest(37996)" ><!-- last line horde quests-->
+	 <!-- HS if not in garrison when picking up first Relic Quest -->
+	 <If Condition="Me.ZoneId != 7078 &amp;&amp; Me.ZoneId != 7004" > <!--Lunarfall or Frostwall -->
+		<CustomBehavior File="Message" Text="Starting Master Relic, NOT IN GARRISON..." LogColor="Red" />
+		<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(110560)" WaitTime="5500" /> 
+		<CustomBehavior File="WaitTimer" WaitTime="20000" VariantTime="40000" TerminateWhen="Me.ZoneId == 7078 || Me.ZoneId == 7004" /> 
+	</If>
+	
+	<If Condition="Me.IsAlliance">
+		<CustomBehavior File="InteractWith" MobId="89793" Range="5" WaitForNpcs="false" X="1940.096" Y="310.8174" Z="90.40393" NonCompeteDistance="0" />  
+		<!-- Harrison Jones -->
+		<CustomBehavior File="Misc\RunLua" Lua="QuestFrameAcceptButton:Click()" WaitTime="500" />
+		<CustomBehavior File="InteractWith" MobId="92223" Range="5" WaitForNpcs="false" X="1940.096" Y="310.8174" Z="90.40393" NonCompeteDistance="0" /> 
+		<!-- Surveyor Daltry -->
+		<CustomBehavior File="Misc\RunLua" Lua="QuestFrameAcceptButton:Click()" WaitTime="500" />
+	</If>
+
+	<If Condition="Me.IsHorde">
+		<CustomBehavior File="InteractWith" MobId="89793" Range="5" WaitForNpcs="false" X="5549.028" Y="4603.395" Z="142.0471" NonCompeteDistance="0" />  
+		<!-- Harrison Jones -->
+		<CustomBehavior File="Misc\RunLua" Lua="QuestFrameAcceptButton:Click()" WaitTime="500" />
+		<CustomBehavior File="InteractWith" MobId="92223" Range="5" WaitForNpcs="false" X="5549.028" Y="4603.395" Z="142.0471" NonCompeteDistance="0" /> 
+		<!-- Surveyor Daltry -->
+		<CustomBehavior File="Misc\RunLua" Lua="QuestFrameAcceptButton:Click()" WaitTime="500" />
+	</If>	
+	
+	</If>
+
+<!-- START Quest Treasure Contract: The Infected Orc-->
+	<!--Part 1 -->
+	<If Condition="HasQuest(37941) &amp;&amp; !IsQuestCompleted(37941)">
+		<Objective QuestName="Treasure Contract: The Infected Orc" QuestId="37941" Type="KillMob" MobId="90333" KillCount="1" />
+		<CustomBehavior File="CompleteLogQuest" QuestId="37941" /> 
+	</If>
+	<!--Part 2 -->
+	<While Condition="HasQuest(37942) &amp;&amp; !IsQuestCompleted(37942)">
+		<CustomBehavior File="InteractWith" QuestId="37942" MobId="239969" ProactiveCombatStrategy="ClearMobsTargetingUs"
+								NonCompeteDistance="0" Range="5" WaitTime="10000" X="7638.19" Y="402.5462" Z="127.1583" /> 
+	</While>
+	<While Condition="HasQuest(37942) &amp;&amp; IsQuestCompleted(37942)">
+		<CustomBehavior File="CompleteLogQuest" QuestId="37942" /> 
+	</While> <!-- Duplicate while loop because errors when complete was combined -->
+	<!--Part 3 -->
+	<While Condition="HasQuest(37943) &amp;&amp; !IsQuestCompleted(37943)">
+		<CustomBehavior File="InteractWith" QuestId="37943" MobId="239968" ProactiveCombatStrategy="ClearMobsTargetingUs"
+									NonCompeteDistance="0" IgnoreCombat="true" Range="5" WaitTime="10000" X="7725.876" Y="-542.9115" Z="155.3342" />
+	</While>
+	<While Condition="HasQuest(37943) &amp;&amp; IsQuestCompleted(37943)">
+		<CustomBehavior File="CompleteLogQuest" QuestId="37943" /> 
+	</While> 
+	<!--Part 4 -->
+	<While Condition="HasQuest(37944) &amp;&amp; !IsQuestCompleted(37944)">
+		<CustomBehavior File="InteractWith" QuestId="37944" MobId="239977" ProactiveCombatStrategy="ClearMobsThatWillAggro"
+									NonCompeteDistance="0" IgnoreCombat="true" Range="5" WaitTime="10000" X="7769.4" Y="188.5342" Z="230.2541" />
+	</While>
+	<While Condition="HasQuest(37944) &amp;&amp; IsQuestCompleted(37944)">
+		<CustomBehavior File="CompleteLogQuest" QuestId="37944" /> 
+	</While> 
+	<!--Part 5 -->
+<If Condition="Me.IsAlliance">
+	<If Condition="Me.Location.Distance(new WoWPoint(8127.299,394.3616,215.461)) > 75 &amp;&amp; HasQuest(37945) &amp;&amp; !IsQuestCompleted(37945)"> 
+				<!-- Loop between cauldron and Gu'rakh until complete-->
+		<While Condition="!Me.HasAura(179860) &amp;&amp; HasQuest(37945) &amp;&amp; !IsQuestCompleted(37945)"> 
+			<!-- clicking cauldron until Erratic Visions aura, 2 ids -->
+			<CustomBehavior File="InteractWith" QuestId="37945" MobId="239967" WaitForNpcs="false"
+								ProactiveCombatStrategy="ClearMobsThatWillAggro" NonCompeteDistance="0"
+								Range="5" WaitTime="500" X="7867.054" Y="166.7907" Z="241.5326" />
+			<CustomBehavior File="InteractWith" QuestId="37945" MobId="239964" WaitForNpcs="false"
+								ProactiveCombatStrategy="ClearMobsThatWillAggro" NonCompeteDistance="0"
+								Range="5" WaitTime="500" X="7867.054" Y="166.7907" Z="241.5326" />
+			<If Condition="Me.HasAura(179860)">
+					<CustomBehavior File="Hooks\Avoid" AvoidName="AvoidSkulls" ObjectId="90268" Radius="5" />
+					<MoveTo X="7788.429" Y="129.584" Z="246.2422" />
+			</If>
+			<If Condition="Me.HasAura(179860)">
+					<MoveTo X="7769.33" Y="83.39361" Z="258.9515" />
+			</If>
+			<If Condition="Me.HasAura(179860)">
+					<MoveTo X="7748.831" Y="25.66603" Z="241.9839" />
+			</If>
+			<If Condition="Me.HasAura(179860)">
+					<MoveTo X="7804.684" Y="36.42548" Z="247.042" />
+			</If>
+			<If Condition="Me.HasAura(179860)">
+					<MoveTo X="7855.704" Y="-9.602155" Z="245.8408" />
+			</If>
+			<CustomBehavior File="Hooks\Avoid" AvoidName="AvoidSkulls" Command="Remove" />
+		</While>
+	</If>
+	<While Condition="Me.HasAura(179860) &amp;&amp; HasQuest(37945) &amp;&amp; !IsQuestCompleted(37945)">
+		<CustomBehavior File="InteractWith" QuestId="37945" MobId="90285" Range="1" PreInteractMountStrategy="DismountOrCancelShapeshift"
+								NonCompeteDistance="0" WaitForNpcs="false" WaitTime="1000" X="7855.704" Y="-9.602155" Z="245.8408"/>
+	</While>
+	<While Condition="Me.Location.Distance(new WoWPoint(8127.299,394.3616,215.461)) &gt; 50 &amp;&amp; HasQuest(37945) &amp;&amp; !IsQuestCompleted(37945)">
+		<CustomBehavior File="WaitTimer" WaitTime="50000" GoalText="Waiting for Vehicle Ride to Skulltaker" />
+	</While>
+	<While Condition="Me.Location.Distance(new WoWPoint(8127.299,394.3616,215.461)) &lt; 75 &amp;&amp; HasQuest(37945) &amp;&amp; !IsQuestCompleted(37945)">
+		<MoveTo X="8127.299" Y="394.3616" Z="215.461" Display="Going to wait for and kill Skulltaker!"/>
+		<!--<CustomBehavior File="WaitTimer" QuestId="37945" WaitTime="30000" />-->
+		<CustomBehavior File="InteractWith" QuestId="37945" MobId="90262" Range="30" PreInteractMountStrategy="DismountOrCancelShapeshift"
+								NonCompeteDistance="0" WaitForNpcs="true" WaitTime="1000"/>
+		<MoveTo X="8117.586" Y="354.4438" Z="217.6174" Display="Reseting Skulltaker!"/>
+	</While>
+	<!--Alliance Turn In -->
+	<If Condition="HasQuest(37945) &amp;&amp; IsQuestCompleted(37945)">
+		<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(110560)" WaitTime="1000" />
+		<CustomBehavior File="WaitTimer" WaitTime="12000" VariantTime="30000" GoalText="Waiting for Hearth {TimeRemaining}" TerminateWhen="Me.ZoneId == 7078 || Me.ZoneId == 7004" /> 
+		<If Condition="Me.IsAlliance">
+			<TurnIn QuestName="The Silent Skull: Taking from the Taker" QuestId="37945" 
+									TurnInName="Bodrick Grey" TurnInId="81492" 	X="1922.84" Y="284.0955" Z="88.96586" />
+		</If>
+	</If>
+</If>
+<If Condition="Me.IsHorde">
+	<If Condition="Me.Location.Distance(new WoWPoint(8127.299,394.3616,215.461)) > 75 &amp;&amp; HasQuest(37996) &amp;&amp; !IsQuestCompleted(37996)"> 
+				<!-- Loop between cauldron and Gu'rakh until complete-->
+		<While Condition="!Me.HasAura(179860) &amp;&amp; HasQuest(37996) &amp;&amp; !IsQuestCompleted(37996)"> 
+			<!-- clicking cauldron until Erratic Visions aura, 2 ids -->
+			<CustomBehavior File="InteractWith" QuestId="37996" MobId="239967" WaitForNpcs="false"
+								ProactiveCombatStrategy="ClearMobsThatWillAggro" NonCompeteDistance="0"
+								Range="5" WaitTime="500" X="7867.054" Y="166.7907" Z="241.5326" />
+			<CustomBehavior File="InteractWith" QuestId="37996" MobId="239964" WaitForNpcs="false"
+								ProactiveCombatStrategy="ClearMobsThatWillAggro" NonCompeteDistance="0"
+								Range="5" WaitTime="500" X="7867.054" Y="166.7907" Z="241.5326" />
+			<If Condition="Me.HasAura(179860)">
+					<CustomBehavior File="Hooks\Avoid" AvoidName="AvoidSkulls" ObjectId="90268" Radius="5" />
+					<MoveTo X="7788.429" Y="129.584" Z="246.2422" />
+			</If>
+			<If Condition="Me.HasAura(179860)">
+					<MoveTo X="7769.33" Y="83.39361" Z="258.9515" />
+			</If>
+			<If Condition="Me.HasAura(179860)">
+					<MoveTo X="7748.831" Y="25.66603" Z="241.9839" />
+			</If>
+			<If Condition="Me.HasAura(179860)">
+					<MoveTo X="7804.684" Y="36.42548" Z="247.042" />
+			</If>
+			<If Condition="Me.HasAura(179860)">
+					<MoveTo X="7855.704" Y="-9.602155" Z="245.8408" />
+			</If>
+			<CustomBehavior File="Hooks\Avoid" AvoidName="AvoidSkulls" Command="Remove" />
+		</While>
+	</If>
+	<While Condition="Me.HasAura(179860) &amp;&amp; HasQuest(37996) &amp;&amp; !IsQuestCompleted(37996)">
+		<CustomBehavior File="InteractWith" QuestId="37996" MobId="90285" Range="1" PreInteractMountStrategy="DismountOrCancelShapeshift"
+								NonCompeteDistance="0" WaitForNpcs="false" WaitTime="1000" X="7855.704" Y="-9.602155" Z="245.8408"/>
+	</While>
+	<While Condition="Me.Location.Distance(new WoWPoint(8127.299,394.3616,215.461)) &gt; 50 &amp;&amp; HasQuest(37996) &amp;&amp; !IsQuestCompleted(37996)">
+		<CustomBehavior File="WaitTimer" WaitTime="50000" GoalText="Waiting for Vehicle Ride to Skulltaker" />
+	</While>
+	<While Condition="Me.Location.Distance(new WoWPoint(8127.299,394.3616,215.461)) &lt; 75 &amp;&amp; HasQuest(37996) &amp;&amp; !IsQuestCompleted(37996)">
+		<MoveTo X="8127.299" Y="394.3616" Z="215.461" Display="Going to wait for and kill Skulltaker!"/>
+		<CustomBehavior File="InteractWith" QuestId="37996" MobId="90262" Range="30" PreInteractMountStrategy="DismountOrCancelShapeshift"
+								NonCompeteDistance="0" WaitForNpcs="true" WaitTime="1000"/>
+		<MoveTo X="8117.586" Y="354.4438" Z="217.6174" Display="Reseting Skulltaker!"/>
+	</While>
+	<!-- Horde Turn In -->
+	<If Condition="HasQuest(37996) &amp;&amp; IsQuestCompleted(37996)">
+		<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(110560)" WaitTime="1000" />
+		<CustomBehavior File="WaitTimer" WaitTime="12000" VariantTime="30000" GoalText="Waiting for Hearth {TimeRemaining}" TerminateWhen="Me.ZoneId == 7078 || Me.ZoneId == 7004" /> 
+		<If Condition="Me.IsAlliance">
+			<TurnIn QuestName="The Silent Skull: Taking from the Taker" QuestId="37996" 
+									TurnInName="Bodrick Grey" TurnInId="81492" 	X="1922.84" Y="284.0955" Z="88.96586" />
+		</If>
+	</If>
+</If>
+<!-- END Quest Treasure Contract: The Infected Orc & Achievement Taking From the Taker -->
+
+<!-- START Quest Treasure Contract: Amulet of Rukhmar-->
+	<!--Part 1 -->
+	<If Condition="HasQuest(37848) &amp;&amp; !IsQuestCompleted(37848)">
+	<Objective QuestName="Treasure Contract: Amulet of Rukhmar" QuestId="37848" Type="CollectItem" ItemId="121819" CollectCount="5" />
+	<CustomBehavior File="CompleteLogQuest" QuestId="37848" />
+	</If>
+	<!--Part 2 -->
+	<While Condition="HasQuest(37849) &amp;&amp; !IsQuestCompleted(37849)"> <!-- 3 different object IDs -->
+		<CustomBehavior File="InteractWith" QuestId="37849" MobId="239818" WaitForNpcs="false" ProactiveCombatStrategy="ClearMobsThatWillAggro"
+								NonCompeteDistance="0" PreInteractMountStrategy="DismountOrCancelShapeshift" 
+								Range="5" WaitTime="5000" X="786.711" Y="1471.044" Z="331.0921"  /> 
+		<CustomBehavior File="InteractWith" QuestId="37850" MobId="239819" WaitForNpcs="false" ProactiveCombatStrategy="ClearMobsThatWillAggro"
+								NonCompeteDistance="0" PreInteractMountStrategy="DismountOrCancelShapeshift" 
+								Range="5" WaitTime="5000" X="884.2563" Y="1017.44" Z="48.12966" />
+		<CustomBehavior File="InteractWith" QuestId="37850" MobId="239820" WaitForNpcs="false" ProactiveCombatStrategy="ClearMobsThatWillAggro"
+								NonCompeteDistance="0" PreInteractMountStrategy="DismountOrCancelShapeshift" 
+								Range="5" WaitTime="5000" X="884.2563" Y="1017.44" Z="48.12966" /> 
+	</While>
+	<While Condition="HasQuest(37849) &amp;&amp; IsQuestCompleted(37849)">
+		<CustomBehavior File="CompleteLogQuest" QuestId="37849" /> 
+	</While> <!-- Duplicate while loop because errors when complete was combined -->
+	<!--Part 3 -->
+	<While Condition="HasQuest(37850) &amp;&amp; !IsQuestCompleted(37850)"> <!-- 3 different object IDs -->
+		<CustomBehavior File="InteractWith" QuestId="37850" MobId="239818" WaitForNpcs="false" ProactiveCombatStrategy="ClearMobsThatWillAggro"
+								NonCompeteDistance="0" PreInteractMountStrategy="DismountOrCancelShapeshift" 
+								Range="5" WaitTime="5000" X="884.2563" Y="1017.44" Z="48.12966" /> 
+		<CustomBehavior File="InteractWith" QuestId="37850" MobId="239819" WaitForNpcs="false" ProactiveCombatStrategy="ClearMobsThatWillAggro"
+								NonCompeteDistance="0" PreInteractMountStrategy="DismountOrCancelShapeshift" 
+								Range="5" WaitTime="5000" X="884.2563" Y="1017.44" Z="48.12966" />
+		<CustomBehavior File="InteractWith" QuestId="37850" MobId="239820" WaitForNpcs="false" ProactiveCombatStrategy="ClearMobsThatWillAggro"
+								NonCompeteDistance="0" PreInteractMountStrategy="DismountOrCancelShapeshift" 
+								Range="5" WaitTime="5000" X="884.2563" Y="1017.44" Z="48.12966" /> 
+	</While>
+	<While Condition="HasQuest(37850) &amp;&amp; IsQuestCompleted(37850)">
+		<CustomBehavior File="CompleteLogQuest" QuestId="37850" /> 
+	</While>
+	<!--Part 4 -->
+	<If Condition="HasQuest(37851) &amp;&amp; !IsQuestCompleted(37851)"> <!-- Get into Cave -->
+		<CustomBehavior File="Misc\RunLua" Lua="JumpOrAscendStart()" WaitTime="5000" />
+		<MoveTo X="140.7918" Y="325.6393" Z="61.28469" />
+		<CustomBehavior File="MyCTM" X="40.52316" Y="302.9936" Z="61.28469" />
+		<CustomBehavior File="MyCTM" X="8.567809" Y="250.8719" Z="59.32298" />
+		<CustomBehavior File="MyCTM" X="-34.20174" Y="224.4265" Z="-0.1997161" />
+	</If>
+	<While Condition="HasQuest(37851) &amp;&amp; !IsQuestCompleted(37851)"> <!-- 3 different object IDs -->
+		<CustomBehavior File="InteractWith" QuestId="37850" MobId="239818" WaitForNpcs="false" ProactiveCombatStrategy="ClearMobsThatWillAggro"
+								NonCompeteDistance="0" PreInteractMountStrategy="DismountOrCancelShapeshift" 
+								Range="5" WaitTime="5000" X="884.2563" Y="1017.44" Z="48.12966" /> 
+		<CustomBehavior File="InteractWith" QuestId="37850" MobId="239819" WaitForNpcs="false" ProactiveCombatStrategy="ClearMobsThatWillAggro"
+								NonCompeteDistance="0" PreInteractMountStrategy="DismountOrCancelShapeshift" 
+								Range="5" WaitTime="5000" X="884.2563" Y="1017.44" Z="48.12966" />
+		<CustomBehavior File="InteractWith" QuestId="37851" MobId="239820" WaitForNpcs="false" ProactiveCombatStrategy="ClearMobsThatWillAggro"
+								NonCompeteDistance="0" PreInteractMountStrategy="DismountOrCancelShapeshift" 
+								Range="5" WaitTime="3000" X="-12.8761" Y="329.7464" Z="-5.120794" /> 
+	</While>
+	<While Condition="HasQuest(37851) &amp;&amp; IsQuestCompleted(37851)">
+		<CustomBehavior File="CompleteLogQuest" QuestId="37851" /> 
+	</While>
+	<!--Part 5 -->
+<If Condition="Me.IsAlliance">
+	<While Condition="Me.Location.Distance(new WoWPoint(30.20254,443.4941,223.8414)) &gt; 50 
+							&amp;&amp; HasQuest(37852) &amp;&amp; !IsQuestCompleted(37852)"> <!--Create Portal -->
+		<MoveTo X="-351.9214" Y="230.2583" Z="-0.3237418" />
+		<If Condition="Unit(89974) != null &amp;&amp; (Unit(89974).Rotation &lt; 3.0 || Unit(89974).Rotation &gt; 3.2) &amp;&amp; Unit(89974).CanInteract">
+			<CustomBehavior File="InteractWith" QuestId="37852" MobId="89974" WaitForNpcs="false" CollectionDistance="8" 
+									ProactiveCombatStrategy="ClearMobsTargetingUs" PreInteractMountStrategy="DismountOrCancelShapeshift" 
+									NonCompeteDistance="0" Range="5" WaitTime="3000" X="-354.7197" Y="228.8884" Z="-0.1781017"  /> <!--1st Idol-->
+		</If>
+		<If Condition="Unit(89974) != null &amp;&amp; (Unit(89974).Rotation &lt; 3.0 || Unit(89974).Rotation &gt; 3.2) &amp;&amp; Unit(89974).CanInteract">
+			<CustomBehavior File="InteractWith" QuestId="37852" MobId="89974" WaitForNpcs="false" CollectionDistance="8" 
+									ProactiveCombatStrategy="ClearMobsTargetingUs" PreInteractMountStrategy="DismountOrCancelShapeshift" 
+									NonCompeteDistance="0" Range="5" WaitTime="3000" X="-354.7197" Y="228.8884" Z="-0.1781017"  /> <!--1st Idol-->
+		</If>
+		<If Condition="Unit(89976) != null &amp;&amp; (Unit(89976).Rotation &lt; 0.8 || Unit(89976).Rotation &gt; 1.0) &amp;&amp; Unit(89976).CanInteract">
+			<CustomBehavior File="InteractWith" QuestId="37852" MobId="89976" WaitForNpcs="false" CollectionDistance="8" 
+									ProactiveCombatStrategy="ClearMobsTargetingUs" PreInteractMountStrategy="DismountOrCancelShapeshift" 
+									NonCompeteDistance="0" Range="5" WaitTime="3000" X="-375.2733" Y="216.7279" Z="0.1957286"  /> <!--2nd Idol-->
+		</If>
+		<If Condition="Unit(89976) != null &amp;&amp; (Unit(89976).Rotation &lt; 0.8 || Unit(89976).Rotation &gt; 1.0) &amp;&amp; Unit(89976).CanInteract">
+			<CustomBehavior File="InteractWith" QuestId="37852" MobId="89976" WaitForNpcs="false" CollectionDistance="8" 
+									ProactiveCombatStrategy="ClearMobsTargetingUs" PreInteractMountStrategy="DismountOrCancelShapeshift" 
+									NonCompeteDistance="0" Range="5" WaitTime="3000" X="-375.2733" Y="216.7279" Z="0.1957286"  /> <!--2nd Idol-->
+		</If>
+		<If Condition="Unit(89977) != null &amp;&amp; (Unit(89977).Rotation &lt; 5.3 || Unit(89977).Rotation &gt; 5.5) &amp;&amp; Unit(89977).CanInteract">
+			<CustomBehavior File="InteractWith" QuestId="37852" MobId="89977" WaitForNpcs="false" CollectionDistance="8" 
+									ProactiveCombatStrategy="ClearMobsTargetingUs" PreInteractMountStrategy="DismountOrCancelShapeshift" 
+									NonCompeteDistance="0" Range="5" WaitTime="3000" X="-374.7673" Y="239.5454" Z="0.5326436" /> <!--3rd Idol-->
+		</If>
+		<If Condition="Unit(89977) != null &amp;&amp; (Unit(89977).Rotation &lt; 5.3 || Unit(89977).Rotation &gt; 5.5) &amp;&amp; Unit(89977).CanInteract">
+			<CustomBehavior File="InteractWith" QuestId="37852" MobId="89977" WaitForNpcs="false" CollectionDistance="8" 
+									ProactiveCombatStrategy="ClearMobsTargetingUs" PreInteractMountStrategy="DismountOrCancelShapeshift" 
+									NonCompeteDistance="0" Range="5" WaitTime="3000" X="-374.7673" Y="239.5454" Z="0.5326436" /> <!--3rd Idol-->
+		</If>
+		<CustomBehavior File="InteractWith" QuestId="37852" MobId="239808" WaitForNpcs="false" CollectionDistance="8" 
+								ProactiveCombatStrategy="ClearMobsTargetingUs" PreInteractMountStrategy="DismountOrCancelShapeshift" 
+								NonCompeteDistance="0" Range="5" WaitTime="10000" X="-368.3603" Y="229.1068" Z="0.3701334" /> <!-- Portal -->
+	<While Condition="Me.Location.Distance(new WoWPoint(30.20254,443.4941,223.8414)) &lt; 75 
+							&amp;&amp; HasQuest(37852) &amp;&amp; !IsQuestCompleted(37852)">
+		<CustomBehavior File="InteractWith" QuestId="37852" MobId="239906" WaitForNpcs="true"  PreInteractMountStrategy="DismountOrCancelShapeshift" 
+								NonCompeteDistance="0" Range="5" WaitTime="3000" X="-3.173611" Y="427.7517" Z="224.2582" />
+	</While>
+	</While>
+	<!--Alliance Turn In -->
+	<If Condition="HasQuest(37852) &amp;&amp; IsQuestCompleted(37852)">
+		<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(110560)" WaitTime="1000" />
+		<CustomBehavior File="WaitTimer" WaitTime="12000" VariantTime="30000" GoalText="Waiting for Hearth {TimeRemaining}" TerminateWhen="Me.ZoneId == 7078 || Me.ZoneId == 7004" /> 
+		<If Condition="Me.IsAlliance">
+			<TurnIn QuestName="Treasure Contract: Amulet of Rukhmar" QuestId="37852" 
+									TurnInName="Bodrick Grey" TurnInId="81492" 	X="1922.84" Y="284.0955" Z="88.96586" />
+		</If>
+	</If>
+</If>
+<If Condition="Me.IsHorde">
+		<While Condition="Me.Location.Distance(new WoWPoint(30.20254,443.4941,223.8414)) &gt; 50 
+							&amp;&amp; HasQuest(37993) &amp;&amp; !IsQuestCompleted(37993)"> <!--Create Portal -->
+		<MoveTo X="-351.9214" Y="230.2583" Z="-0.3237418" />
+		<If Condition="Unit(89974) != null &amp;&amp; (Unit(89974).Rotation &lt; 3.0 || Unit(89974).Rotation &gt; 3.2) &amp;&amp; Unit(89974).CanInteract">
+			<CustomBehavior File="InteractWith" QuestId="37993" MobId="89974" WaitForNpcs="false" CollectionDistance="8" 
+									ProactiveCombatStrategy="ClearMobsTargetingUs" PreInteractMountStrategy="DismountOrCancelShapeshift" 
+									NonCompeteDistance="0" Range="5" WaitTime="3000" X="-354.7197" Y="228.8884" Z="-0.1781017"  /> <!--1st Idol-->
+		</If>
+		<If Condition="Unit(89974) != null &amp;&amp; (Unit(89974).Rotation &lt; 3.0 || Unit(89974).Rotation &gt; 3.2) &amp;&amp; Unit(89974).CanInteract">
+			<CustomBehavior File="InteractWith" QuestId="37993" MobId="89974" WaitForNpcs="false" CollectionDistance="8" 
+									ProactiveCombatStrategy="ClearMobsTargetingUs" PreInteractMountStrategy="DismountOrCancelShapeshift" 
+									NonCompeteDistance="0" Range="5" WaitTime="3000" X="-354.7197" Y="228.8884" Z="-0.1781017"  /> <!--1st Idol-->
+		</If>
+		<If Condition="Unit(89976) != null &amp;&amp; (Unit(89976).Rotation &lt; 0.8 || Unit(89976).Rotation &gt; 1.0) &amp;&amp; Unit(89976).CanInteract">
+			<CustomBehavior File="InteractWith" QuestId="37993" MobId="89976" WaitForNpcs="false" CollectionDistance="8" 
+									ProactiveCombatStrategy="ClearMobsTargetingUs" PreInteractMountStrategy="DismountOrCancelShapeshift" 
+									NonCompeteDistance="0" Range="5" WaitTime="3000" X="-375.2733" Y="216.7279" Z="0.1957286"  /> <!--2nd Idol-->
+		</If>
+		<If Condition="Unit(89976) != null &amp;&amp; (Unit(89976).Rotation &lt; 0.8 || Unit(89976).Rotation &gt; 1.0) &amp;&amp; Unit(89976).CanInteract">
+			<CustomBehavior File="InteractWith" QuestId="37993" MobId="89976" WaitForNpcs="false" CollectionDistance="8" 
+									ProactiveCombatStrategy="ClearMobsTargetingUs" PreInteractMountStrategy="DismountOrCancelShapeshift" 
+									NonCompeteDistance="0" Range="5" WaitTime="3000" X="-375.2733" Y="216.7279" Z="0.1957286"  /> <!--2nd Idol-->
+		</If>
+		<If Condition="Unit(89977) != null &amp;&amp; (Unit(89977).Rotation &lt; 5.3 || Unit(89977).Rotation &gt; 5.5) &amp;&amp; Unit(89977).CanInteract">
+			<CustomBehavior File="InteractWith" QuestId="37993" MobId="89977" WaitForNpcs="false" CollectionDistance="8" 
+									ProactiveCombatStrategy="ClearMobsTargetingUs" PreInteractMountStrategy="DismountOrCancelShapeshift" 
+									NonCompeteDistance="0" Range="5" WaitTime="3000" X="-374.7673" Y="239.5454" Z="0.5326436" /> <!--3rd Idol-->
+		</If>
+		<If Condition="Unit(89977) != null &amp;&amp; (Unit(89977).Rotation &lt; 5.3 || Unit(89977).Rotation &gt; 5.5) &amp;&amp; Unit(89977).CanInteract">
+			<CustomBehavior File="InteractWith" QuestId="37993" MobId="89977" WaitForNpcs="false" CollectionDistance="8" 
+									ProactiveCombatStrategy="ClearMobsTargetingUs" PreInteractMountStrategy="DismountOrCancelShapeshift" 
+									NonCompeteDistance="0" Range="5" WaitTime="3000" X="-374.7673" Y="239.5454" Z="0.5326436" /> <!--3rd Idol-->
+		</If>
+		<CustomBehavior File="InteractWith" QuestId="37993" MobId="239808" WaitForNpcs="false" CollectionDistance="8" 
+								ProactiveCombatStrategy="ClearMobsTargetingUs" PreInteractMountStrategy="DismountOrCancelShapeshift" 
+								NonCompeteDistance="0" Range="5" WaitTime="10000" X="-368.3603" Y="229.1068" Z="0.3701334" /> <!-- Portal -->
+	<While Condition="Me.Location.Distance(new WoWPoint(30.20254,443.4941,223.8414)) &lt; 75 
+							&amp;&amp; HasQuest(37993) &amp;&amp; !IsQuestCompleted(37993)">
+		<CustomBehavior File="InteractWith" QuestId="37993" MobId="239906" WaitForNpcs="true"  PreInteractMountStrategy="DismountOrCancelShapeshift" 
+								NonCompeteDistance="0" Range="5" WaitTime="3000" X="-3.173611" Y="427.7517" Z="224.2582" />
+	</While>
+	</While>
+	<!--Turn In -->
+	<If Condition="HasQuest(37993) &amp;&amp; IsQuestCompleted(37993)">
+		<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(110560)" WaitTime="1000" />
+		<CustomBehavior File="WaitTimer" WaitTime="12000" VariantTime="30000" GoalText="Waiting for Hearth {TimeRemaining}" TerminateWhen="Me.ZoneId == 7078 || Me.ZoneId == 7004" /> 
+		<If Condition="Me.IsAlliance">
+			<TurnIn QuestName="Treasure Contract: Amulet of Rukhmar" QuestId="37993" 
+									TurnInName="Bodrick Grey" TurnInId="81492" 	X="1922.84" Y="284.0955" Z="88.96586" />
+		</If>
+		<If Condition="Me.IsHorde">				
+			<TurnIn QuestName="Treasure Contract: Amulet of Rukhmar" QuestId="37993" 
+									TurnInName="Rokhan" TurnInId="78487" X="5614.104" Y="4563.054" Z="135.189" />
+		</If>
+	</If>
+</If>
+<!-- END Quest Treasure Contract: Amulet of Rukhmar-->
+
+<!-- START Quest Treasure Contract: Explosive Discoveries-->
+	<!--Part 1 -->
+	<If Condition="HasQuest(37881) &amp;&amp; !IsQuestCompleted(37881)">
+		<CustomBehavior File="KillUntilComplete" QuestId="37881" >
+			<HuntingGrounds>
+					<Hotspot X="-1534.553" Y="-1605.837" Z="8.595935" />
+					<Hotspot X="-1431.328" Y="-1458.443" Z="4.569629" />
+			 </HuntingGrounds>
+			 <PursuitList>
+				  <PursueUnit Id="90107" PursueWhen="!IsObjectiveComplete(1,37881)" />
+			  </PursuitList>
+		</CustomBehavior>
+		<CustomBehavior File="CompleteLogQuest" QuestId="37881" />
+	</If>
+	<!--Part 2 -->
+	<While Condition="HasQuest(37882) &amp;&amp; !IsQuestCompleted(37882)">
+		<CustomBehavior File="NoCombatMoveTo" X="-1587.106" Y="-1984.881" Z="25.88826" />
+		<CustomBehavior File="MyCTM" X="-1564.01" Y="-2000.23" Z="29.99541" /> <!--Clear Trailor and Reset if falls off -->
+		<MoveTo X="-1545.884" Y="-1967.611" Z="32.04027" />
+		<LootMobs Value="false" /><!-- loot disabled as well as multiple lines below to prevent bugs on tailer-->
+		<CustomBehavior File="Hooks\DoWhen" ActivityName="GetOffTrailer" AllowUseDuringCombat="True" UseWhen="Me.Combat" >
+			<EnableBehavior Name="Pull, Combat" />
+			<CustomBehavior File="MyCTM" X="-1564.01" Y="-2000.23" Z="29.99541" />
+		</CustomBehavior>
+		<DisableBehavior Name="Pull, Combat" /> <!-- Will bug if tries to fight mob while on Trailer -->
+		<While Condition="!Me.Combat &amp;&amp; HasQuest(37882) &amp;&amp; !IsQuestCompleted(37882)"> <!--Reset if In Combat -->
+			<CustomBehavior File="ForcedDismount" />
+			<CustomBehavior File="MyCTM" X="-1543.118" Y="-1981.223" Z="32.46363" />
+			<CustomBehavior File="MyCTM" X="-1542.83" Y="-1986.051" Z="32.39244" />
+			<CustomBehavior File="Misc\RunLua" Lua="JumpOrAscendStart()" WaitTime="200" />
+			<CustomBehavior File="MyCTM" X="-1543.408" Y="-1989.265" Z="36.01851" />
+			<CustomBehavior File="MyCTM" X="-1545.146" Y="-1997.278" Z="36.48691" />
+			<CustomBehavior File="WaitTimer" WaitTime="1000" GoalText="Avoid Falling Off" />
+			<CustomBehavior File="MyCTM" X="-1538.779" Y="-1999.083" Z="36.81292" />
+			<CustomBehavior File="WaitTimer" WaitTime="1000" GoalText="Avoid Falling Off" />
+			<CustomBehavior File="MyCTM" X="-1536.305" Y="-1999.503" Z="35.98266" />
+			<CustomBehavior File="InteractWith" QuestId="37882" MobId="239889" ProactiveCombatStrategy="ClearMobsTargetingUs" CollectionDistance="10"
+									NonCompeteDistance="0" PreInteractMountStrategy="DismountOrCancelShapeshift" Range="15" WaitTime="7500" />
+		</While>
+		<CustomBehavior File="Hooks\DoWhen" ActivityName="GetOffTrailer" Command="Remove" />
+		<EnableBehavior Name="Pull, Combat" />
+	</While>
+	<While Condition="HasQuest(37882) &amp;&amp; IsQuestCompleted(37882)">
+		<CustomBehavior File="CompleteLogQuest" QuestId="37882" /> 
+		<CustomBehavior File="MyCTM" X="-1564.01" Y="-2000.23" Z="29.99541" /> <!-- Ensures off trailer -->
+	</While> <!-- Duplicate while loop because errors when complete was combined -->
+	<!--Part 3 -->
+	<While Condition="Me.Location.Distance(new WoWPoint(-1361.554,-1098.416,-0.6322328)) &gt; 200 &amp;&amp; 
+							HasQuest(37883) &amp;&amp; !IsQuestCompleted(37883)">
+		<CustomBehavior File="NoCombatMoveTo" X="-969.0804" Y="-1734.558" Z="1.911843" /><!--DarkTide Roost FP ... May Die En Route-->
+		<LootMobs Value="true" />
+		<MoveTo X="-792.9537" Y="-670.396" Z="106.9126" /><!--Socrethar's Rise FP-->
+		<CustomBehavior File="NoCombatMoveTo" X="-1088.374" Y="-590.4737" Z="0.4282849" />
+		<MoveTo X="-1088.374" Y="-590.4737" Z="0.4282849" />
+		<CustomBehavior File="WaitTimer" WaitTime="1000" GoalText="Stop to summon" />
+		<CustomBehavior File="RunMacro" Macro="/cast crimson water strider" WaitTime="3000"/>
+		<CustomBehavior File="NoCombatMoveTo" X="-1163.838" Y="-1066.055" Z="-2.111263" />
+		<CustomBehavior File="NoCombatMoveTo" X="-1361.554" Y="-1098.416" Z="-0.6322328" />
+		<CustomBehavior File="ForcedDismount" />
+	</While>
+	<While Condition="Me.Location.Distance(new WoWPoint(-1361.554,-1098.416,-0.6322328)) &lt; 200 &amp;&amp; 
+							HasQuest(37883) &amp;&amp; !IsQuestCompleted(37883)" >
+			<CustomBehavior File="ForcedDismount" />
+			<CustomBehavior File="InteractWith" QuestId="37883" MobId="239890" ProactiveCombatStrategy="ClearMobsThatWillAggro" NonCompeteDistance="0"
+									PreInteractMountStrategy="DismountOrCancelShapeshift" Range="5" WaitTime="5000" X="-1361.554" Y="-1098.416" Z="-0.6322328" /> 
+	</While>
+	<While Condition="HasQuest(37883) &amp;&amp; IsQuestCompleted(37883)">
+		<CustomBehavior File="CompleteLogQuest" QuestId="37883" /> 
+	</While>
+	<!--Part 4 -->
+	<If Condition="HasQuest(37884) &amp;&amp; !IsQuestCompleted(37884)">
+		<CustomBehavior File="Misc\RunLua" Lua="JumpOrAscendStart()" WaitTime="10000" />
+		<MoveTo X="-1323.387" Y="-1107.694" Z="-2.180543" />
+		<CustomBehavior File="NoCombatMoveTo" X="-1100.799" Y="-880.3693" Z="9.787556" />
+		<CustomBehavior File="WaitTimer" WaitTime="1000" GoalText="Stop to summon" />
+		<CustomBehavior File="RunMacro" Macro="/cast crimson water strider" WaitTime="3000"/>
+		<CustomBehavior File="NoCombatMoveTo" X="-925.1317" Y="-913.3357" Z="97.50094" />
+		<Objective QuestName="Dark Grimoire: The Final Ingredient" QuestId="37884" Type="CollectItem" ItemId="121832" CollectCount="5" />
+		<CustomBehavior File="CompleteLogQuest" QuestId="37884" />
+	</If>
+	<!--Part 5 -->
+<If Condition="Me.IsAlliance">
+	<If Condition="HasQuest(37885) &amp;&amp; !IsQuestCompleted(37885) 
+						&amp;&amp; Me.Location.Distance(new WoWPoint(-677.1611,-642.9005,6.095531)) &gt; 20" >
+		<CustomBehavior File="NoCombatMoveTo" X="-639.2226" Y="-553.1147" Z="8.011583" /> <!-- Open Portal If Closed -->
+		<If Condition="Object(239887) != null">
+			<CustomBehavior File="InteractWith" QuestId="37885" MobId="239887" CollectionDistance="50" NonCompeteDistance="0"
+						ProactiveCombatStrategy="ClearMobsTargetingUs" WaitForNpcs="false" PreInteractMountStrategy="DismountOrCancelShapeshift" 
+						WaitTime="5000" X="-658.5591" Y="-588.7632" Z="11.02219" />
+		</If>
+	</If>
+	<While Condition="HasQuest(37885) &amp;&amp; !IsQuestCompleted(37885) &amp;&amp; Me.Location.Distance(new WoWPoint(-677.1611,-642.9005,6.095531)) &gt; 20" >
+		<CustomBehavior File="ForcedDismount" />
+		<CustomBehavior File="MyCTM" X="-639.2226" Y="-553.1147" Z="8.011583" /> <!-- attempt to get off mountain if ported -->
+		<MoveTo X="-663.5686" Y="-599.864" Z="11.41908" />
+		<MoveTo X="-670.7213" Y="-612.0032" Z="9.993073" Range="0" />
+		<MoveTo X="-666.488" Y="-607.7806" Z="10.84871" Range="0" />
+		<CustomBehavior File="WaitTimer" WaitTime="3000" GoalText="settle for bounce" />
+		<MoveTo X="-665.7527" Y="-607.4301" Z="10.89736" Range="8" />
+		<CustomBehavior File="WaitTimer" WaitTime="3000" GoalText="settle for bounce" />
+		<MoveTo X="-673.351" Y="-620.6849" Z="7.498302" Range="8" />
+		<CustomBehavior File="WaitTimer" WaitTime="5000" GoalText="Avoiding Early Port" />
+		<CustomBehavior File="InteractWith" QuestId="37885" MobId="239899" ProactiveCombatStrategy="ClearMobsTargetingUs" IgnoreCombat="true"
+								NonCompeteDistance="0" CollectionDistance="40" WaitForNpcs="false"
+								PreInteractMountStrategy="DismountOrCancelShapeshift" WaitTime="5000"   />
+	</While>
+	<While Condition="HasQuest(37885) &amp;&amp; !IsQuestCompleted(37885) &amp;&amp; Me.Location.Distance(new WoWPoint(-677.1611,-642.9005,6.095531)) &lt; 30" >
+		<CustomBehavior File="InteractWith" QuestId="37885" MobId="239899" ProactiveCombatStrategy="ClearMobsTargetingUs" IgnoreCombat="true"
+								NonCompeteDistance="0" CollectionDistance="40" WaitForNpcs="false" 
+								PreInteractMountStrategy="DismountOrCancelShapeshift" WaitTime="5000"   />
+	</While>
+	<!--Alliance Turn In -->
+	<If Condition="HasQuest(37885) &amp;&amp; IsQuestCompleted(37885)">
+		<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(110560)" WaitTime="1000" />
+		<CustomBehavior File="WaitTimer" WaitTime="12000" VariantTime="30000" GoalText="Waiting for Hearth {TimeRemaining}" TerminateWhen="Me.ZoneId == 7078 || Me.ZoneId == 7004" /> 
+		<CustomBehavior File="DeleteItems" Ids="122154, 122101, 121837, 121820, 122147, 120989" /><!-- Manuals No Longer Needed -->
+		<CustomBehavior File="DeleteItems" Ids="115020" /> <!--<WoWItem Name="Goblin Rocket Pack" Entry="115020" />-->
+		<CustomBehavior File="DeleteItems" Ids="116978" /> <!--<WoWItem Name="Rylakinator-3000 Power Cell" Entry="116978" />-->
+		<If Condition="Me.IsAlliance">
+			<TurnIn QuestName="Treasure Contract: Explosive Discoveries" QuestId="37885" 
+											TurnInName="Bodrick Grey" TurnInId="81492" 	X="1922.84" Y="284.0955" Z="88.96586" />
+		</If>
+	</If>
+	<If Condition="HasQuest(37885) &amp;&amp; !IsQuestCompleted(37885) 
+						&amp;&amp; Me.Location.Distance(new WoWPoint(-677.1611,-642.9005,6.095531)) &gt; 20" >
+		<CustomBehavior File="NoCombatMoveTo" X="-639.2226" Y="-553.1147" Z="8.011583" /> <!-- Open Portal If Closed -->
+		<If Condition="Object(239887) != null">
+			<CustomBehavior File="InteractWith" QuestId="37885" MobId="239887" CollectionDistance="50" NonCompeteDistance="0"
+						ProactiveCombatStrategy="ClearMobsTargetingUs" WaitForNpcs="false" PreInteractMountStrategy="DismountOrCancelShapeshift" 
+						WaitTime="5000" X="-658.5591" Y="-588.7632" Z="11.02219" />
+		</If>
+	</If>
+</If>
+<If Condition="Me.IsHorde">
+	<While Condition="HasQuest(37994) &amp;&amp; !IsQuestCompleted(37994) &amp;&amp; Me.Location.Distance(new WoWPoint(-677.1611,-642.9005,6.095531)) &gt; 20" >
+		<CustomBehavior File="ForcedDismount" />
+		<CustomBehavior File="MyCTM" X="-639.2226" Y="-553.1147" Z="8.011583" /> <!-- attempt to get off mountain if ported -->
+		<MoveTo X="-663.5686" Y="-599.864" Z="11.41908" />
+		<MoveTo X="-670.7213" Y="-612.0032" Z="9.993073" Range="0" />
+		<MoveTo X="-666.488" Y="-607.7806" Z="10.84871" Range="0" />
+		<CustomBehavior File="WaitTimer" WaitTime="3000" GoalText="settle for bounce" />
+		<MoveTo X="-665.7527" Y="-607.4301" Z="10.89736" Range="8" />
+		<CustomBehavior File="WaitTimer" WaitTime="3000" GoalText="settle for bounce" />
+		<MoveTo X="-673.351" Y="-620.6849" Z="7.498302" Range="8" />
+		<CustomBehavior File="WaitTimer" WaitTime="5000" GoalText="Avoiding Early Port" />
+		<CustomBehavior File="InteractWith" QuestId="37994" MobId="239899" ProactiveCombatStrategy="ClearMobsTargetingUs" IgnoreCombat="true"
+								NonCompeteDistance="0" CollectionDistance="40" WaitForNpcs="false"
+								PreInteractMountStrategy="DismountOrCancelShapeshift" WaitTime="5000"   />
+	</While>
+	<While Condition="HasQuest(37994) &amp;&amp; !IsQuestCompleted(37994) &amp;&amp; Me.Location.Distance(new WoWPoint(-677.1611,-642.9005,6.095531)) &lt; 30" >
+		<CustomBehavior File="InteractWith" QuestId="37994" MobId="239899" ProactiveCombatStrategy="ClearMobsTargetingUs" IgnoreCombat="true"
+								NonCompeteDistance="0" CollectionDistance="40" WaitForNpcs="false" 
+								PreInteractMountStrategy="DismountOrCancelShapeshift" WaitTime="5000"   />
+	</While>
+	<!-- Horde Turn In -->
+	<If Condition="HasQuest(37994) &amp;&amp; IsQuestCompleted(37994)">
+		<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(110560)" WaitTime="1000" />
+		<CustomBehavior File="WaitTimer" WaitTime="12000" VariantTime="30000" GoalText="Waiting for Hearth {TimeRemaining}" TerminateWhen="Me.ZoneId == 7078 || Me.ZoneId == 7004" /> 
+		<CustomBehavior File="DeleteItems" Ids="122154, 122101, 121837, 121820, 122147, 120989" /><!-- Manuals No Longer Needed -->
+		<CustomBehavior File="DeleteItems" Ids="115020" /> <!--<WoWItem Name="Goblin Rocket Pack" Entry="115020" />-->
+		<CustomBehavior File="DeleteItems" Ids="116978" /> <!--<WoWItem Name="Rylakinator-3000 Power Cell" Entry="116978" />-->
+		<If Condition="Me.IsHorde">				
+			<TurnIn QuestName="Treasure Contract: Explosive Discoveries" QuestId="37994" 
+											TurnInName="Rokhan" TurnInId="78487" X="5614.104" Y="4563.054" Z="135.189" />
+		</If>
+	</If>
+</If>
+<!-- END Quest Treasure Contract: Explosive Discoveries-->
+
+<!-- START Quest Treasure Contract: Gutrek's Cleaver(靈魂熔爐)-->
+	<!--Part 1 -->
+  <MoveTo X="2593.932" Y="5699.403" Z="100.5352" />
+	<If Condition="HasQuest(37788) &amp;&amp; !IsQuestCompleted(37788)">
+		<CustomBehavior File="FlyTo" X="4000.829" Y="7048.848" Z="64.7029" />
+    <CustomBehavior File="ForcedDismount" />
+		<Objective QuestName="Treasure Contract: Gutrek's Cleaver" QuestId="37788" Type="CollectItem" ItemId="121822" CollectCount="5" />
+		<CustomBehavior File="CompleteLogQuest" QuestId="37788" />
+	</If>
+	<!--Part 2 -->
+	<While Condition="HasQuest(37797) &amp;&amp; !IsQuestCompleted(37797)">
+		<CustomBehavior File="FlyTo" X="4361.025" Y="7055.404" Z="119.9126" />
+    <CustomBehavior File="ForcedDismount" />
+		<CustomBehavior File="InteractWith" QuestId="37797" MobId="239772" ProactiveCombatStrategy="ClearMobsTargetingUs"
+								NonCompeteDistance="0" Range="5" WaitTime="10000" X="4361.025" Y="7055.404" Z="119.9126"  /> 
+	</While>
+	<While Condition="HasQuest(37797) &amp;&amp; IsQuestCompleted(37797)">
+		<CustomBehavior File="CompleteLogQuest" QuestId="37797" /> 
+	</While> <!-- Duplicate while loop because errors when complete was combined -->
+	<!--Part 3 -->
+	<If Condition="HasQuest(37798) &amp;&amp; !IsQuestCompleted(37798)">
+		<CustomBehavior File="FlyTo" X="3428.431" Y="7121.698" Z="1.024586" />
+    <CustomBehavior File="ForcedDismount" />
+	</If>
+	<While Condition="HasQuest(37798) &amp;&amp; !IsQuestCompleted(37798)">
+		<CustomBehavior File="InteractWith" QuestId="37798" MobId="239771" ProactiveCombatStrategy="ClearMobsTargetingUs"
+								NonCompeteDistance="0" Range="5" WaitTime="10000" X="3428.431" Y="7121.698" Z="1.024586" /> 
+	</While>
+	<While Condition="HasQuest(37798) &amp;&amp; IsQuestCompleted(37798)">
+		<CustomBehavior File="CompleteLogQuest" QuestId="37798" /> 
+	</While> 
+	<!--Part 4 -->
+	<If Condition="HasQuest(37799) &amp;&amp; !IsQuestCompleted(37799)">
+		<CustomBehavior File="FlyTo" X="4454.646" Y="6187.619" Z="125.204" />
+		<!--<MoveTo X="4511.001" Y="6144.386" Z="121.1665" />--> <!-- get onto ledge to get blade -->
+		<!--<CustomBehavior File="MyCTM" X="4512.603" Y="6145.803" Z="122.7431" />
+		<CustomBehavior File="MyCTM" X="4513.347" Y="6147.603" Z="122.732" />
+		<CustomBehavior File="MyCTM" X="4510.747" Y="6152.306" Z="121.6186" />
+		<CustomBehavior File="MyCTM" X="4493.614" Y="6183.984" Z="121.2077" />
+		<CustomBehavior File="MyCTM" X="4463.773" Y="6199.372" Z="122.5683" />
+		<CustomBehavior File="ForcedDismount" />
+		<CustomBehavior File="MyCTM" X="4458.646" Y="6190.307" Z="122.523" />
+		<CustomBehavior File="MyCTM" X="4456.374" Y="6187.68" Z="124.7946"  />
+		<CustomBehavior File="MyCTM" X="4454.646" Y="6187.619" Z="125.204" />-->
+	</If>
+	<While Condition="HasQuest(37799) &amp;&amp; !IsQuestCompleted(37799)">
+		<!--<CustomBehavior File="InteractWith" QuestId="37799" MobId="239768" CollectionDistance="10"
+					NonCompeteDistance="0" WaitTime="5000" X="4454.646" Y="6187.619" Z="125.204" />-->
+    <CustomBehavior File="UserDialog" AllowBotStop="false" SoundCue="Exclamation" SoundCueInterval="5" ExpiryTime="600" ExpiryAction="InputEnabled_Continue"
+			Text="請手動撿道具" Title="WARNING" />
+  </While>
+	<While Condition="HasQuest(37799) &amp;&amp; IsQuestCompleted(37799)">
+		<CustomBehavior File="CompleteLogQuest" QuestId="37799" /> 
+	</While> 
+	<!--Part 5 -->
+<If Condition="Me.IsAlliance">
+	<If Condition="HasQuest(37811) &amp;&amp; !IsQuestCompleted(37811) &amp;&amp; Me.Location.Distance(new WoWPoint(4441.851,6174.493,107.4943)) &lt; 60">
+		<CustomBehavior File="MyCTM" X="4441.851" Y="6174.493" Z="107.4943" />
+		<CustomBehavior File="WaitTimer" WaitTime="3000" GoalText="Avoiding Mesh Errors" />
+	</If>
+	<If Condition="HasQuest(37811) &amp;&amp; !IsQuestCompleted(37811)" >
+		<CustomBehavior File="FlyTo" X="3900.688" Y="6384.012" Z="37.10974"/>
+    <CustomBehavior File="ForcedDismount" />
+		<MoveTo X="3914.868" Y="6323.017" Z="-16.20399" />
+		<CustomBehavior File="WaitTimer" WaitTime="3000" GoalText="Hoping to clear aggro {TimeRemaining}" TerminateWhen="!Me.Combat" /> 
+	</If>
+	<While Condition="HasQuest(37811) &amp;&amp; !IsQuestCompleted(37811)">
+		<CustomBehavior File="InteractWith" QuestId="37811" MobId="239781" NonCompeteDistance="0" WaitTime="2000" X="3903.644" Y="6311.171" Z="-15.90049" /> 
+		<CustomBehavior File="InteractWith" QuestId="37811" MobId="239782" NonCompeteDistance="0" WaitTime="2000" X="3907.198" Y="6317.178" Z="-16.33355" />
+		<CustomBehavior File="InteractWith" QuestId="37811" MobId="239783" NonCompeteDistance="0" WaitTime="2000" X="3930.072" Y="6305.008" Z="-15.48386" />
+    <CustomBehavior File="WaitTimer" WaitTime="5000"/>
+		<CustomBehavior File="InteractWith" QuestId="37811" MobId="239779" NonCompeteDistance="0" 
+					WaitTime="15000" WaitForNpcs="false" X="3918.337" Y="6311.082" Z="-16.21862" />
+		<CustomBehavior File="InteractWith" QuestId="37811" MobId="89824" NonCompeteDistance="0" WaitForNpcs="false"  />
+	</While>
+	<!-- Alliance Turn In -->
+	<If Condition="HasQuest(37811) &amp;&amp; IsQuestCompleted(37811)">
+		<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(110560)" WaitTime="1000" />
+		<CustomBehavior File="WaitTimer" WaitTime="12000" VariantTime="30000" GoalText="Waiting for Hearth {TimeRemaining}" TerminateWhen="Me.ZoneId == 7078 || Me.ZoneId == 7004" /> 
+		<If Condition="Me.IsAlliance">
+			<TurnIn QuestName="Treasure Contract: Gutrek's Cleaver" QuestId="37811" 
+									TurnInName="Bodrick Grey" TurnInId="81492" 	X="1922.84" Y="284.0955" Z="88.96586" />
+		</If>
+	</If>
+</If>
+<If Condition="Me.IsHorde">
+	<If Condition="HasQuest(37992) &amp;&amp; !IsQuestCompleted(37992) &amp;&amp; Me.Location.Distance(new WoWPoint(4441.851,6174.493,107.4943)) &lt; 60">
+		<CustomBehavior File="MyCTM" X="4441.851" Y="6174.493" Z="107.4943" />
+		<CustomBehavior File="WaitTimer" WaitTime="3000" GoalText="Avoiding Mesh Errors" />
+	</If>
+	<If Condition="HasQuest(37992) &amp;&amp; !IsQuestCompleted(37992)" >
+		<CustomBehavior File="FlyTo" X="3925.273" Y="6290.81" Z="-17.04812" />
+		<MoveTo X="3914.868" Y="6323.017" Z="-16.20399" />
+		<CustomBehavior File="WaitTimer" WaitTime="3000" GoalText="Hoping to clear aggro {TimeRemaining}" TerminateWhen="!Me.Combat" /> 
+	</If>
+	<While Condition="HasQuest(37992) &amp;&amp; !IsQuestCompleted(37992)">
+		<CustomBehavior File="InteractWith" QuestId="37992" MobId="239781" NonCompeteDistance="0" WaitTime="2000" X="3903.644" Y="6311.171" Z="-15.90049" /> 
+		<CustomBehavior File="InteractWith" QuestId="37992" MobId="239782" NonCompeteDistance="0" WaitTime="2000" X="3907.198" Y="6317.178" Z="-16.33355" />
+		<CustomBehavior File="InteractWith" QuestId="37992" MobId="239783" NonCompeteDistance="0" WaitTime="2000" X="3930.072" Y="6305.008" Z="-15.48386" />
+		<CustomBehavior File="InteractWith" QuestId="37992" MobId="239779" NonCompeteDistance="0" 
+					WaitTime="15000" WaitForNpcs="false" X="3918.337" Y="6311.082" Z="-16.21862" />
+		<CustomBehavior File="InteractWith" QuestId="37992" MobId="89824" NonCompeteDistance="0" WaitForNpcs="false"  />
+	</While>
+	<!--Horde Turn In -->
+	<If Condition="HasQuest(37992) &amp;&amp; IsQuestCompleted(37992)">
+		<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(110560)" WaitTime="1000" />
+		<CustomBehavior File="WaitTimer" WaitTime="12000" VariantTime="30000" GoalText="Waiting for Hearth {TimeRemaining}" TerminateWhen="Me.ZoneId == 7078 || Me.ZoneId == 7004" /> 
+		<If Condition="Me.IsHorde">				
+			<TurnIn QuestName="Treasure Contract: Gutrek's Cleaver" QuestId="37992" 
+									TurnInName="Rokhan" TurnInId="78487" X="5614.104" Y="4563.054" Z="135.189" />
+		</If>
+	</If>
+</If>
+<!-- END Quest Treasure Contract: Gutrek's Cleaver-->
+
+<!-- START Quest Treasure Contract: The Artificer-->
+	<!--Part 1 -->
+	<While Condition="HasQuest(37973) &amp;&amp; !IsQuestCompleted(37973)">
+		<CustomBehavior File="InteractWith" QuestId="37973" MobId="240016" ProactiveCombatStrategy="ClearMobsThatWillAggro"
+								NonCompeteDistance="0" PreInteractMountStrategy="DismountOrCancelShapeshift" 
+								Range="5" WaitTime="5000" X="502.1059" Y="593.5938" Z="96.61375" /> 
+	</While>
+	<While Condition="HasQuest(37973) &amp;&amp; IsQuestCompleted(37973)">
+		<CustomBehavior File="CompleteLogQuest" QuestId="37973" /> 
+	</While> 
+	<!--Part 2 -->
+	<While Condition="HasQuest(37976) &amp;&amp; !IsQuestCompleted(37976)">
+		<CustomBehavior File="InteractWith" QuestId="37976" MobId="90408" ProactiveCombatStrategy="ClearMobsTargetingUs" 
+								NonCompeteDistance="0" Range="15" X="491.7946" Y="428.2517" Z="91.76897"/>
+	</While>
+	<While Condition="HasQuest(37976) &amp;&amp; IsQuestCompleted(37976)">
+		<CustomBehavior File="CompleteLogQuest" QuestId="37976" /> 
+	</While> 
+	<!--Part 3 -->
+	<While Condition="HasQuest(37977) &amp;&amp; !IsQuestCompleted(37977)">
+		<CustomBehavior File="InteractWith" QuestId="37977" MobId="90412" ProactiveCombatStrategy="ClearMobsTargetingUs"
+								NonCompeteDistance="0" Range="15" X="73.18905" Y="261.7473" Z="117.7633"  />
+	</While>
+	<While Condition="HasQuest(37977) &amp;&amp; IsQuestCompleted(37977)">
+		<CustomBehavior File="CompleteLogQuest" QuestId="37977" /> 
+	</While> 
+	<!--Part 4 -->
+	<While Condition="HasQuest(37978) &amp;&amp; !IsQuestCompleted(37978)">
+		 <CustomBehavior File="InteractWith" QuestId="37978" MobId="90404" WaitForNpcs="false" ProactiveCombatStrategy="ClearMobsTargetingUs"
+								NonCompeteDistance="0" PreInteractMountStrategy="DismountOrCancelShapeshift" Range="15" X="340.5761" Y="132.6618" Z="266.9387" />
+	</While> 
+	<While Condition="HasQuest(37978) &amp;&amp; IsQuestCompleted(37978)">
+		 <CustomBehavior File="CompleteLogQuest" QuestId="37978" />
+	</While>
+	<!--Part 5 -->
+<If Condition="Me.IsAlliance">
+	<If Condition="HasQuest(37979) &amp;&amp; !IsQuestCompleted(37979)"><!-- Get into Cave -->
+		<MoveTo X="629.2338" Y="114.5893" Z="106.0073" />
+		<CustomBehavior File="MyCTM"  X="634.5177" Y="139.6959" Z="86.17049" />
+		<CustomBehavior File="WaitTimer" WaitTime="5000" />
+		<MoveTo X="585.4737" Y="101.8037" Z="56.46733" />
+	</If>
+	<While Condition="HasQuest(37979) &amp;&amp; !IsQuestCompleted(37979)">
+		<CustomBehavior File="InteractWith" QuestId="37979" MobId="240053" WaitForNpcs="false" ProactiveCombatStrategy="ClearMobsThatWillAggro"
+								PreInteractMountStrategy="DismountOrCancelShapeshift" Range="15" NonCompeteDistance="0"
+								WaitTime="5000" X="582.5411" Y="103.0041" Z="56.54697" />
+		<If Condition="Unit(90391) != null &amp;&amp; (Unit(90391).Rotation &lt; 6.0 || Unit(90391).Rotation &gt; 6.5) &amp;&amp; Unit(90391).CanInteract">
+			<CustomBehavior File="Message" Text="Turning inner ring" LogColor="DeepSkyBlue" />
+			<CustomBehavior File="InteractWith" PreInteractMountStrategy="Dismount" MobId="90391" InteractBlacklistTimeInSeconds="5" NonCompeteDistance="0" MinRange="3" WaitTime="2000" IgnoreLoSToTarget="true" X="579.6511" Y="105.2674" Z="57.70372" />
+		</If> 
+		<If Condition="Unit(90386) != null &amp;&amp; (Unit(90386).Rotation &lt; 6.0 || Unit(90386).Rotation &gt; 6.5) &amp;&amp; Unit(90386).CanInteract">
+			<CustomBehavior File="Message" Text="Turning middle ring" LogColor="DeepSkyBlue" />
+			<CustomBehavior File="InteractWith" PreInteractMountStrategy="Dismount" MobId="90386" InteractBlacklistTimeInSeconds="5" NonCompeteDistance="0" MinRange="3" WaitTime="2000" IgnoreLoSToTarget="true" X="579.6511" Y="105.2674" Z="57.70372" />
+		</If> 
+		<If Condition="Unit(90376) != null &amp;&amp; (Unit(90376).Rotation &lt; 6.0 || Unit(90376).Rotation &gt; 6.5) &amp;&amp; Unit(90376).CanInteract">
+			<CustomBehavior File="Message" Text="Turning outer ring" LogColor="DeepSkyBlue" />
+			<CustomBehavior File="InteractWith" PreInteractMountStrategy="Dismount" MobId="90376" InteractBlacklistTimeInSeconds="5" NonCompeteDistance="0" MinRange="3" WaitTime="2000" IgnoreLoSToTarget="true" X="579.6511" Y="105.2674" Z="57.70372" />
+		</If> 
+		<CustomBehavior File="InteractWith" QuestId="37979" MobId="90504" WaitForNpcs="false" NonCompeteDistance="0"
+								Range="5" WaitTime="2500" X="582.5411" Y="103.0041" Z="56.54697"  /> <!--Dream of Argus-->
+		<CustomBehavior File="InteractWith" QuestId="37979" MobId="90618" WaitForNpcs="false" NonCompeteDistance="0"
+								Range="5" WaitTime="2500" X="582.5411" Y="103.0041" Z="56.54697"  /> <!--Dream of Argus-->									
+	</While>
+	<!--Alliance Turn In -->
+	<If Condition="HasQuest(37979) &amp;&amp; IsQuestCompleted(37979)">
+		<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(110560)" WaitTime="1000" />
+		<CustomBehavior File="WaitTimer" WaitTime="12000" VariantTime="30000" GoalText="Waiting for Hearth {TimeRemaining}" TerminateWhen="Me.ZoneId == 7078 || Me.ZoneId == 7004" /> 
+		<If Condition="Me.IsAlliance">
+			<TurnIn QuestName="Treasure Contract: The Artificer" QuestId="37979" 
+										TurnInName="Bodrick Grey" TurnInId="81492" 	X="1922.84" Y="284.0955" Z="88.96586" />
+		</If>
+	</If>
+</If>
+<If Condition="Me.IsHorde">
+		<If Condition="HasQuest(37997) &amp;&amp; !IsQuestCompleted(37997)"><!-- Get into Cave -->
+		<MoveTo X="629.2338" Y="114.5893" Z="106.0073" />
+		<CustomBehavior File="MyCTM"  X="634.5177" Y="139.6959" Z="86.17049" />
+		<CustomBehavior File="WaitTimer" WaitTime="5000" />
+		<MoveTo X="585.4737" Y="101.8037" Z="56.46733" />
+	</If>
+	<While Condition="HasQuest(37997) &amp;&amp; !IsQuestCompleted(37997)">
+		<CustomBehavior File="InteractWith" QuestId="37997" MobId="240053" WaitForNpcs="false" ProactiveCombatStrategy="ClearMobsThatWillAggro"
+								PreInteractMountStrategy="DismountOrCancelShapeshift" Range="15" NonCompeteDistance="0"
+								WaitTime="5000" X="582.5411" Y="103.0041" Z="56.54697" />
+		<If Condition="Unit(90391) != null &amp;&amp; (Unit(90391).Rotation &lt; 6.0 || Unit(90391).Rotation &gt; 6.5) &amp;&amp; Unit(90391).CanInteract">
+			<CustomBehavior File="Message" Text="Turning inner ring" LogColor="DeepSkyBlue" />
+			<CustomBehavior File="InteractWith" PreInteractMountStrategy="Dismount" MobId="90391" InteractBlacklistTimeInSeconds="5" NonCompeteDistance="0" MinRange="3" WaitTime="2000" IgnoreLoSToTarget="true" X="579.6511" Y="105.2674" Z="57.70372" />
+		</If> 
+		<If Condition="Unit(90386) != null &amp;&amp; (Unit(90386).Rotation &lt; 6.0 || Unit(90386).Rotation &gt; 6.5) &amp;&amp; Unit(90386).CanInteract">
+			<CustomBehavior File="Message" Text="Turning middle ring" LogColor="DeepSkyBlue" />
+			<CustomBehavior File="InteractWith" PreInteractMountStrategy="Dismount" MobId="90386" InteractBlacklistTimeInSeconds="5" NonCompeteDistance="0" MinRange="3" WaitTime="2000" IgnoreLoSToTarget="true" X="579.6511" Y="105.2674" Z="57.70372" />
+		</If> 
+		<If Condition="Unit(90376) != null &amp;&amp; (Unit(90376).Rotation &lt; 6.0 || Unit(90376).Rotation &gt; 6.5) &amp;&amp; Unit(90376).CanInteract">
+			<CustomBehavior File="Message" Text="Turning outer ring" LogColor="DeepSkyBlue" />
+			<CustomBehavior File="InteractWith" PreInteractMountStrategy="Dismount" MobId="90376" InteractBlacklistTimeInSeconds="5" NonCompeteDistance="0" MinRange="3" WaitTime="2000" IgnoreLoSToTarget="true" X="579.6511" Y="105.2674" Z="57.70372" />
+		</If> 
+		<CustomBehavior File="InteractWith" QuestId="37997" MobId="90504" WaitForNpcs="false" NonCompeteDistance="0"
+								Range="5" WaitTime="2500" X="582.5411" Y="103.0041" Z="56.54697"  /> <!--Dream of Argus-->
+		<CustomBehavior File="InteractWith" QuestId="37979" MobId="90618" WaitForNpcs="false" NonCompeteDistance="0"
+								Range="5" WaitTime="2500" X="582.5411" Y="103.0041" Z="56.54697"  /> <!--Dream of Argus-->									
+	</While>
+	<!-- Horde Turn In -->
+	<If Condition="HasQuest(37997) &amp;&amp; IsQuestCompleted(37997)">
+		<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(110560)" WaitTime="1000" />
+		<CustomBehavior File="WaitTimer" WaitTime="12000" VariantTime="30000" GoalText="Waiting for Hearth {TimeRemaining}" TerminateWhen="Me.ZoneId == 7078 || Me.ZoneId == 7004" /> 
+		<If Condition="Me.IsHorde">				
+			<TurnIn QuestName="Treasure Contract: The Artificer" QuestId="37997" 
+										TurnInName="Rokhan" TurnInId="78487" X="5614.104" Y="4563.054" Z="135.189" />
+		</If>	
+	</If>
+</If>
+<!-- END Quest Treasure Contract: The Artificer -->
+
+<!-- START Quest Treasure Contract: The Thunderlord Sage-->
+	<!--Part 1 -->
+	<If Condition="HasQuest(37914) &amp;&amp; !IsQuestCompleted(37914)"> <!-- Get to FrostRidge -->
+		<CustomBehavior File="NoCombatMoveTo" X="7230.053" Y="3248.307" Z="145.4819" />
+	</If>
+	<While Condition="HasQuest(37914) &amp;&amp; !IsQuestCompleted(37914)">
+		<CustomBehavior File="InteractWith" QuestId="37914" MobId="90176" ProactiveCombatStrategy="ClearMobsThatWillAggro" InteractByGossipOptions="1"
+								NonCompeteDistance="0" PreInteractMountStrategy="DismountOrCancelShapeshift" 
+								Range="5" WaitTime="5000" X="7180.231" Y="3218.928" Z="146.7415" /> 
+	</While>
+	<While Condition="HasQuest(37914) &amp;&amp; IsQuestCompleted(37914)">
+		<CustomBehavior File="CompleteLogQuest" QuestId="37914" /> 
+	</While> 
+	<!--Part 2 -->
+	<While Condition="HasQuest(37916) &amp;&amp; !IsQuestCompleted(37916) &amp;&amp; !HasItem(122098) ">
+		<CustomBehavior File="InteractWith" QuestId="37916" MobId="239923" ProactiveCombatStrategy="ClearMobsTargetingUs" 
+								NonCompeteDistance="0"  Range="5" X="7307.563" Y="3175.707" Z="143.3978" /> <!-- Get Gronnsbane's Haft -->
+	</While>
+	<While Condition="HasQuest(37916) &amp;&amp; !IsQuestCompleted(37916) &amp;&amp; !HasItem(122099) ">
+		<CustomBehavior File="InteractWith" QuestId="37916" MobId="239924" ProactiveCombatStrategy="ClearMobsTargetingUs" 
+								NonCompeteDistance="0" Range="5" X="7178.545" Y="3077.514" Z="164.405" /> <!-- Get Gronnsbane's Weight -->
+	</While>
+	<While Condition="HasQuest(37916) &amp;&amp; !IsQuestCompleted(37916) &amp;&amp; !HasItem(122096) ">
+		<CustomBehavior File="InteractWith" QuestId="37916" MobId="239922" ProactiveCombatStrategy="ClearMobsTargetingUs" 
+								NonCompeteDistance="0" Range="5" X="6910.451" Y="3108.374" Z="124.8076" /> <!-- Get Gronnsbane's Blade -->
+	</While>
+	<While Condition="HasQuest(37916) &amp;&amp; IsQuestCompleted(37916)">
+		<CustomBehavior File="CompleteLogQuest" QuestId="37916" /> 
+	</While> 
+	<!--Part 3 -->
+	<If Condition="HasQuest(37917) &amp;&amp; !IsQuestCompleted(37917)">
+		<CustomBehavior File="NoCombatMoveTo" X="7741.34" Y="4907.51" Z="126.2591" />
+		<CustomBehavior File="Hooks\DoWhen" ActivityName="GetOutOfLava"  AllowUseDuringCombat="True" UseWhen="Me.HasAura(173611)" >
+			<MoveTo X="7737.49" Y="4922.652" Z="124.5103" /> <!-- Move to safe location if fighting mob in lava -->
+		</CustomBehavior>
+		<MoveTo X="7741.34" Y="4907.51" Z="126.2591" /> <!-- Clear mobs that aggro'd -->
+		<CustomBehavior File="WaitTimer" WaitTime="200" /> <!-- Allow Reset of position to prevent falling off ledge -->
+		<MoveTo X="7741.34" Y="4907.51" Z="126.2591" /> <!-- Clear mobs that aggro'd -->
+		<CustomBehavior File="WaitTimer" WaitTime="200" /> <!-- Allow Reset of position to prevent falling off ledge -->
+		<MoveTo X="7741.34" Y="4907.51" Z="126.2591" /> <!-- Clear mobs that aggro'd -->
+		<CustomBehavior File="WaitTimer" WaitTime="200" /> <!-- Allow Reset of position to prevent falling off ledge -->
+		<MoveTo X="7741.34" Y="4907.51" Z="126.2591" /> <!-- Clear mobs that aggro'd -->
+		<CustomBehavior File="Hooks\DoWhen" ActivityName="GetOutOfLava" Command="Remove" />
+		<DisableBehavior Name="Pull, Combat" /> <!-- May Die En Route ... better than time and risk with lava and elites -->
+	</If>
+	<While Condition="HasQuest(37917) &amp;&amp; !IsQuestCompleted(37917)">
+		<CustomBehavior File="MyCTM" X="7757.321" Y="4903.363" Z="120.944" />
+		<CustomBehavior File="InteractWith" QuestId="37917" MobId="239926" IgnoreCombat="true" WaitTime="2000" 
+								InteractBlacklistTimeInSeconds="5" NonCompeteDistance="0" Range="10" X="7741.646" Y="4909.103" Z="126.2194" />
+	</While>
+	<While Condition="HasQuest(37917) &amp;&amp; IsQuestCompleted(37917)">
+		<CustomBehavior File="CompleteLogQuest" QuestId="37917" /> 
+	</While> 
+	<!--Part 4 -->
+	<If Condition="HasQuest(37918) &amp;&amp; !IsQuestCompleted(37918)">
+		<CustomBehavior File="MyCTM" X="7747.355" Y="4901.479" Z="119.555" /> <!-- Get Up From Ridge -->
+		<CustomBehavior File="MyCTM" X="7744.855" Y="4904.526" Z="123.9956" />
+		<CustomBehavior File="MyCTM" X="7740.968" Y="4907.133" Z="126.2574" />
+		<EnableBehavior Name="Pull, Combat" />
+		<CustomBehavior File="NoCombatMoveTo" X="7411.313" Y="4470.924" Z="186.9441" />
+	</If>
+	<While Condition="HasQuest(37918) &amp;&amp; !IsQuestCompleted(37918)">
+		<CustomBehavior File="InteractWith" QuestId="37918" MobId="239925" WaitTime="2000"
+								InteractBlacklistTimeInSeconds="5" NonCompeteDistance="0" Range="10" X="7400.603" Y="4498.24" Z="239.1986" />
+	</While> 
+	<While Condition="HasQuest(37918) &amp;&amp; IsQuestCompleted(37918)">
+		 <CustomBehavior File="CompleteLogQuest" QuestId="37918" />
+	</While>
+	<!--Part 5 -->
+<If Condition="Me.IsAlliance">
+	<While Condition="HasQuest(37919) &amp;&amp; !IsQuestCompleted(37919)" >
+		<If Condition="HasQuest(37919) &amp;&amp; !IsQuestCompleted(37919) &amp;&amp; GetItemCount(109131)&lt;1" >
+			<CustomBehavior File="Message" Text="Farming at least 2 Raw Clefthoof Meat" LogColor="CornflowerBlue" />
+			<CustomBehavior File="NoCombatMoveTo" X="7687.552" Y="5351.975" Z="124.7062" />
+			<MoveTo DestName="Kill Area" X="7687.552" Y="5351.975" Z="124.7062" />
+			<SetGrindArea>
+				<GrindArea>
+					<MobIds>76711 76710 73234</MobIds>
+					<TargetElites>false</TargetElites>
+					<RandomizeHotspots>false</RandomizeHotspots> 
+					<Hotspots>
+						<Hotspot X="7687.552" Y="5351.975" Z="124.7062" />
+						<Hotspot X="7636.043" Y="5476.9" Z="119.9299" />
+						<Hotspot X="7724.005" Y="5416.634" Z="116.8906" />
+						<Hotspot X="7753.812" Y="5446.083" Z="118.9066" />
+						<Hotspot X="7581.611" Y="5675.688" Z="126.3233" />
+						<Hotspot X="7469.542" Y="5712.041" Z="125.9623" />
+						<Hotspot X="7410.808" Y="5694.841" Z="121.5581" />
+						<Hotspot X="7315.312" Y="5566.476" Z="131.9637" />
+						<Hotspot X="7528.912" Y="5852.264" Z="109.3293" />
+						<Hotspot X="7691.424" Y="5864.56" Z="103.9334" />
+						<Hotspot X="7611.789" Y="5656.981" Z="123.1696" />
+					</Hotspots>
+				</GrindArea>  
+			</SetGrindArea>
+			<GrindTo Condition="GetItemCount(109131)&gt;1" GoalText="Getting at least 2 Raw Clefthoof Meat"  />
+		</If>
+		<CustomBehavior File="NoCombatMoveTo" X="7124.026" Y="4713.308" Z="228.2761" /> <!-- Getting to Altar... May die en route -->
+		<CustomBehavior File="Hooks\Avoid" AvoidName="Some Mob" ObjectId="90141" Radius="10" AvoidWhen="Me.HasAura(161894)" />
+		<CustomBehavior File="WaitTimer" WaitTime="2500" />
+		<MoveTo X="7124.026" Y="4713.308" Z="228.2761" /> <!-- Kill Dragon if already summoned -->
+		<CustomBehavior File="InteractWith" QuestId="37919" MobId="90141" WaitTime="5000" WaitForNpcs="false"
+								NonCompeteDistance="0" Range="10" X="7124.026" Y="4713.308" Z="228.2761" />
+		<MoveTo X="7124.026" Y="4713.308" Z="228.2761" />
+		<CustomBehavior File="InteractWith" QuestId="37919" MobId="239916" WaitTime="10000" WaitForNpcs="false" InteractByGossipOptions="1"
+								NonCompeteDistance="0" Range="10" X="7124.026" Y="4713.308" Z="228.2761" />
+		<MoveTo X="7124.026" Y="4713.308" Z="228.2761" />
+		<CustomBehavior File="InteractWith" QuestId="37919" MobId="90141" WaitTime="5000" WaitForNpcs="false"
+								NonCompeteDistance="0" Range="10" X="7124.026" Y="4713.308" Z="228.2761" />
+		<MoveTo X="7124.026" Y="4713.308" Z="228.2761" />
+		<CustomBehavior File="InteractWith" QuestId="37919" MobId="90141" WaitTime="5000" WaitForNpcs="false"
+								NonCompeteDistance="0" Range="10" X="7124.026" Y="4713.308" Z="228.2761" />
+		<MoveTo X="7124.026" Y="4713.308" Z="228.2761" />
+		<CustomBehavior File="Hooks\Avoid" AvoidName="Some Mob" Command="Remove" />
+	</While>
+	<!--Turn In -->
+	<If Condition="HasQuest(37919) &amp;&amp; IsQuestCompleted(37919)">
+		<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(110560)" WaitTime="1000" />
+		<CustomBehavior File="WaitTimer" WaitTime="12000" VariantTime="30000" GoalText="Waiting for Hearth {TimeRemaining}" TerminateWhen="Me.ZoneId == 7078 || Me.ZoneId == 7004" /> 
+		<If Condition="Me.IsAlliance">
+			<TurnIn QuestName="Treasure Contract: The Thunderlord Sage" QuestId="37919" 
+									TurnInName="Bodrick Grey" TurnInId="81492" 	X="1922.84" Y="284.0955" Z="88.96586" />
+		</If>
+	</If>
+</If>
+<If Condition="Me.IsHorde">
+	<While Condition="HasQuest(37995) &amp;&amp; !IsQuestCompleted(37995)" >
+		<If Condition="HasQuest(37995) &amp;&amp; !IsQuestCompleted(37995) &amp;&amp; GetItemCount(109131)&lt;1" >
+			<CustomBehavior File="Message" Text="Farming at least 2 Raw Clefthoof Meat" LogColor="CornflowerBlue" />
+			<CustomBehavior File="NoCombatMoveTo" X="7687.552" Y="5351.975" Z="124.7062" />
+			<MoveTo DestName="Kill Area" X="7687.552" Y="5351.975" Z="124.7062" />
+			<SetGrindArea>
+				<GrindArea>
+					<MobIds>76711 76710 73234</MobIds>
+					<TargetElites>false</TargetElites>
+					<RandomizeHotspots>false</RandomizeHotspots> 
+					<Hotspots>
+						<Hotspot X="7687.552" Y="5351.975" Z="124.7062" />
+						<Hotspot X="7636.043" Y="5476.9" Z="119.9299" />
+						<Hotspot X="7724.005" Y="5416.634" Z="116.8906" />
+						<Hotspot X="7753.812" Y="5446.083" Z="118.9066" />
+						<Hotspot X="7581.611" Y="5675.688" Z="126.3233" />
+						<Hotspot X="7469.542" Y="5712.041" Z="125.9623" />
+						<Hotspot X="7410.808" Y="5694.841" Z="121.5581" />
+						<Hotspot X="7315.312" Y="5566.476" Z="131.9637" />
+						<Hotspot X="7528.912" Y="5852.264" Z="109.3293" />
+						<Hotspot X="7691.424" Y="5864.56" Z="103.9334" />
+						<Hotspot X="7611.789" Y="5656.981" Z="123.1696" />
+					</Hotspots>
+				</GrindArea>  
+			</SetGrindArea>
+			<GrindTo Condition="GetItemCount(109131)&gt;1" GoalText="Getting at least 2 Raw Clefthoof Meat"  />
+		</If>
+		<CustomBehavior File="NoCombatMoveTo" X="7124.026" Y="4713.308" Z="228.2761" /> <!-- Getting to Altar... May die en route -->
+		<CustomBehavior File="Hooks\Avoid" AvoidName="Some Mob" ObjectId="90141" Radius="10" AvoidWhen="Me.HasAura(161894)" />
+		<CustomBehavior File="WaitTimer" WaitTime="2500" />
+		<MoveTo X="7124.026" Y="4713.308" Z="228.2761" /> <!-- Kill Dragon if already summoned -->
+		<CustomBehavior File="InteractWith" QuestId="37995" MobId="90141" WaitTime="5000" WaitForNpcs="false"
+								NonCompeteDistance="0" Range="10" X="7124.026" Y="4713.308" Z="228.2761" />
+		<MoveTo X="7124.026" Y="4713.308" Z="228.2761" />
+		<CustomBehavior File="InteractWith" QuestId="37995" MobId="239916" WaitTime="10000" WaitForNpcs="false" InteractByGossipOptions="1"
+								NonCompeteDistance="0" Range="10" X="7124.026" Y="4713.308" Z="228.2761" />
+		<MoveTo X="7124.026" Y="4713.308" Z="228.2761" />
+		<CustomBehavior File="InteractWith" QuestId="37995" MobId="90141" WaitTime="5000" WaitForNpcs="false"
+								NonCompeteDistance="0" Range="10" X="7124.026" Y="4713.308" Z="228.2761" />
+		<MoveTo X="7124.026" Y="4713.308" Z="228.2761" />
+		<CustomBehavior File="InteractWith" QuestId="37995" MobId="90141" WaitTime="5000" WaitForNpcs="false"
+								NonCompeteDistance="0" Range="10" X="7124.026" Y="4713.308" Z="228.2761" />
+		<MoveTo X="7124.026" Y="4713.308" Z="228.2761" />
+		<CustomBehavior File="Hooks\Avoid" AvoidName="Some Mob" Command="Remove" />
+	</While>
+	<!--Turn In -->
+	<If Condition="HasQuest(37995) &amp;&amp; IsQuestCompleted(37995)">
+		<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(110560)" WaitTime="1000" />
+		<CustomBehavior File="WaitTimer" WaitTime="12000" VariantTime="30000" GoalText="Waiting for Hearth {TimeRemaining}" TerminateWhen="Me.ZoneId == 7078 || Me.ZoneId == 7004" /> 
+		<If Condition="Me.IsHorde">				
+			<TurnIn QuestName="Treasure Contract: The Thunderlord Sage" QuestId="37995" 
+									TurnInName="Rokhan" TurnInId="78487" X="5614.104" Y="4563.054" Z="135.189" />
+		</If>
+	</If>
+</If>
+<!-- END Quest Treasure Contract: The Thunderlord Sage -->
+	<CustomBehavior File="DeleteItems" Ids="122154, 122101, 121837, 121820, 122147, 120989" />
+	<CustomBehavior File="HBRelogSkip" />
+</QuestOrder>	
+</HBProfile>
