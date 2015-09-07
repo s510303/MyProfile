@@ -309,60 +309,55 @@
 </If>
 <!-- END Quest Treasure Contract: The Infected Orc & Achievement Taking From the Taker -->
 
-<!-- START Quest Treasure Contract: Amulet of Rukhmar-->
+<!-- START Quest Treasure Contract: Amulet of Rukhmar 頂尖裝置-->
 	<!--Part 1 -->
 	<If Condition="HasQuest(37848) &amp;&amp; !IsQuestCompleted(37848)">
+  <MoveTo X="676.424" Y="701.439" Z="113.96" />
+  <CustomBehavior File="FlyTo" X="989.7451" Y="1764.942" Z="309.1845" />
+  <CustomBehavior File="ForcedDismount" />
 	<Objective QuestName="Treasure Contract: Amulet of Rukhmar" QuestId="37848" Type="CollectItem" ItemId="121819" CollectCount="5" />
 	<CustomBehavior File="CompleteLogQuest" QuestId="37848" />
 	</If>
 	<!--Part 2 -->
 	<While Condition="HasQuest(37849) &amp;&amp; !IsQuestCompleted(37849)"> <!-- 3 different object IDs -->
+    <CustomBehavior File="FlyTo" X="786.711" Y="1471.044" Z="331.0921" />
+    <CustomBehavior File="ForcedDismount" />
 		<CustomBehavior File="InteractWith" QuestId="37849" MobId="239818" WaitForNpcs="false" ProactiveCombatStrategy="ClearMobsThatWillAggro"
 								NonCompeteDistance="0" PreInteractMountStrategy="DismountOrCancelShapeshift" 
-								Range="5" WaitTime="5000" X="786.711" Y="1471.044" Z="331.0921"  /> 
-		<CustomBehavior File="InteractWith" QuestId="37850" MobId="239819" WaitForNpcs="false" ProactiveCombatStrategy="ClearMobsThatWillAggro"
-								NonCompeteDistance="0" PreInteractMountStrategy="DismountOrCancelShapeshift" 
-								Range="5" WaitTime="5000" X="884.2563" Y="1017.44" Z="48.12966" />
-		<CustomBehavior File="InteractWith" QuestId="37850" MobId="239820" WaitForNpcs="false" ProactiveCombatStrategy="ClearMobsThatWillAggro"
-								NonCompeteDistance="0" PreInteractMountStrategy="DismountOrCancelShapeshift" 
-								Range="5" WaitTime="5000" X="884.2563" Y="1017.44" Z="48.12966" /> 
+								Range="5" WaitTime="5000" X="786.711" Y="1471.044" Z="331.0921"  />
 	</While>
 	<While Condition="HasQuest(37849) &amp;&amp; IsQuestCompleted(37849)">
 		<CustomBehavior File="CompleteLogQuest" QuestId="37849" /> 
 	</While> <!-- Duplicate while loop because errors when complete was combined -->
 	<!--Part 3 -->
 	<While Condition="HasQuest(37850) &amp;&amp; !IsQuestCompleted(37850)"> <!-- 3 different object IDs -->
-		<CustomBehavior File="InteractWith" QuestId="37850" MobId="239818" WaitForNpcs="false" ProactiveCombatStrategy="ClearMobsThatWillAggro"
+    <CustomBehavior File="FlyTo" X="861.2173" Y="1015.448" Z="54.38369"  />
+    <CustomBehavior File="ForcedDismount" />
+    <CustomBehavior File="MyCTM" X="884.8629" Y="1017.46" Z="48.30746" />
+		<CustomBehavior File="InteractWith" QuestId="37850" MobId="239819" WaitForNpcs="false" ProactiveCombatStrategy="ClearMobsTargetingUs"
 								NonCompeteDistance="0" PreInteractMountStrategy="DismountOrCancelShapeshift" 
-								Range="5" WaitTime="5000" X="884.2563" Y="1017.44" Z="48.12966" /> 
-		<CustomBehavior File="InteractWith" QuestId="37850" MobId="239819" WaitForNpcs="false" ProactiveCombatStrategy="ClearMobsThatWillAggro"
-								NonCompeteDistance="0" PreInteractMountStrategy="DismountOrCancelShapeshift" 
-								Range="5" WaitTime="5000" X="884.2563" Y="1017.44" Z="48.12966" />
-		<CustomBehavior File="InteractWith" QuestId="37850" MobId="239820" WaitForNpcs="false" ProactiveCombatStrategy="ClearMobsThatWillAggro"
-								NonCompeteDistance="0" PreInteractMountStrategy="DismountOrCancelShapeshift" 
-								Range="5" WaitTime="5000" X="884.2563" Y="1017.44" Z="48.12966" /> 
+								Range="5" WaitTime="5000" X="884.8629" Y="1017.46" Z="48.30746"/>
+    <CustomBehavior File="MyCTM" X="861.2173" Y="1015.448" Z="54.38369" />
 	</While>
 	<While Condition="HasQuest(37850) &amp;&amp; IsQuestCompleted(37850)">
 		<CustomBehavior File="CompleteLogQuest" QuestId="37850" /> 
 	</While>
 	<!--Part 4 -->
 	<If Condition="HasQuest(37851) &amp;&amp; !IsQuestCompleted(37851)"> <!-- Get into Cave -->
-		<CustomBehavior File="Misc\RunLua" Lua="JumpOrAscendStart()" WaitTime="5000" />
-		<MoveTo X="140.7918" Y="325.6393" Z="61.28469" />
-		<CustomBehavior File="MyCTM" X="40.52316" Y="302.9936" Z="61.28469" />
+		<!--<CustomBehavior File="Misc\RunLua" Lua="JumpOrAscendStart()" WaitTime="5000" />-->
+    <CustomBehavior File="FlyTo" X="-34.29415" Y="221.519" Z="-0.1986313"/>
+    <CustomBehavior File="ForcedDismount" />
+    <MoveTo X="-10.19579" Y="326.237" Z="-4.701187" />
+		<!--<MoveTo X="140.7918" Y="325.6393" Z="61.28469" />-->
+		<!--<CustomBehavior File="MyCTM" X="40.52316" Y="302.9936" Z="61.28469" />
 		<CustomBehavior File="MyCTM" X="8.567809" Y="250.8719" Z="59.32298" />
-		<CustomBehavior File="MyCTM" X="-34.20174" Y="224.4265" Z="-0.1997161" />
+		<CustomBehavior File="MyCTM" X="-34.20174" Y="224.4265" Z="-0.1997161" />-->
 	</If>
 	<While Condition="HasQuest(37851) &amp;&amp; !IsQuestCompleted(37851)"> <!-- 3 different object IDs -->
-		<CustomBehavior File="InteractWith" QuestId="37850" MobId="239818" WaitForNpcs="false" ProactiveCombatStrategy="ClearMobsThatWillAggro"
+		<CustomBehavior File="InteractWith" QuestId="37851" MobId="239820" WaitForNpcs="false" ProactiveCombatStrategy="ClearMobsTargetingUs"
 								NonCompeteDistance="0" PreInteractMountStrategy="DismountOrCancelShapeshift" 
-								Range="5" WaitTime="5000" X="884.2563" Y="1017.44" Z="48.12966" /> 
-		<CustomBehavior File="InteractWith" QuestId="37850" MobId="239819" WaitForNpcs="false" ProactiveCombatStrategy="ClearMobsThatWillAggro"
-								NonCompeteDistance="0" PreInteractMountStrategy="DismountOrCancelShapeshift" 
-								Range="5" WaitTime="5000" X="884.2563" Y="1017.44" Z="48.12966" />
-		<CustomBehavior File="InteractWith" QuestId="37851" MobId="239820" WaitForNpcs="false" ProactiveCombatStrategy="ClearMobsThatWillAggro"
-								NonCompeteDistance="0" PreInteractMountStrategy="DismountOrCancelShapeshift" 
-								Range="5" WaitTime="3000" X="-12.8761" Y="329.7464" Z="-5.120794" /> 
+								Range="5" WaitTime="3000" X="-12.8761" Y="329.7464" Z="-5.120794" />
+    <MoveTo X="-34.29415" Y="221.519" Z="-0.1986313" />
 	</While>
 	<While Condition="HasQuest(37851) &amp;&amp; IsQuestCompleted(37851)">
 		<CustomBehavior File="CompleteLogQuest" QuestId="37851" /> 
@@ -371,6 +366,8 @@
 <If Condition="Me.IsAlliance">
 	<While Condition="Me.Location.Distance(new WoWPoint(30.20254,443.4941,223.8414)) &gt; 50 
 							&amp;&amp; HasQuest(37852) &amp;&amp; !IsQuestCompleted(37852)"> <!--Create Portal -->
+    <CustomBehavior File="FlyTo" X="-351.9214" Y="230.2583" Z="-0.3237418" />
+    <CustomBehavior File="ForcedDismount" />
 		<MoveTo X="-351.9214" Y="230.2583" Z="-0.3237418" />
 		<If Condition="Unit(89974) != null &amp;&amp; (Unit(89974).Rotation &lt; 3.0 || Unit(89974).Rotation &gt; 3.2) &amp;&amp; Unit(89974).CanInteract">
 			<CustomBehavior File="InteractWith" QuestId="37852" MobId="89974" WaitForNpcs="false" CollectionDistance="8" 
@@ -424,7 +421,9 @@
 <If Condition="Me.IsHorde">
 		<While Condition="Me.Location.Distance(new WoWPoint(30.20254,443.4941,223.8414)) &gt; 50 
 							&amp;&amp; HasQuest(37993) &amp;&amp; !IsQuestCompleted(37993)"> <!--Create Portal -->
-		<MoveTo X="-351.9214" Y="230.2583" Z="-0.3237418" />
+      <CustomBehavior File="FlyTo" X="-351.9214" Y="230.2583" Z="-0.3237418" />
+      <CustomBehavior File="ForcedDismount" />
+		<!--<MoveTo X="-351.9214" Y="230.2583" Z="-0.3237418" />-->
 		<If Condition="Unit(89974) != null &amp;&amp; (Unit(89974).Rotation &lt; 3.0 || Unit(89974).Rotation &gt; 3.2) &amp;&amp; Unit(89974).CanInteract">
 			<CustomBehavior File="InteractWith" QuestId="37993" MobId="89974" WaitForNpcs="false" CollectionDistance="8" 
 									ProactiveCombatStrategy="ClearMobsTargetingUs" PreInteractMountStrategy="DismountOrCancelShapeshift" 
