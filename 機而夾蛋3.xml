@@ -78,9 +78,16 @@
          <!--<RunTo X="1957.809" Y="85.04769" Z="86.26516" />
          <RunTo X="1963.19" Y="69.7935" Z="98.73251" />
          <RunTo X="1967.695" Y="69.79959" Z="108.9127" />-->
-         <MoveTo X="3685.313" Y="-3836.29" Z="44.98112"/>
-         <!--<CustomBehavior File="InteractWith" MobId="233610" ObjectType="Gameobject" Range="4" X="1966.385" Y="66.29166" Z="108.92" />
-         <CustomBehavior File="WaitTimer" WaitTime="8000" GoalText="Waiting for port {TimeRemaining}" />-->
+         <MoveTo X="1952.965" Y="88.8566" Z="85.35108" />
+         <CustomBehavior File="MyCTM" X="1962.771" Y="79.45829" Z="86.80607"/>
+         <CustomBehavior File="MyCTM" X="1975.75" Y="75.80701" Z="89.6964"/>
+         <CustomBehavior File="MyCTM" X="1968.61" Y="65.12929" Z="95.55936"/>
+         <CustomBehavior File="MyCTM" X="1961.865" Y="77.50562" Z="102.1037"/>
+         <CustomBehavior File="MyCTM" X="1975.994" Y="76.59556" Z="108.6383"/>
+         <CustomBehavior File="MyCTM" X="1967.487" Y="67.56936" Z="108.9163"/>
+         <!--<MoveTo X="3685.313" Y="-3836.29" Z="44.98112"/>-->
+         <CustomBehavior File="InteractWith" MobId="233610" ObjectType="Gameobject" Range="4" X="1966.385" Y="66.29166" Z="108.92" />
+         <CustomBehavior File="WaitTimer" WaitTime="8000" GoalText="Waiting for port {TimeRemaining}" />
        </If>
        <!--戰爭之矛-->
        <If Condition =" Me.ZoneId == 7332">
