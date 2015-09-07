@@ -36,7 +36,7 @@
 	<!-- Pick up quest -->
 	<If Condition="!(HasQuest(38441) || HasQuest(38252) || HasQuest(38044) || HasQuest(38449) || HasQuest(37940) || HasQuest(38047))" >
 		<CustomBehavior File="RunCode" Code="Logging.Write(System.Windows.Media.Colors.DeepSkyBlue, &quot;[Profile]: Moving to Tanaan Planning Map to pick up quest.&quot;);"/>
-		<CustomBehavior File="NoCombatMoveTo" X="4330.277" Y="-1519.324" Z="88.02171" /> <!-- Moves to Horde Tanaan Planning Map "  -->
+		<CustomBehavior File="FlyTo" X="4330.277" Y="-1519.324" Z="88.02171" /> <!-- Moves to Horde Tanaan Planning Map "  -->
 		
 		<CustomBehavior File="InteractWith" MobId="241725" NonCompeteDistance="0" WaitTime="2000" Range="5" X="4327.646" Y="-1520.481" Z="88.02522" /> <!-- Interacts with Horde Tanaan Planning Map "  -->
 		<CustomBehavior File="Misc\RunLua" Lua="QuestChoiceFrameOption1.OptionButton:Click()" WaitTime="500" />
@@ -54,9 +54,9 @@
 	<If Condition="HasQuest(38441)" >
 		<If Condition="!IsQuestCompleted(38441)" >
 			<CustomBehavior File="RunCode" Code="Logging.Write(System.Windows.Media.Colors.DeepSkyBlue, &quot;[Profile]: Moving to The Fel Forge.&quot;);"/>
+      <CustomBehavior File="LoadProfile" RememberProfile="True" ProfileName="Bonus Fel Forge" />
 		</If>
-		
-		<SetGrindArea>
+		<!--<SetGrindArea>
 			<GrindArea>
 				<TargetMinLevel>99</TargetMinLevel>
 				<TargetMaxLevel>101</TargetMaxLevel>
@@ -79,7 +79,7 @@
 				</Hotspots>
 				</GrindArea>    
 			</SetGrindArea>
-		<GrindUntil Nav="Fly" Condition="IsQuestCompleted(38441)" />
+		<GrindUntil Nav="Fly" Condition="IsQuestCompleted(38441)" />-->
 	</If>
 	
 	<!-- Ruins of Kra'nak -->
@@ -172,7 +172,7 @@
 	
 	<!-- Ironhold Harbor -->
 	<If Condition="HasQuest(37940)" >
-		<If Condition="!IsQuestCompleted(38441)" >
+		<If Condition="!IsQuestCompleted(37940)" >
 			<CustomBehavior File="RunCode" Code="Logging.Write(System.Windows.Media.Colors.DeepSkyBlue, &quot;[Profile]: Moving to Ironhold Harbor.&quot;);"/>
 		</If>
 		<CustomBehavior File="UserSettings" KillBetweenHotspots="true" />
@@ -262,7 +262,7 @@
 		<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(&quot;item:6948&quot;)" WaitTime="15000" />
 	</While>
 
-	<Vendor Name="Draka" Entry="90481" Type="Repair" Nav="Fly" X="4329.608" Y="-1521.613" Z="88.02565" />
+	<!--<Vendor Name="Draka" Entry="90481" Type="Repair" Nav="Fly" X="4329.608" Y="-1521.613" Z="88.02565" />-->
 	
 	<If Condition="HasQuest(38441) &amp;&amp; IsQuestCompleted(38441)" >
 		<TurnIn Nav="Fly" QuestName="Assault on The Fel Forge" QuestId="38441" TurnInName="Draka" TurnInId="90481" X="4329.608" Y="-1521.613" Z="88.02565" />
