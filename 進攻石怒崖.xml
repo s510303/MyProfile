@@ -1,0 +1,136 @@
+<HBProfile>
+<Name>[Q]Bonus Ruins of Ruins of Kra'nak - OppLy</Name>
+
+<MinDurability>0.4</MinDurability>
+<MinFreeBagSlots>1</MinFreeBagSlots>
+
+<MinLevel>97</MinLevel>
+<MaxLevel>101</MaxLevel>
+
+<MailGrey>false</MailGrey>
+<MailWhite>false</MailWhite>
+<MailGreen>false</MailGreen>
+<MailBlue>false</MailBlue>
+<MailPurple>false</MailPurple>
+
+<SellGrey>true</SellGrey>
+<SellWhite>false</SellWhite>
+<SellGreen>false</SellGreen>
+<SellBlue>false</SellBlue>
+<SellPurple>false</SellPurple>
+
+<AvoidMobs>
+</AvoidMobs>
+
+<Vendors>
+</Vendors>
+
+<Mailboxes>
+</Mailboxes>
+
+<Blackspots>
+</Blackspots>
+
+<QuestOrder>
+
+  <CustomBehavior File="UserSettings" KillBetweenHotspots="true" LootMobs="True" PullDistance="25"/>
+<!--GameObject Name="Siege Equipment Blueprints" Entry="241669" X="4411.943" Y="-634.5677" Z="31.49386" /-->
+<!--GameObject Name="Ironbound Crate" Entry="241507" X="4309.943" Y="-722.0823" Z="42.04132" /-->
+<!--WoWUnit Name="Hellfire Shell" Entry="91901" X="4410.452" Y="-854.9774" Z="44.54209" / Then click enemy-->
+
+  <!--<MoveTo X="4455.004" Y="-570.0504" Z="49.80917"  />-->
+
+  <CustomBehavior File ="FlyTo" X="7396.974" Y="4667.169" Z="161.0286"/>
+  <CustomBehavior File="ForcedDismount" />
+  <If Condition="HasQuest(35641) &amp;&amp; !IsQuestCompleted(35641)">
+    <CustomBehavior File="InteractWith" WaitTime="3000" MobIds="233005,228536,77994,78578,77992,88437" NumOfTimes="100" CollectionDistance="45" PreInteractMountStrategy="Dismount"
+          TerminateWhen="IsQuestCompleted(35641)">
+      <HuntingGrounds WaypointVisitStrategy="Random" >
+        <Hotspot X="7493.096" Y="4841.835" Z="158.48" />
+        <Hotspot X="7449.438" Y="4832.738" Z="156.155" />
+        <Hotspot X="7413.052" Y="4845.143" Z="167.5839" />
+        <Hotspot X="7378.342" Y="4803.172" Z="174.1602" />
+        <Hotspot X="7374.167" Y="4782.937" Z="179.2967" />
+        <Hotspot X="7359.318" Y="4738.44" Z="179.9381" />
+        <Hotspot X="7329.46" Y="4697.989" Z="169.9715" />
+        <Hotspot X="7335.329" Y="4657.562" Z="163.4736" />
+        <Hotspot X="7375.174" Y="4630.308" Z="161.1599" />
+        <Hotspot X="7353.22" Y="4588.771" Z="149.4681" />
+        <Hotspot X="7318.057" Y="4574.244" Z="153.2352" />
+        <Hotspot X="7325.184" Y="4576.958" Z="151.5839" />
+        <Hotspot X="7375.966" Y="4568.572" Z="148.4908" />
+        <Hotspot X="7422.194" Y="4585.622" Z="140.832" />
+        <Hotspot X="7462.096" Y="4618.161" Z="133.1557" />
+        <Hotspot X="7502.64" Y="4647.649" Z="126.842" />
+        <Hotspot X="7549.167" Y="4629.049" Z="115.7744" />
+        <Hotspot X="7593.629" Y="4603.96" Z="99.7942" />
+        <Hotspot X="7642.792" Y="4592.807" Z="109.7517" />
+        <Hotspot X="7666.51" Y="4566.465" Z="124.0905" />
+        <Hotspot X="7688.101" Y="4548.378" Z="133.8808" />
+        <Hotspot X="7667.37" Y="4519.952" Z="137.4698" />
+        <Hotspot X="7659.812" Y="4480.809" Z="134.9419" />
+        <Hotspot X="7666.562" Y="4468.316" Z="134.2493" />
+        <Hotspot X="7653.542" Y="4507.685" Z="137.15" />
+        <Hotspot X="7616.626" Y="4537.822" Z="154.7861" />
+        <Hotspot X="7622.977" Y="4518.763" Z="144.5618" />
+        <Hotspot X="7658.617" Y="4523.728" Z="138.311" />
+        <Hotspot X="7689.267" Y="4542.354" Z="135.0776" />
+        <Hotspot X="7655.108" Y="4580.557" Z="115.4355" />
+        <Hotspot X="7609.934" Y="4602.343" Z="102.3014" />
+        <Hotspot X="7637.793" Y="4633.841" Z="77.85169" />
+        <Hotspot X="7688.087" Y="4642.544" Z="51.0671" />
+        <Hotspot X="7737.633" Y="4645.634" Z="40.87123" />
+        <Hotspot X="7747.888" Y="4675.039" Z="41.1236" />
+        <Hotspot X="7755.99" Y="4724.497" Z="31.71144" />
+        <Hotspot X="7775.188" Y="4768" Z="23.63782" />
+        <Hotspot X="7778.321" Y="4794.615" Z="17.68464" />
+        <Hotspot X="7688.877" Y="5011.822" Z="129.8449" />
+        <Hotspot X="7713.338" Y="5028.572" Z="128.0461" />
+        <Hotspot X="7762.427" Y="5036.971" Z="127.9964" />
+        <Hotspot X="7771.719" Y="4998.086" Z="127.9964" />
+        <Hotspot X="7726.763" Y="5004.472" Z="128.0359" />
+        <Hotspot X="7680.419" Y="5026.797" Z="129.9735" />
+        <Hotspot X="7657.444" Y="5042.918" Z="131.3907" />
+        <Hotspot X="7627.621" Y="5069.877" Z="134.0944" />
+        <Hotspot X="7607.856" Y="5110.538" Z="134.578" />
+        <Hotspot X="7592.583" Y="5151.137" Z="139.7281" />
+        <Hotspot X="7553.591" Y="5181.938" Z="138.359" />
+        <Hotspot X="7505.252" Y="5197.148" Z="136.8035" />
+        <Hotspot X="7516.262" Y="5150.62" Z="136.2067" />
+        <Hotspot X="7505.143" Y="5130.489" Z="136.2067" />
+        <Hotspot X="7503.604" Y="5110.155" Z="136.1598" />
+      </HuntingGrounds>
+    </CustomBehavior>
+  </If>
+  <!--<SetGrindArea>
+		<GrindArea>
+			<TargetMinLevel>99</TargetMinLevel>
+			<TargetMaxLevel>101</TargetMaxLevel>
+			<MaxDistance>50</MaxDistance>
+			<LootRadius>60</LootRadius>
+			<TargetElites>false</TargetElites>
+			<RandomizeHotspots>true</RandomizeHotspots>
+			<MobIds></MobIds>
+			<Factions>16 2718</Factions>
+			<Hotspots>
+				<Hotspot X="4431.598" Y="-696.8158" Z="29.25032" />
+				<Hotspot X="4401.309" Y="-634.6718" Z="30.38467" />
+				<Hotspot X="4369.518" Y="-671.563" Z="30.59381" />
+				<Hotspot X="4308.313" Y="-700.6304" Z="42.05642" />
+				<Hotspot X="4308.89" Y="-790.7899" Z="30.06496" />
+				<Hotspot X="4277.179" Y="-879.3702" Z="26.63812" />
+				<Hotspot X="4247.092" Y="-933.0215" Z="20.16998" />
+				<Hotspot X="4317.044" Y="-995.9095" Z="21.85527" />
+				<Hotspot X="4292.503" Y="-1045.243" Z="20.95871" />
+			</Hotspots>
+			</GrindArea>    
+		</SetGrindArea>
+	<GrindUntil Condition="IsQuestCompleted(39445) || IsQuestCompleted(38441) || IsQuestCompleted(37970)" />-->
+
+  <!--<CustomBehavior File="LoadProfile" RememberProfile="True" ProfileName="[Q][H]Tanaan Jungle Oil Daily - Opply" />
+  
+  <CustomBehavior File="FlyTo" X="4455.004" Y="-570.0504" Z="49.80917"  />-->
+
+	<CustomBehavior File="RunCode" Code="Styx.CommonBot.TreeRoot.Stop(&quot;Profile complete...&quot;)" />
+</QuestOrder>
+</HBProfile>
