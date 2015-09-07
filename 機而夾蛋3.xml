@@ -130,10 +130,15 @@
       <MoveTo X="1808.895" Y="937.5173" Z="35.05845" />
       <MoveTo X="1798.337" Y="838.3011" Z="35.9459" />
       <MoveTo X="1609.577" Y="841.896" Z="36.07137" />
+      <CustomBehavior File="ForcedDismount" />
       <MoveTo X="1611.299" Y="1018.952" Z="36.07173" />
+      <CustomBehavior File="ForcedDismount" />
       <MoveTo X="1610.97" Y="1052.586" Z="35.71094" />
+      <CustomBehavior File="ForcedDismount" />
       <MoveTo X="1647.441" Y="1094.417" Z="44.59085" />
+      <CustomBehavior File="ForcedDismount" />
       <MoveTo X="1707.135" Y="1097.335" Z="52.83679" />
+      <CustomBehavior File="ForcedDismount" />
       <MoveTo X="1707.401" Y="989.467" Z="53.02592" />
       <CustomBehavior File="ForcedDismount" />
       <CustomBehavior File="Message" Text="一王開始." LogColor="Lime" />
