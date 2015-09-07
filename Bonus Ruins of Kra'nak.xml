@@ -31,18 +31,57 @@
 <Blackspots>
 </Blackspots>
 
-<QuestOrder>
+  <!--<WoWUnit Name="魔裔講師" Entry="89748" X="4538.547" Y="492.2344" Z="226.4767" />
+  <WoWUnit Name="塞司克教徒" Entry="90312" X="4556.237" Y="492.1667" Z="226.4736" />
+  <WoWUnit Name="塞司克塑能師" Entry="90654" X="4596.292" Y="599.875" Z="202.1387" />-->
+  <!-- Quest Ids and Hotspots -->
+  <Quest Id="39512" Name="暗影議會的秘密">
+    <Objective Type="CollectItem" ItemId="128432" ItemName="暗影議會文件" CollectCount="20">
+      <CollectFrom>
+        <Mob Name="塞克斯懼爪" Id="90649" />
+        <Mob Name="魔裔講師" Id="89748" />
+        <Mob Name="塞司克教徒" Id="90312" />
+        <Mob Name="塞司克塑能師" Id="90654" />
+      </CollectFrom>
+      <Hotspots>
+        <Hotspot X="4546.808" Y="486.0171" Z="226.6106" />
+        <Hotspot X="4639.002" Y="608.1016" Z="204.4243" />
+        <Hotspot X="4523.261" Y="653.3411" Z="175.3183" />
+        <Hotspot X="4409.374" Y="820.7141" Z="175.4831" />
+      </Hotspots>
+    </Objective>
+  </Quest>
 
-	<CustomBehavior File="InteractWith" MobIds="90795, 90300, 90706, 90790, 90791, 90796, 90792, 243852" NumOfTimes="100" WaitTime="1500" TerminateWhen="IsQuestCompleted(39447)" >
-		<HuntingGrounds WaypointVisitStrategy="Random" >
-			<Hotspot X="4546.808" Y="486.0171" Z="226.6106" />
-			<Hotspot X="4639.002" Y="608.1016" Z="204.4243" />
-			<Hotspot X="4523.261" Y="653.3411" Z="175.3183" />
-			<Hotspot X="4409.374" Y="820.7141" Z="175.4831" />
-		</HuntingGrounds>
-	</CustomBehavior>
+<QuestOrder>
+  <CustomBehavior File="UserSettings" KillBetweenHotspots="true" LootMobs="True" PullDistance="25"/>
+
+  <If Condition="HasQuest(39447) &amp;&amp; !IsQuestCompleted(39447)">
+    <CustomBehavior File="InteractWith" MobIds="90795, 90300, 90706, 90790, 90791, 90796, 90792, 243852" PreInteractMountStrategy="DismountOrCancelShapeshift" NumOfTimes="100" WaitTime="1500" TerminateWhen="IsQuestCompleted(39447)" >
+      <HuntingGrounds WaypointVisitStrategy="Random" >
+        <Hotspot X="4546.808" Y="486.0171" Z="226.6106" />
+        <Hotspot X="4639.002" Y="608.1016" Z="204.4243" />
+        <Hotspot X="4523.261" Y="653.3411" Z="175.3183" />
+        <Hotspot X="4409.374" Y="820.7141" Z="175.4831" />
+      </HuntingGrounds>
+    </CustomBehavior>
+  </If>
+
+  <If Condition="HasQuest(38252) &amp;&amp; !IsQuestCompleted(38252)">
+    <CustomBehavior File="InteractWith" MobIds="90795, 90300, 90706, 90790, 90791, 90796, 90792, 243852" PreInteractMountStrategy="DismountOrCancelShapeshift" NumOfTimes="100" WaitTime="1500" TerminateWhen="IsQuestCompleted(38252)" >
+      <HuntingGrounds WaypointVisitStrategy="Random" >
+        <Hotspot X="4546.808" Y="486.0171" Z="226.6106" />
+        <Hotspot X="4639.002" Y="608.1016" Z="204.4243" />
+        <Hotspot X="4523.261" Y="653.3411" Z="175.3183" />
+        <Hotspot X="4409.374" Y="820.7141" Z="175.4831" />
+      </HuntingGrounds>
+    </CustomBehavior>
+  </If>
+
+  <If Condition="HasQuest(39512) &amp;&amp; !IsQuestCompleted(39512)">
+    <Objective QuestName="暗影議會的秘密" QuestId="39512" Type="CollectItem" ItemId="128432" CollectCount="20" />
+  </If>
 	
-	<CustomBehavior File="NoCombatMoveTo" X="4572.857" Y="336.026" Z="221.5237"  />
+	<CustomBehavior File="FlyTo" X="4572.857" Y="336.026" Z="221.5237"  />
 
 	<CustomBehavior File="RunCode" Code="Styx.CommonBot.TreeRoot.Stop(&quot;Profile complete...&quot;)" />
 </QuestOrder>
