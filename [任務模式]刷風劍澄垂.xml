@@ -79,12 +79,21 @@
 			<If Condition="Me.IsAlliance  &amp;&amp; Me.ZoneId != 2717 ">
         <!-- Outland move to and use portal in shat -->
         <If Condition="Me.ZoneId == 7078">
-          <RunTo X="1957.809" Y="85.04769" Z="86.26516" />
-          <RunTo X="1963.19" Y="69.7935" Z="98.73251" />
-          <RunTo X="1967.695" Y="69.79959" Z="108.9127" />
+          <!--<RunTo X="1957.809" Y="85.04769" Z="86.26516" />
+         <RunTo X="1963.19" Y="69.7935" Z="98.73251" />
+         <RunTo X="1967.695" Y="69.79959" Z="108.9127" />-->
+          <MoveTo X="1952.965" Y="88.8566" Z="85.35108" />
+          <CustomBehavior File="MyCTM" X="1962.771" Y="79.45829" Z="86.80607"/>
+          <CustomBehavior File="MyCTM" X="1975.75" Y="75.80701" Z="89.6964"/>
+          <CustomBehavior File="MyCTM" X="1968.61" Y="65.12929" Z="95.55936"/>
+          <CustomBehavior File="MyCTM" X="1961.865" Y="77.50562" Z="102.1037"/>
+          <CustomBehavior File="MyCTM" X="1975.994" Y="76.59556" Z="108.6383"/>
+          <CustomBehavior File="MyCTM" X="1967.487" Y="67.56936" Z="108.9163"/>
+          <!--<MoveTo X="3685.313" Y="-3836.29" Z="44.98112"/>-->
           <CustomBehavior File="InteractWith" MobId="233610" ObjectType="Gameobject" Range="4" X="1966.385" Y="66.29166" Z="108.92" />
           <CustomBehavior File="WaitTimer" WaitTime="8000" GoalText="Waiting for port {TimeRemaining}" />
         </If>
+        <!--戰爭之矛-->
         <If Condition =" Me.ZoneId == 7332">
           <RunTo X="3730.06" Y="-4044.52" Z="44.4461" />
           <CustomBehavior File="InteractWith" MobId="235883" ObjectType="Gameobject" Range="4" X="3734.65" Y="-4042.976" Z="44.81873" />
@@ -234,19 +243,16 @@
 			<If Condition="Me.IsHorde" >
 				 <!--Outland move to and use portal in shat-->
         <If Condition="Me.ZoneId == 7004">
-          <RunTo X="5592.42" Y="4568.17" Z="135.7166" />
-          <RunTo X="5572.122" Y="4507.008" Z="130.083" />
-          <RunTo X="5622.694" Y="4470.612" Z="130.103" />
-          <RunTo X="5584.143" Y="4359.814" Z="160.7936" />
+          <!--要塞-->
+          <MoveTo X="5592.42" Y="4568.17" Z="135.7166" />
+          <MoveTo X="5572.122" Y="4507.008" Z="130.083" />
+          <MoveTo X="5622.694" Y="4470.612" Z="130.103" />
+          <MoveTo X="5584.143" Y="4359.814" Z="160.7936" />
           <CustomBehavior File="InteractWith" MobId="233600" ObjectType="Gameobject" Range="4" X="5586.819" Y="4357.713" Z="161.427" />
-          <CustomBehavior File="WaitTimer" WaitTime="8000" GoalText="Waiting for port {TimeRemaining}" />          
-          <!--<CustomBehavior File="UseTransport" TransportId="233600"
-      WaitAtX="5584.143" WaitAtY="4359.814" WaitAtZ="160.7936"
-      GetOffX="5354.041" GetOffY="-3945.052" GetOffZ="32.73335"
-      TransportStartX="5586.819" TransportStartY="4357.713" TransportStartZ="161.427"
-      TransportEndX="5354.041" TransportEndY="-3945.052" TransportEndZ="32.73335"
-      StandOnX="5584.143" StandOnY="4359.814" StandOnZ="160.7936"  />-->
-          <RunTo X="5265.908" Y="-4071.956" Z="21.31483" />
+          <CustomBehavior File="WaitTimer" WaitTime="8000" GoalText="Waiting for port {TimeRemaining}" />
+
+          <!--艾斯蘭-->
+          <MoveTo X="5265.908" Y="-4071.956" Z="21.31483" />
           <CustomBehavior File="InteractWith" MobId="235880" ObjectType="Gameobject" Range="4" X="5266.4" Y="-4075.891" Z="21.13024" />
           <CustomBehavior File="WaitTimer" WaitTime="8000" GoalText="Waiting for port {TimeRemaining}" />
           <!--<CustomBehavior File="UseTransport" TransportId="235880"
@@ -611,37 +617,37 @@
 						<RunTo X="673.803" Y="-502.5283" Z="-213.4892" />
             <RunTo X="653.7065" Y="-837.4611" Z="-208.607" />
         <If Condition="(Me.Class == WoWClass.Monk)">
-          <CustomBehavior File="InteractWith" MobId="12056" IgnoreLoSToTarget="True" MinRange="25" IgnoreCombat="True" MobState="Alive" InteractByCastingSpellId="117952" WaitForNpcs="false" ObjectType="Npc" Range="40" X="653.7065" Y="-837.4611" Z="-208.607"/>
+          <CustomBehavior File="InteractWith" MobId="12056" IgnoreLoSToTarget="True" MinRange="25" IgnoreCombat="True" MobState="Alive" InteractByCastingSpellId="117952" WaitForNpcs="false" ObjectType="Npc" Range="40" X="653.7065" Y="-837.4611" Z="-208.607" AttemptCountMax="50"/>
         </If>
         <If Condition="(Me.Class == WoWClass.Warrior)">
-          <CustomBehavior File="InteractWith" MobId="12056" IgnoreLoSToTarget="True" MinRange="25" IgnoreCombat="True" MobState="Alive" InteractByCastingSpellId="57755" WaitForNpcs="false" ObjectType="Npc" Range="30" X="653.7065" Y="-837.4611" Z="-208.607"/>
+          <CustomBehavior File="InteractWith" MobId="12056" IgnoreLoSToTarget="True" MinRange="25" IgnoreCombat="True" MobState="Alive" InteractByCastingSpellId="57755" WaitForNpcs="false" ObjectType="Npc" Range="30" X="653.7065" Y="-837.4611" Z="-208.607" AttemptCountMax="50"/>
         </If>
         <If Condition="(Me.Class == WoWClass.Hunter)">
-          <CustomBehavior File="InteractWith" MobId="12056" IgnoreLoSToTarget="True" MinRange="25" IgnoreCombat="True" MobState="Alive" InteractByCastingSpellId="75" WaitForNpcs="false" ObjectType="Npc" Range="40" X="653.7065" Y="-837.4611" Z="-208.607"/>
+          <CustomBehavior File="InteractWith" MobId="12056" IgnoreLoSToTarget="True" MinRange="25" IgnoreCombat="True" MobState="Alive" InteractByCastingSpellId="75" WaitForNpcs="false" ObjectType="Npc" Range="40" X="653.7065" Y="-837.4611" Z="-208.607" AttemptCountMax="50"/>
         </If>
         <If Condition="(Me.Class == WoWClass.Druid)">
-          <CustomBehavior File="InteractWith" MobId="12056" IgnoreLoSToTarget="True" MinRange="25" IgnoreCombat="True" PreInteractMountStrategy="DismountOrCancelShapeshift" MobState="Alive" InteractByCastingSpellId="8921" WaitForNpcs="false" ObjectType="Npc" Range="40" X="653.7065" Y="-837.4611" Z="-208.607"/>
+          <CustomBehavior File="InteractWith" MobId="12056" IgnoreLoSToTarget="True" MinRange="25" IgnoreCombat="True" PreInteractMountStrategy="DismountOrCancelShapeshift" MobState="Alive" InteractByCastingSpellId="8921" WaitForNpcs="false" ObjectType="Npc" Range="40" X="653.7065" Y="-837.4611" Z="-208.607" AttemptCountMax="50"/>
         </If>
         <If Condition="(Me.Class == WoWClass.DeathKnight)">
-          <CustomBehavior File="InteractWith" MobId="12056" IgnoreLoSToTarget="True" MinRange="25" IgnoreCombat="True" MobState="Alive" InteractByCastingSpellId="45477" WaitForNpcs="false" ObjectType="Npc" Range="30" X="653.7065" Y="-837.4611" Z="-208.607"/>
+          <CustomBehavior File="InteractWith" MobId="12056" IgnoreLoSToTarget="True" MinRange="25" IgnoreCombat="True" MobState="Alive" InteractByCastingSpellId="45477" WaitForNpcs="false" ObjectType="Npc" Range="30" X="653.7065" Y="-837.4611" Z="-208.607" AttemptCountMax="50"/>
         </If>
         <If Condition="(Me.Class == WoWClass.Mage)">
-          <CustomBehavior File="InteractWith" MobId="12056" IgnoreLoSToTarget="True" MinRange="25" IgnoreCombat="True" MobState="Alive" InteractByCastingSpellId="44614" WaitForNpcs="false" ObjectType="Npc" Range="40" X="653.7065" Y="-837.4611" Z="-208.607"/>
+          <CustomBehavior File="InteractWith" MobId="12056" IgnoreLoSToTarget="True" MinRange="25" IgnoreCombat="True" MobState="Alive" InteractByCastingSpellId="44614" WaitForNpcs="false" ObjectType="Npc" Range="40" X="653.7065" Y="-837.4611" Z="-208.607" AttemptCountMax="50"/>
         </If>
         <If Condition="(Me.Class == WoWClass.Paladin)">
-          <CustomBehavior File="InteractWith" MobId="12056" IgnoreLoSToTarget="True" MinRange="25" IgnoreCombat="True" MobState="Alive" InteractByCastingSpellId="20271" WaitForNpcs="false" ObjectType="Npc" Range="30" X="653.7065" Y="-837.4611" Z="-208.607"/>
+          <CustomBehavior File="InteractWith" MobId="12056" IgnoreLoSToTarget="True" MinRange="25" IgnoreCombat="True" MobState="Alive" InteractByCastingSpellId="20271" WaitForNpcs="false" ObjectType="Npc" Range="30" X="653.7065" Y="-837.4611" Z="-208.607" AttemptCountMax="50"/>
         </If>
         <If Condition="(Me.Class == WoWClass.Priest)">
-          <CustomBehavior File="InteractWith" MobId="12056" IgnoreLoSToTarget="True" MinRange="25" IgnoreCombat="True" MobState="Alive" InteractByCastingSpellId="589" WaitForNpcs="false" ObjectType="Npc" Range="40" X="653.7065" Y="-837.4611" Z="-208.607"/>
+          <CustomBehavior File="InteractWith" MobId="12056" IgnoreLoSToTarget="True" MinRange="25" IgnoreCombat="True" MobState="Alive" InteractByCastingSpellId="589" WaitForNpcs="false" ObjectType="Npc" Range="40" X="653.7065" Y="-837.4611" Z="-208.607" AttemptCountMax="50"/>
         </If>
         <If Condition="(Me.Class == WoWClass.Shaman)">
-          <CustomBehavior File="InteractWith" MobId="12056" IgnoreLoSToTarget="True" MinRange="25" IgnoreCombat="True" MobState="Alive" InteractByCastingSpellId="8050" WaitForNpcs="false" ObjectType="Npc" Range="25" X="653.7065" Y="-837.4611" Z="-208.607"/>
+          <CustomBehavior File="InteractWith" MobId="12056" IgnoreLoSToTarget="True" MinRange="25" IgnoreCombat="True" MobState="Alive" InteractByCastingSpellId="8050" WaitForNpcs="false" ObjectType="Npc" Range="25" X="653.7065" Y="-837.4611" Z="-208.607" AttemptCountMax="50"/>
         </If>
         <If Condition="(Me.Class == WoWClass.Warlock)">
-          <CustomBehavior File="InteractWith" MobId="12056" IgnoreLoSToTarget="True" MinRange="25" IgnoreCombat="True" MobState="Alive" InteractByCastingSpellId="172" WaitForNpcs="false" ObjectType="Npc" Range="40" X="653.7065" Y="-837.4611" Z="-208.607"/>
+          <CustomBehavior File="InteractWith" MobId="12056" IgnoreLoSToTarget="True" MinRange="25" IgnoreCombat="True" MobState="Alive" InteractByCastingSpellId="172" WaitForNpcs="false" ObjectType="Npc" Range="40" X="653.7065" Y="-837.4611" Z="-208.607" AttemptCountMax="50"/>
         </If>
         <If Condition="(Me.Class == WoWClass.Rogue)">
-          <CustomBehavior File="InteractWith" MobId="12056" IgnoreLoSToTarget="True" MinRange="25" IgnoreCombat="True" MobState="Alive" InteractByCastingSpellId="121733" WaitForNpcs="false" ObjectType="Npc" Range="40" X="653.7065" Y="-837.4611" Z="-208.607"/>
+          <CustomBehavior File="InteractWith" MobId="12056" IgnoreLoSToTarget="True" MinRange="25" IgnoreCombat="True" MobState="Alive" InteractByCastingSpellId="121733" WaitForNpcs="false" ObjectType="Npc" Range="40" X="653.7065" Y="-837.4611" Z="-208.607" AttemptCountMax="50"/>
         </If>
 						<!--<RunTo X="587.7184" Y="-806.6628" Z="-205.0457" /> 
 						<CustomBehavior File="RunMacro" Macro="/target Baron Geddon" />-->
@@ -694,15 +700,16 @@
 						<CustomBehavior File="InteractWith" MobId="54404" NumOfTimes="1" WaitTime="1000" /> <!-- Talk to Majordomo to pull Ragnaros -->
 						<CustomBehavior File="RunMacro" Macro="/script SelectGossipOption(1)\n/script CloseGossip()" NumOfTimes="3" WaitTime="1000" />
 						<CustomBehavior File="WaitTimer" WaitTime="300000" />
+            <CustomBehavior File="UseItem" ItemId="110560" WaitTime="20000" />
 			<!-- End Molten Core Instance Farm -->
 			
 			<!-- Hearth out because we're done! -->
-				<While Condition="(Me.ZoneId == 2717)" >
+				<!--<While Condition="(Me.ZoneId == 2717)" >
 						<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(6948)" WaitTime="1000" />
 						<CustomBehavior File="WaitTimer" WaitTime="12000" GoalText="Hearthing to current Hearth location. {TimeRemaining}" />
 				</While>
 				
-				<CustomBehavior File="UserDialog" AllowBotStop="True" SoundCue="Exclamation" SoundCueInterval="1" Text="Molten Core Run Complete!\nDid You Get Lucky?" />
+				<CustomBehavior File="UserDialog" AllowBotStop="True" SoundCue="Exclamation" SoundCueInterval="1" Text="Molten Core Run Complete!\nDid You Get Lucky?" />-->
 				</If>
 											
 				
