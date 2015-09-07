@@ -31,14 +31,65 @@
 <Blackspots>
 </Blackspots>
 
+  <!--<WoWUnit Name="格羅姆卡碼頭工人" Entry="89936" X="4807.018" Y="-398.9601" Z="4.256851" />
+  <WoWUnit Name="格羅姆卡長槍手" Entry="89777" X="4735.887" Y="-364.0399" Z="11.72547" />
+  <WoWUnit Name="格羅姆卡援軍" Entry="89810" X="4734.268" Y="-368.2202" Z="11.72497" />
+  <WoWUnit Name="格羅姆卡哨衛" Entry="89857" X="4704.964" Y="-373.0876" Z="11.72497" />
+  <WoWUnit Name="格羅姆卡戰鬥騎兵" Entry="90494" X="4852.847" Y="-403.2231" Z="72.05893" />-->
+
+  <Quest Id="39510" Name="幹點髒活">
+    <Objective Type="CollectItem" ItemId="128429" ItemName="鋼鐵部落海軍貨運清單" CollectCount="15">
+      <CollectFrom>
+        <Mob Name="格羅姆卡碼頭工人" Id="89936" />
+        <Mob Name="格羅姆卡長槍手" Id="89777" />
+        <Mob Name="格羅姆卡援軍" Id="89810" />
+        <Mob Name="格羅姆卡哨衛" Id="89857" />
+        <Mob Name="格羅姆卡戰鬥騎兵" Id="90494" />
+      </CollectFrom>
+      <Hotspots>
+        <Hotspot X="4497.988" Y="-466.9139" Z="11.97806" />
+        <Hotspot X="4611.969" Y="-487.5433" Z="21.74086" />
+        <Hotspot X="4752.319" Y="-482.5305" Z="36.65261" />
+        <Hotspot X="4681.296" Y="-322.3831" Z="4.258523" />
+        <Hotspot X="4758.266" Y="-242.6821" Z="4.211034" />
+        <Hotspot X="4627.497" Y="-258.9672" Z="10.5943" />
+        <Hotspot X="4480.781" Y="-347.3628" Z="31.56784" />
+      </Hotspots>
+    </Objective>
+  </Quest>
+
 <QuestOrder>
-	<CustomBehavior File="Hooks\DoWhen" ActivityName="InteractWithObjects" 
-					UseWhen="!Me.Combat &amp;&amp; (Unit(90433, o =&gt; o.Distance &lt; 30) != null || Object(240014, o =&gt; o.Distance &lt; 30) != null) || (Object(239839, o =&gt; o.Distance &lt; 30) != null)" >
-		<CustomBehavior File="InteractWith" WaitForNpcs="false" WaitTime="3000" MobIds="90433, 240014, 239839" NumOfTimes="100" CollectionDistance="35" PreInteractMountStrategy="DismountOrCancelShapeshift" 
-						TerminateWhen="Unit(90433, o =&gt; o.Distance &lt; 45) == null &amp;&amp; Object(240014, o =&gt; o.Distance &lt; 45) == null &amp;&amp; Object(239839, o =&gt; o.Distance &lt; 45) == null" />
-	</CustomBehavior>
-	
-	<SetGrindArea>
+  <CustomBehavior File="UserSettings" KillBetweenHotspots="true" LootMobs="True" PullDistance="25"/>
+
+  <MoveTo X="4455.004" Y="-570.0504" Z="49.80917"/>
+  <CustomBehavior File="FlyTo" X="4565.531" Y="-403.5759" Z="44.60963" />
+  <CustomBehavior File="ForcedDismount" />
+
+  <If Condition="HasQuest(39452) &amp;&amp; !IsQuestCompleted(39452)">
+
+    <CustomBehavior File="Hooks\DoWhen" ActivityName="InteractWithObjects"
+        UseWhen="!Me.Combat &amp;&amp; (Unit(90433, o =&gt; o.Distance &lt; 30) != null || Object(240014, o =&gt; o.Distance &lt; 30) != null) || (Object(239839, o =&gt; o.Distance &lt; 30) != null)" >
+      <CustomBehavior File="InteractWith" WaitForNpcs="false" WaitTime="3000" MobIds="90433, 240014, 239839" NumOfTimes="100" CollectionDistance="35" PreInteractMountStrategy="DismountOrCancelShapeshift"
+              TerminateWhen="Unit(90433, o =&gt; o.Distance &lt; 45) == null &amp;&amp; Object(240014, o =&gt; o.Distance &lt; 45) == null &amp;&amp; Object(239839, o =&gt; o.Distance &lt; 45) == null" />
+    </CustomBehavior>
+    
+    <CustomBehavior File="InteractWith" MobIds="243205,90433,240014,239839" PreInteractMountStrategy="DismountOrCancelShapeshift" NumOfTimes="100" WaitTime="1500" TerminateWhen="IsQuestCompleted(39452)" >
+      <HuntingGrounds WaypointVisitStrategy="Random" >
+        <Hotspot X="4497.988" Y="-466.9139" Z="11.97806" />
+        <Hotspot X="4611.969" Y="-487.5433" Z="21.74086" />
+        <Hotspot X="4752.319" Y="-482.5305" Z="36.65261" />
+        <Hotspot X="4681.296" Y="-322.3831" Z="4.258523" />
+        <Hotspot X="4758.266" Y="-242.6821" Z="4.211034" />
+        <Hotspot X="4627.497" Y="-258.9672" Z="10.5943" />
+        <Hotspot X="4480.781" Y="-347.3628" Z="31.56784" />
+      </HuntingGrounds>
+    </CustomBehavior>
+  </If>
+
+  <If Condition="HasQuest(39510) &amp;&amp; !IsQuestCompleted(39510)">
+    <Objective QuestName="幹點髒活" QuestId="39510" Type="CollectItem" ItemId="128429" CollectCount="15" />
+  </If>
+	<!--<SetGrindArea>
 		<GrindArea>
 			<TargetMinLevel>99</TargetMinLevel>
 			<TargetMaxLevel>101</TargetMaxLevel>
@@ -59,11 +110,11 @@
 			</Hotspots>
 			</GrindArea>    
 		</SetGrindArea>
-	<GrindUntil Nav="Fly" Condition="IsQuestCompleted(39451)" />
+	<GrindUntil Nav="Fly" Condition="IsQuestCompleted(39451)" />-->
 	
 	<CustomBehavior File="Hooks\DoWhen" ActivityName="InteractWithObjects" Command="Remove" />
 	
-	<CustomBehavior File="NoCombatMoveTo" X="4455.004" Y="-570.0504" Z="49.80917"  />
+	<CustomBehavior File="FlyTo" X="4455.004" Y="-570.0504" Z="49.80917"  />
 
 	<CustomBehavior File="RunCode" Code="Styx.CommonBot.TreeRoot.Stop(&quot;Profile complete...&quot;)" />
 </QuestOrder>
