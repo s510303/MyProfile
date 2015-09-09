@@ -59,8 +59,8 @@
   <While Condition="HasQuest(39447) &amp;&amp; !IsQuestCompleted(39447)">
     <CustomBehavior File="Message" Text="找怪擊殺." LogColor="Lime" />
     <If Condition="(Me.Class == WoWClass.Paladin)">
-      <CustomBehavior File="InteractWith" MobIds="90649,89748,90312,90654,92706" IgnoreLoSToTarget="True" MinRange="15" IgnoreCombat="True" MobState="Alive"
-                      InteractByCastingSpellId="20271" PreInteractMountStrategy="DismountOrCancelShapeshift" WaitForNpcs="false" ObjectType="Npc" Range="30">
+      <CustomBehavior File="InteractWith" MobIds="90649,89748,90312,90654,92706" MinRange="15" MobState="Alive"
+                      InteractByCastingSpellId="20271" ProactiveCombatStrategy=" ClearMobsTargetingUs" PreInteractMountStrategy="DismountOrCancelShapeshift" WaitForNpcs="false" ObjectType="Npc" Range="30">
         <HuntingGrounds WaypointVisitStrategy="Random" >
           <Hotspot X="4546.808" Y="486.0171" Z="226.6106" />
           <Hotspot X="4639.002" Y="608.1016" Z="204.4243" />
