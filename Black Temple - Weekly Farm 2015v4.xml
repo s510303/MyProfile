@@ -65,8 +65,8 @@
 		******************************
 		Add MapId for farming location, the id you enter here is where you want to go.-->
 		<While Condition="!(Me.MapId == 530)" >
-			<CustomBehavior File="UserDialog" AllowBotStop="False" SoundCue="Exclamation" SoundCueInterval="5" ExpiryTime="15" ExpiryAction="InputEnabled_Continue" 
-			Text="Do not stop the bot, i will take you where you want to go, just sit back and relax." Title="WARNING" />	
+			<!--<CustomBehavior File="UserDialog" AllowBotStop="False" SoundCue="Exclamation" SoundCueInterval="5" ExpiryTime="15" ExpiryAction="InputEnabled_Continue" 
+			Text="Do not stop the bot, i will take you where you want to go, just sit back and relax." Title="WARNING" />-->	
 			<If Condition="Me.IsAlliance" >
         <!--要塞-->
         <!--<If Condition="Me.ZoneId == 7078">
@@ -608,12 +608,12 @@
     <CustomBehavior File="InteractWith" MobId="23421" IgnoreLoSToTarget="True" MinRange="25" IgnoreCombat="True" MobState="Alive" InteractByCastingSpellId="75" WaitForNpcs="false" ObjectType="Npc" Range="40" X="456.4948" Y="413.7039" Z="118.538"/>
   </If>
   <If Condition="(Me.Class == WoWClass.DeathKnight)">
-    <CustomBehavior File="InteractWith" MobId="23421" MobState="Alive" InteractByCastingSpellId="45477" WaitForNpcs="false" ObjectType="Npc" Range="30" X="463.7257" Y="401.5936" Z="118.538"/>
-    <CustomBehavior File="InteractWith" MobId="23421" MobState="Alive" InteractByCastingSpellId="45477" WaitForNpcs="false" ObjectType="Npc" Range="30" X="457.9456" Y="389.6228" Z="118.538"/>
-    <CustomBehavior File="InteractWith" MobId="23421" MobState="Alive" InteractByCastingSpellId="45477" WaitForNpcs="false" ObjectType="Npc" Range="30" X="444.1863" Y="389.1276" Z="118.538"/>
-    <CustomBehavior File="InteractWith" MobId="23421" MobState="Alive" InteractByCastingSpellId="45477" WaitForNpcs="false" ObjectType="Npc" Range="30" X="438.1626" Y="400.9247" Z="118.538"/>
-    <CustomBehavior File="InteractWith" MobId="23421" IgnoreLoSToTarget="True" MinRange="25" IgnoreCombat="True" MobState="Alive" InteractByCastingSpellId="45477" WaitForNpcs="false" ObjectType="Npc" Range="30" X="443.2104" Y="413.9362" Z="118.538"/>
-    <CustomBehavior File="InteractWith" MobId="23421" IgnoreLoSToTarget="True" MinRange="25" IgnoreCombat="True" MobState="Alive" InteractByCastingSpellId="45477" WaitForNpcs="false" ObjectType="Npc" Range="30" X="456.4948" Y="413.7039" Z="118.538"/>
+    <CustomBehavior File="InteractWith" MobId="23421" MobState="Alive" WaitForNpcs="false" X="463.7257" Y="401.5936" Z="118.538"/>
+    <CustomBehavior File="InteractWith" MobId="23421" MobState="Alive" WaitForNpcs="false" X="457.9456" Y="389.6228" Z="118.538"/>
+    <CustomBehavior File="InteractWith" MobId="23421" MobState="Alive" WaitForNpcs="false" X="444.1863" Y="389.1276" Z="118.538"/>
+    <CustomBehavior File="InteractWith" MobId="23421" MobState="Alive" WaitForNpcs="false" X="438.1626" Y="400.9247" Z="118.538"/>
+    <CustomBehavior File="InteractWith" MobId="23421" MobState="Alive" WaitForNpcs="false" X="443.2104" Y="413.9362" Z="118.538"/>
+    <CustomBehavior File="InteractWith" MobId="23421" MobState="Alive" WaitForNpcs="false" X="456.4948" Y="413.7039" Z="118.538"/>
   </If>
   <If Condition="(Me.Class == WoWClass.Paladin)">
     <CustomBehavior File="InteractWith" MobId="23421" MobState="Alive" WaitForNpcs="false" X="463.7257" Y="401.5936" Z="118.538"/>
@@ -758,9 +758,9 @@
     </If>
   </While>
 	
-      <While Condition="Unit(22841, u => u.IsAlive) != null ">	
+      <!--<While Condition="Unit(22841, u => u.IsAlive) != null ">-->	
       	<!-- GOOGE to force kill -->
-       	<CustomBehavior File="GetOutOfGroundEffectAndAuras" 
+       	<!--<CustomBehavior File="GetOutOfGroundEffectAndAuras" 
 	                EventCompleteWhen="SpecificMobsDead" 
 	                EventCompleteDeadMobId="22841"
 	                EventX="510.00" EventY="400.00" EventZ="112.99"
@@ -773,7 +773,7 @@
 	                           <Hotspot X="510.3488" Y="400.7242" Z="112.7838" />
                       </Safespots>
        	</CustomBehavior>
-      </While>  
+      </While>-->  
 	
 				   
     <MoveTo X="542.0909" Y="400.6063" Z="112.7840"  />
@@ -833,9 +833,9 @@
     <CustomBehavior File="InteractWith" MobId="22871" IgnoreLoSToTarget="True" MinRange="5" IgnoreCombat="True" MobState="Alive" InteractByCastingSpellId="121733" WaitForNpcs="false" ObjectType="Npc" Range="30" />
   </If>
 
-      <While Condition="Unit(22871, u => u.IsAlive) != null ">	
+      <!--<While Condition="Unit(22871, u => u.IsAlive) != null ">-->	
       	<!-- GOOGE to force kill -->
-       	<CustomBehavior File="GetOutOfGroundEffectAndAuras" 
+       	<!--<CustomBehavior File="GetOutOfGroundEffectAndAuras" 
 	                EventCompleteWhen="SpecificMobsDead" 
 	                EventCompleteDeadMobId="22871"
 	                EventX="604.00" EventY="400.00" EventZ="187.99"
@@ -846,7 +846,7 @@
 	                           <Hotspot X="604.00" Y="400.00" Z="187.99" />
                       </Safespots>
        	</CustomBehavior>
-      </While>  
+      </While>-->  
 
     <MoveTo X="604.1094" Y="402.2923" Z="187.0896"  />
     <MoveTo X="604.1094" Y="402.2923" Z="187.0896"  />
