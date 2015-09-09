@@ -40,8 +40,8 @@
     
       <If Condition="(Me.Class == WoWClass.Paladin)">
       <CustomBehavior File="Message" Text="找怪擊殺." LogColor="Lime" />
-      <CustomBehavior File="InteractWith" MobIds="90483,92873,91251" IgnoreLoSToTarget="True" MinRange="15" IgnoreCombat="True" MobState="Alive"
-                      InteractByCastingSpellId="20271" PreInteractMountStrategy="DismountOrCancelShapeshift" WaitForNpcs="false" ObjectType="Npc" Range="30">
+      <CustomBehavior File="InteractWith" MobIds="90483,92873,91251" MinRange="15" MobState="Alive"
+                      InteractByCastingSpellId="20271" ProactiveCombatStrategy=" ClearMobsTargetingUs" PreInteractMountStrategy="DismountOrCancelShapeshift" WaitForNpcs="false" ObjectType="Npc" Range="30">
         <HuntingGrounds WaypointVisitStrategy="Random" >
         <Hotspot X="3973.398" Y="1147.4" Z="162.937" />
 				<Hotspot X="3897.893" Y="1019.773" Z="161.0709" />
@@ -52,7 +52,7 @@
     </If>
       <If Condition="(Me.Class == WoWClass.Warrior)">
         <CustomBehavior File="Message" Text="找怪擊殺." LogColor="Lime" />
-        <CustomBehavior File="InteractWith" MobIds="90483,92873,91251" IgnoreLoSToTarget="True" MinRange="25" IgnoreCombat="True" MobState="Alive"
+        <CustomBehavior File="InteractWith" MobIds="90483,92873,91251" IgnoreLoSToTarget="True" MinRange="25" MobState="Alive"
                         InteractByCastingSpellId="57755"  PreInteractMountStrategy="DismountOrCancelShapeshift" WaitForNpcs="false" ObjectType="Npc" Range="30">
         <HuntingGrounds WaypointVisitStrategy="Random" >
         <Hotspot X="3973.398" Y="1147.4" Z="162.937" />
