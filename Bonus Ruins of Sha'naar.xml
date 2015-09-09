@@ -49,6 +49,18 @@
         </HuntingGrounds>
       </CustomBehavior>
     </If>
+    <If Condition="(Me.Class == WoWClass.Hunter)">
+      <CustomBehavior File="Message" Text="找怪擊殺." LogColor="Lime" />
+      <CustomBehavior File="InteractWith" MobIds="90425,90517,92546,90684,92521,92575" MinRange="8" MobState="Alive"
+                      InteractByCastingSpellId="75" ProactiveCombatStrategy=" ClearMobsTargetingUs"  PreInteractMountStrategy="DismountOrCancelShapeshift" WaitForNpcs="false" ObjectType="Npc" Range="30">
+        <HuntingGrounds WaypointVisitStrategy="Random" >
+          <Hotspot X="3534.753" Y="211.627" Z="139.7309" />
+          <Hotspot X="3508.366" Y="136.7421" Z="149.1467" />
+          <Hotspot X="3545.823" Y="74.75066" Z="157.412" />
+          <Hotspot X="3343.649" Y="0.3435831" Z="169.5572" />
+        </HuntingGrounds>
+      </CustomBehavior>
+    </If>
     <If Condition ="Unit(90703, u =&gt; u.Distance &lt; 45)!=null">
       <CustomBehavior File="Message" Text="束縛靈魂" LogColor="Lime" />
       <CustomBehavior File="InteractWith" MobId="90703" NumOfTimes="100" WaitTime="2000" WaitForNpcs="false" ProactiveCombatStrategy=" ClearMobsTargetingUs" PreInteractMountStrategy="DismountOrCancelShapeshift"
