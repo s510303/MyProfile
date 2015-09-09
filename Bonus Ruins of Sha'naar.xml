@@ -35,7 +35,38 @@
 
 	<CustomBehavior File="UserSettings" KillBetweenHotspots="true" />
 
-  <If Condition="HasQuest(39450) &amp;&amp; !IsQuestCompleted(39450)">
+  <While Condition="HasQuest(39450) &amp;&amp; !IsQuestCompleted(39450)">
+
+    <If Condition="(Me.Class == WoWClass.Warrior)">
+      <CustomBehavior File="Message" Text="找怪擊殺." LogColor="Lime" />
+      <CustomBehavior File="InteractWith" MobIds="90425,90517,92546,90684,92521,92575" MinRange="10" MobState="Alive"
+                      InteractByCastingSpellId="57755" ProactiveCombatStrategy=" ClearMobsTargetingUs"  PreInteractMountStrategy="DismountOrCancelShapeshift" WaitForNpcs="false" ObjectType="Npc" Range="30">
+        <HuntingGrounds WaypointVisitStrategy="Random" >
+          <Hotspot X="3534.753" Y="211.627" Z="139.7309" />
+          <Hotspot X="3508.366" Y="136.7421" Z="149.1467" />
+          <Hotspot X="3545.823" Y="74.75066" Z="157.412" />
+          <Hotspot X="3343.649" Y="0.3435831" Z="169.5572" />
+        </HuntingGrounds>
+      </CustomBehavior>
+    </If>
+    <If Condition ="Unit(90703, u =&gt; u.Distance &lt; 45)!=null">
+      <CustomBehavior File="Message" Text="束縛靈魂" LogColor="Lime" />
+      <CustomBehavior File="InteractWith" MobId="90703" NumOfTimes="100" WaitTime="2000" WaitForNpcs="false" ProactiveCombatStrategy=" ClearMobsTargetingUs" PreInteractMountStrategy="DismountOrCancelShapeshift"
+                      TerminateWhen="Unit(90703, u =&gt; u.Distance &lt; 45) == null"/>
+    </If>
+    <If Condition ="Unit(92597, u =&gt; u.Distance &lt; 45)!=null">
+      <CustomBehavior File="Message" Text="惡魔能量" LogColor="Lime" />
+      <CustomBehavior File="InteractWith" MobId="92597" NumOfTimes="100" WaitTime="2000" WaitForNpcs="false" ProactiveCombatStrategy=" ClearMobsTargetingUs" PreInteractMountStrategy="DismountOrCancelShapeshift"
+                      TerminateWhen="Unit(92597, u =&gt; u.Distance &lt; 45) == null"/>
+    </If>
+    <If Condition ="Object(240165, o =&gt; o.Distance &lt; 45)!=null">
+      <CustomBehavior File="Message" Text="拾取加速魔典" LogColor="Lime" />
+      <CustomBehavior File="InteractWith" MobId="240165" NumOfTimes="100" WaitTime="2000" WaitForNpcs="false" ProactiveCombatStrategy=" ClearMobsTargetingUs" PreInteractMountStrategy="DismountOrCancelShapeshift"
+                      TerminateWhen="Object(240165, o =&gt; o.Distance &lt; 45) == null"/>
+    </If>   
+  </While>
+
+  <!--<If Condition="HasQuest(39450) &amp;&amp; !IsQuestCompleted(39450)">
     <CustomBehavior File="InteractWith" MobIds="90501, 90302, 90687, 240165,92597" NumOfTimes="100" WaitTime="1500" PreInteractMountStrategy="DismountOrCancelShapeshift" TerminateWhen="IsQuestCompleted(39449)" >
       <HuntingGrounds WaypointVisitStrategy="Random" >
         <Hotspot X="3534.753" Y="211.627" Z="139.7309" />
@@ -45,18 +76,18 @@
         <Hotspot X="3245.297" Y="351.0324" Z="116.5274" />
       </HuntingGrounds>
     </CustomBehavior>
-  </If>
-  <If Condition="HasQuest(39519) &amp;&amp; !IsQuestCompleted(39519)">
-    <CustomBehavior File="InteractWith" MobIds="90425,90517,92546" NumOfTimes="100" WaitTime="1500" PreInteractMountStrategy="DismountOrCancelShapeshift" TerminateWhen="IsQuestCompleted(39449)" >
-      <HuntingGrounds WaypointVisitStrategy="Random" >
-        <Hotspot X="3534.753" Y="211.627" Z="139.7309" />
-        <Hotspot X="3508.366" Y="136.7421" Z="149.1467" />
-        <Hotspot X="3545.823" Y="74.75066" Z="157.412" />
-        <Hotspot X="3343.649" Y="0.3435831" Z="169.5572" />
-        <Hotspot X="3245.297" Y="351.0324" Z="116.5274" />
-      </HuntingGrounds>
-    </CustomBehavior>
-  </If>
+  </If>-->
+    <If Condition="HasQuest(39519) &amp;&amp; !IsQuestCompleted(39519)">
+      <CustomBehavior File="InteractWith" MobIds="90425,90517,92546" NumOfTimes="100" WaitTime="1500" PreInteractMountStrategy="DismountOrCancelShapeshift" TerminateWhen="IsQuestCompleted(39449)" >
+        <HuntingGrounds WaypointVisitStrategy="Random" >
+          <Hotspot X="3534.753" Y="211.627" Z="139.7309" />
+          <Hotspot X="3508.366" Y="136.7421" Z="149.1467" />
+          <Hotspot X="3545.823" Y="74.75066" Z="157.412" />
+          <Hotspot X="3343.649" Y="0.3435831" Z="169.5572" />
+          <Hotspot X="3245.297" Y="351.0324" Z="116.5274" />
+        </HuntingGrounds>
+      </CustomBehavior>
+    </If>
   <!--<If Condition="HasQuest(39519) &amp;&amp; !IsQuestCompleted(39519)">
    <SetGrindArea>
     <GrindArea>
@@ -82,7 +113,7 @@
 	
 	<CustomBehavior File="UserSettings" Preset="UserOriginal" />
 	
-	<CustomBehavior File="NoCombatMoveTo" X="3723.544" Y="156.7639" Z="56.12444"  />
+	<CustomBehavior File="FlyTo" X="3723.544" Y="156.7639" Z="56.12444"  />
 
 	<CustomBehavior File="RunCode" Code="Styx.CommonBot.TreeRoot.Stop(&quot;Profile complete...&quot;)" />
 </QuestOrder>
