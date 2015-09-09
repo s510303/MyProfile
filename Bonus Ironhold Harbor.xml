@@ -64,8 +64,63 @@
   <MoveTo X="4455.004" Y="-570.0504" Z="49.80917"/>
   <CustomBehavior File="FlyTo" X="4565.531" Y="-403.5759" Z="44.60963" />
   <CustomBehavior File="ForcedDismount" />
+  <UseMount Value="false" />
+  <!--<WoWUnit Name="格羅姆卡戰爭鐵匠" Entry="89935" X="4598.906" Y="-296.1506" Z="10.48526" />
+  <WoWUnit Name="格羅姆卡碼頭工人" Entry="89936" X="4599.874" Y="-278.194" Z="10.73522" />
+  <WoWUnit Name="格羅姆卡長槍手" Entry="89777" X="4555.305" Y="-327.956" Z="10.75501" />
+  <WoWUnit Name="格羅姆卡哨衛" Entry="89857" X="4613.865" Y="-245.3629" Z="10.73304" />
+  <WoWUnit Name="格羅姆卡灼烙者" Entry="90136" X="4592.883" Y="-238.5816" Z="10.73467" />
+  <WoWUnit Name="格羅姆卡長槍手" Entry="89777" X="4518.213" Y="-297.7071" Z="27.77639" />-->
+  
+  <While Condition="HasQuest(39452) &amp;&amp; !IsQuestCompleted(39452)">
+    <If Condition="(Me.Class == WoWClass.Paladin)">
+      <CustomBehavior File="Message" Text="找怪擊殺." LogColor="Lime" />
+      <CustomBehavior File="InteractWith" MobIds="89935,89936,89777,89857,90136" MinRange="15" MobState="Alive"
+                      InteractByCastingSpellId="20271" ProactiveCombatStrategy=" ClearMobsTargetingUs" PreInteractMountStrategy="DismountOrCancelShapeshift" WaitForNpcs="false" ObjectType="Npc" Range="30">
+        <HuntingGrounds WaypointVisitStrategy="Random" >
+          <Hotspot X="4497.988" Y="-466.9139" Z="11.97806" />
+          <Hotspot X="4611.969" Y="-487.5433" Z="21.74086" />
+          <Hotspot X="4752.319" Y="-482.5305" Z="36.65261" />
+          <Hotspot X="4681.296" Y="-322.3831" Z="4.258523" />
+          <Hotspot X="4758.266" Y="-242.6821" Z="4.211034" />
+          <Hotspot X="4627.497" Y="-258.9672" Z="10.5943" />
+          <Hotspot X="4480.781" Y="-347.3628" Z="31.56784" />
+        </HuntingGrounds>
+      </CustomBehavior>
+    </If>
+    <If Condition="(Me.Class == WoWClass.Warrior)">
+      <CustomBehavior File="Message" Text="找怪擊殺." LogColor="Lime" />
+      <CustomBehavior File="InteractWith" MobIds="89935,89936,89777,89857,90136" IgnoreLoSToTarget="True" MinRange="25" IgnoreCombat="True" MobState="Alive"
+                      InteractByCastingSpellId="57755"  PreInteractMountStrategy="DismountOrCancelShapeshift" WaitForNpcs="false" ObjectType="Npc" Range="30">
+        <HuntingGrounds WaypointVisitStrategy="Random" >
+          <Hotspot X="4497.988" Y="-466.9139" Z="11.97806" />
+          <Hotspot X="4611.969" Y="-487.5433" Z="21.74086" />
+          <Hotspot X="4752.319" Y="-482.5305" Z="36.65261" />
+          <Hotspot X="4681.296" Y="-322.3831" Z="4.258523" />
+          <Hotspot X="4758.266" Y="-242.6821" Z="4.211034" />
+          <Hotspot X="4627.497" Y="-258.9672" Z="10.5943" />
+          <Hotspot X="4480.781" Y="-347.3628" Z="31.56784" />
+        </HuntingGrounds>
 
-  <If Condition="HasQuest(39452) &amp;&amp; !IsQuestCompleted(39452)">
+      </CustomBehavior>
+    </If>
+    
+    <If Condition ="Unit(90433, u =&gt; u.Distance &lt; 45)!=null">
+      <CustomBehavior File="Message" Text="鋼鐵部落旌旗" LogColor="Lime" />
+      <CustomBehavior File="InteractWith" MobId="90433" NumOfTimes="100" WaitTime="2000" WaitForNpcs="false" ProactiveCombatStrategy=" ClearMobsTargetingUs" PreInteractMountStrategy="DismountOrCancelShapeshift"
+                      TerminateWhen="Unit(90433, u =&gt; u.Distance &lt; 45) == null"/>
+    </If>
+    <!--<If Condition ="Object(240015, o =&gt; o.Distance &lt; 45)!=null">
+      <CustomBehavior File="Message" Text="一堆鋼鐵部落補給品" LogColor="Lime" />
+      <CustomBehavior File="InteractWith" MobId="240015" NumOfTimes="100" WaitTime="2000" WaitForNpcs="false" ProactiveCombatStrategy=" ClearMobsTargetingUs" PreInteractMountStrategy="DismountOrCancelShapeshift"
+                      TerminateWhen="Object(240015, o =&gt; o.Distance &lt; 45) == null"/>
+    </If>-->
+  </While>
+  <UseMount Value="true" />
+  <!--<If Condition="HasQuest(39452) &amp;&amp; !IsQuestCompleted(39452)">
+
+    
+
 
     <CustomBehavior File="Hooks\DoWhen" ActivityName="InteractWithObjects"
         UseWhen="!Me.Combat &amp;&amp; (Unit(90433, o =&gt; o.Distance &lt; 30) != null || Object(240014, o =&gt; o.Distance &lt; 30) != null) || (Object(239839, o =&gt; o.Distance &lt; 30) != null)" >
@@ -84,7 +139,7 @@
         <Hotspot X="4480.781" Y="-347.3628" Z="31.56784" />
       </HuntingGrounds>
     </CustomBehavior>
-  </If>
+  </If>-->
 
   <If Condition="HasQuest(39510) &amp;&amp; !IsQuestCompleted(39510)">
     <Objective QuestName="幹點髒活" QuestId="39510" Type="CollectItem" ItemId="128429" CollectCount="15" />
