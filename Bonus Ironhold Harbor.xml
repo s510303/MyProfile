@@ -1,5 +1,5 @@
 <HBProfile>
-<Name>[Q]Bonus Ruins of Ruins of Kra'nak - OppLy</Name>
+<Name>[Q]Bonus Ironhold Harbor - OppLy</Name>
 
 <MinDurability>0.4</MinDurability>
 <MinFreeBagSlots>1</MinFreeBagSlots>
@@ -90,8 +90,25 @@
     </If>
     <If Condition="(Me.Class == WoWClass.Warrior)">
       <CustomBehavior File="Message" Text="找怪擊殺." LogColor="Lime" />
-      <CustomBehavior File="InteractWith" MobIds="89935,89936,89777,89857,90136" IgnoreLoSToTarget="True" MinRange="25" IgnoreCombat="True" MobState="Alive"
+      <CustomBehavior File="InteractWith" MobIds="89935,89936,89777,89857,90136" MinRange="8" MobState="Alive"
                       InteractByCastingSpellId="57755"  PreInteractMountStrategy="DismountOrCancelShapeshift" WaitForNpcs="false" ObjectType="Npc" Range="30">
+        <HuntingGrounds WaypointVisitStrategy="Random" >
+          <Hotspot X="4497.988" Y="-466.9139" Z="11.97806" />
+          <Hotspot X="4611.969" Y="-487.5433" Z="21.74086" />
+          <Hotspot X="4752.319" Y="-482.5305" Z="36.65261" />
+          <Hotspot X="4681.296" Y="-322.3831" Z="4.258523" />
+          <Hotspot X="4758.266" Y="-242.6821" Z="4.211034" />
+          <Hotspot X="4627.497" Y="-258.9672" Z="10.5943" />
+          <Hotspot X="4480.781" Y="-347.3628" Z="31.56784" />
+        </HuntingGrounds>
+
+      </CustomBehavior>
+    </If>
+
+    <If Condition="(Me.Class == WoWClass.Hunter)">
+      <CustomBehavior File="Message" Text="找怪擊殺." LogColor="Lime" />
+      <CustomBehavior File="InteractWith" MobIds="89935,89936,89777,89857,90136" MinRange="8" MobState="Alive"
+                      InteractByCastingSpellId="75"  PreInteractMountStrategy="DismountOrCancelShapeshift" WaitForNpcs="false" ObjectType="Npc" Range="30">
         <HuntingGrounds WaypointVisitStrategy="Random" >
           <Hotspot X="4497.988" Y="-466.9139" Z="11.97806" />
           <Hotspot X="4611.969" Y="-487.5433" Z="21.74086" />
