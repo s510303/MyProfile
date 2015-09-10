@@ -144,24 +144,24 @@
       <CustomBehavior File="Message" Text="一王開始." LogColor="Lime" />
       <MoveTo X="1705.093" Y="955.2429" Z="53.07642" />
       <If Condition="(Me.Class == WoWClass.Hunter)">
-        <CustomBehavior File="InteractWith" MobId="24850" IgnoreLoSToTarget="False" MinRange="10" MobState="Alive" InteractByCastingSpellId="75" WaitForNpcs="false" ObjectType="Npc" Range="15"
-                        TerminateWhen="Unit(24850, u =&gt; u.Distance &lt; 45 &amp;&amp; u.HealthPercent &gt;= 2) == null" />
+        <CustomBehavior File="InteractWith" MobId="24850" MinRange="10" MobState="Alive" InteractByCastingSpellId="75" WaitForNpcs="false" Range="30"
+                        TerminateWhen="Unit(24850, u =&gt; u.Distance &gt; 40 &amp;&amp; u.HealthPercent &lt; 2) == null" />
         <CustomBehavior File="WaitTimer" WaitTime="15000" GoalText="Waiting for Boss {TimeRemaining}" />
-        <CustomBehavior File="InteractWith" MobId="24892" IgnoreLoSToTarget="False" MinRange="10" MobState="Alive" InteractByCastingSpellId="75" WaitForNpcs="false" ObjectType="Npc" Range="15"/>
+        <CustomBehavior File="InteractWith" MobId="24892" MinRange="10" IgnoreCombat="True" MobState="Alive" InteractByCastingSpellId="75" WaitForNpcs="false" Range="30"/>
         <!--<CustomBehavior File="InteractWith"  IgnoreLoSToTarget="True" MinRange="10" IgnoreCombat="True" MobState="Alive" InteractByCastingSpellId="75" WaitForNpcs="false" ObjectType="Npc" Range="15" />-->
       </If>
       <If Condition="(Me.Class == WoWClass.Warrior)">
-        <CustomBehavior File="InteractWith" MobId="24850" IgnoreLoSToTarget="False" MinRange="8" IgnoreCombat="False" InteractByCastingSpellId="57755" WaitForNpcs="false" ObjectType="Npc" Range="30"
-                        TerminateWhen="Unit(24850, u =&gt; u.Distance &lt; 45 &amp;&amp; u.HealthPercent &gt;= 2) == null"/>
+        <CustomBehavior File="InteractWith" MobId="24850" MinRange="8" InteractByCastingSpellId="57755" WaitForNpcs="false" Range="30"
+                        TerminateWhen="Unit(24850, u =&gt; u.Distance &gt; 40 &amp;&amp; u.HealthPercent &lt; 2) == null"/>
         <CustomBehavior File="WaitTimer" WaitTime="10000" GoalText="Waiting for Boss {TimeRemaining}" />
-        <CustomBehavior File="InteractWith" MobId="24892" IgnoreLoSToTarget="False" MinRange="8" IgnoreCombat="False" InteractByCastingSpellId="57755" WaitForNpcs="false" ObjectType="Npc" Range="30"/>
+        <CustomBehavior File="InteractWith" MobId="24892" MinRange="8" IgnoreCombat="True" InteractByCastingSpellId="57755" WaitForNpcs="false" Range="30"/>
         <!--<CustomBehavior File="InteractWith" MobId="24892" IgnoreLoSToTarget="True" MinRange="8" IgnoreCombat="True" MobState="Alive" InteractByCastingSpellId="57755" WaitForNpcs="false" ObjectType="Npc" Range="30" />-->
       </If>
       <If Condition="(Me.Class == WoWClass.Paladin)">
-        <CustomBehavior File="InteractWith" MobId="24850" IgnoreLoSToTarget="False" MinRange="8" IgnoreCombat="False" InteractByCastingSpellId="20271" WaitForNpcs="false" ObjectType="Npc" Range="30"
-                        TerminateWhen="Unit(24850, u =&gt; u.Distance &lt; 45 &amp;&amp; u.HealthPercent &gt;= 2) == null"/>
+        <CustomBehavior File="InteractWith" MobId="24850" MinRange="8" InteractByCastingSpellId="20271" WaitForNpcs="false" Range="30"
+                        TerminateWhen="Unit(24850, u =&gt; u.Distance &gt; 40 &amp;&amp; u.HealthPercent &lt; 2) == null"/>
         <CustomBehavior File="WaitTimer" WaitTime="10000" GoalText="Waiting for Boss {TimeRemaining}" />
-        <CustomBehavior File="InteractWith" MobId="24892" IgnoreLoSToTarget="False" MinRange="8" IgnoreCombat="False" InteractByCastingSpellId="20271" WaitForNpcs="false" ObjectType="Npc" Range="30"/>
+        <CustomBehavior File="InteractWith" MobId="24892" MinRange="8" IgnoreCombat="True" InteractByCastingSpellId="20271" WaitForNpcs="false" Range="30"/>
         <!--<CustomBehavior File="InteractWith" MobId="24892" IgnoreLoSToTarget="True" MinRange="8" IgnoreCombat="True" MobState="Alive" InteractByCastingSpellId="20271" WaitForNpcs="false" ObjectType="Npc" Range="30" />-->
       </If>
       <CustomBehavior File="WaitTimer" WaitTime="15000" GoalText="Waiting for Boss {TimeRemaining}" />
