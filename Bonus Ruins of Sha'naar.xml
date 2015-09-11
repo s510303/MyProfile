@@ -33,8 +33,8 @@
 
 <QuestOrder>
 
-	<CustomBehavior File="UserSettings" KillBetweenHotspots="true" />
-
+  <CustomBehavior File="UserSettings" LootMobs="True" PullDistance="30" KillBetweenHotspots="True" GroundMountFarmingMode="false" />
+  <MoveTo X="3725.623" Y="157.3001" Z="56.10865" />
   <CustomBehavior File="FlyTo" X="3499.058" Y="214.5451" Z="144.2225" />
   <CustomBehavior File="ForcedDismount" />
   <UseMount Value="false" />
