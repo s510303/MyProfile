@@ -38,7 +38,7 @@
   <CustomBehavior File="FlyTo" X="3499.058" Y="214.5451" Z="144.2225" />
   <CustomBehavior File="ForcedDismount" />
   <UseMount Value="false" />
-  <While Condition="HasQuest(39450) &amp;&amp; !IsQuestCompleted(39450)">
+  <While Condition="(HasQuest(39450) &amp;&amp; !IsQuestCompleted(39450)) || (HasQuest(38020) &amp;&amp; !IsQuestCompleted(39450))">
 
     <If Condition="(Me.Class == WoWClass.Warrior)">
       <CustomBehavior File="Message" Text="找怪擊殺." LogColor="Lime" />
@@ -173,6 +173,34 @@
         <CustomBehavior File="Message" Text="找怪擊殺." LogColor="Lime" />
         <CustomBehavior File="InteractWith" MobIds="90425,90517,92546" MinRange="8" MobState="Alive"
                         InteractByCastingSpellId="75" ProactiveCombatStrategy=" ClearMobsTargetingUs"  PreInteractMountStrategy="DismountOrCancelShapeshift" WaitForNpcs="false" ObjectType="Npc" Range="30">
+          <HuntingGrounds WaypointVisitStrategy="Random" >
+            <Hotspot X="3400.455" Y="25.45352" Z="162.4033" />
+            <Hotspot X="3369.128" Y="92.24024" Z="162.2649" />
+            <Hotspot X="3315.241" Y="35.00753" Z="166.7925" />
+            <Hotspot X="3345.874" Y="-1.918712" Z="169.5483" />
+            <Hotspot X="3364.585" Y="-28.90251" Z="166.1552" />
+            <Hotspot X="3333.882" Y="-9.207969" Z="169.4251" />
+          </HuntingGrounds>
+        </CustomBehavior>
+      </If>
+      <If Condition="(Me.Class == WoWClass.DeathKnight)">
+        <CustomBehavior File="Message" Text="找怪擊殺." LogColor="Lime" />
+        <CustomBehavior File="InteractWith" MobIds="90425,90517,92546" MobState="Alive"
+                        InteractByCastingSpellId="45477" ProactiveCombatStrategy=" ClearMobsTargetingUs"  PreInteractMountStrategy="DismountOrCancelShapeshift" WaitForNpcs="false" ObjectType="Npc" Range="30">
+          <HuntingGrounds WaypointVisitStrategy="Random" >
+            <Hotspot X="3400.455" Y="25.45352" Z="162.4033" />
+            <Hotspot X="3369.128" Y="92.24024" Z="162.2649" />
+            <Hotspot X="3315.241" Y="35.00753" Z="166.7925" />
+            <Hotspot X="3345.874" Y="-1.918712" Z="169.5483" />
+            <Hotspot X="3364.585" Y="-28.90251" Z="166.1552" />
+            <Hotspot X="3333.882" Y="-9.207969" Z="169.4251" />
+          </HuntingGrounds>
+        </CustomBehavior>
+      </If>
+      <If Condition="(Me.Class == WoWClass.Warrior)">
+        <CustomBehavior File="Message" Text="找怪擊殺." LogColor="Lime" />
+        <CustomBehavior File="InteractWith" MobIds="90425,90517,92546" MobState="Alive"
+                        InteractByCastingSpellId="45477" ProactiveCombatStrategy=" ClearMobsTargetingUs"  PreInteractMountStrategy="DismountOrCancelShapeshift" WaitForNpcs="false" ObjectType="Npc" Range="30">
           <HuntingGrounds WaypointVisitStrategy="Random" >
             <Hotspot X="3400.455" Y="25.45352" Z="162.4033" />
             <Hotspot X="3369.128" Y="92.24024" Z="162.2649" />
