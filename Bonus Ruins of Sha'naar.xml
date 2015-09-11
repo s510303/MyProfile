@@ -98,6 +98,36 @@
         </HuntingGrounds>
       </CustomBehavior>
     </If>
+    <If Condition="(Me.Class == WoWClass.DeathKnight)">
+      <CustomBehavior File="Message" Text="找怪擊殺." LogColor="Lime" />
+      <CustomBehavior File="InteractWith" MobIds="90425,90517,92546,90684,92521,92575" MobState="Alive"
+                      InteractByCastingSpellId="45477" ProactiveCombatStrategy=" ClearMobsTargetingUs"  PreInteractMountStrategy="DismountOrCancelShapeshift" WaitForNpcs="false" ObjectType="Npc">
+        <HuntingGrounds WaypointVisitStrategy="Random" >
+          <Hotspot X="3450.939" Y="34.14382" Z="165.6427" />
+          <Hotspot X="3360.276" Y="-15.45864" Z="166.235" />
+          <Hotspot X="3326.031" Y="-21.91609" Z="166.196" />
+          <Hotspot X="3322.188" Y="23.74224" Z="166.2041" />
+          <Hotspot X="3359.843" Y="66.20332" Z="161.8992" />
+          <Hotspot X="3402.732" Y="105.3407" Z="161.9099" />
+          <Hotspot X="3498.691" Y="89.27711" Z="148.4623" />
+          <Hotspot X="3468.424" Y="154.1311" Z="149.5129" />
+          <Hotspot X="3563.506" Y="185.4346" Z="140.1998" />
+          <Hotspot X="3519.271" Y="193.4202" Z="139.7719" />
+          <Hotspot X="3514.897" Y="237.7387" Z="139.3912" />
+          <Hotspot X="3570.684" Y="239.1594" Z="140.0787" />
+          <Hotspot X="3600.077" Y="194.7089" Z="130.1779" />
+          <Hotspot X="3441.261" Y="180.3542" Z="149.7225" />
+          <Hotspot X="3385.816" Y="190.0732" Z="142.6737" />
+          <Hotspot X="3357.074" Y="210.4435" Z="141.7244" />
+          <Hotspot X="3303.078" Y="288.7501" Z="117.3091" />
+          <Hotspot X="3295.433" Y="345.1154" Z="117.8547" />
+          <Hotspot X="3262.307" Y="384.3519" Z="116.6741" />
+          <Hotspot X="3266.301" Y="352.4319" Z="117.0576" />
+          <Hotspot X="3222.759" Y="341.1326" Z="116.5596" />
+        </HuntingGrounds>
+      </CustomBehavior>
+    </If>
+    
     <If Condition ="Unit(90703, u =&gt; u.Distance &lt; 45)!=null">
       <CustomBehavior File="Message" Text="束縛靈魂" LogColor="Lime" />
       <CustomBehavior File="InteractWith" MobId="90703" NumOfTimes="100" WaitTime="2000" WaitForNpcs="false" ProactiveCombatStrategy=" ClearMobsTargetingUs" PreInteractMountStrategy="DismountOrCancelShapeshift"
