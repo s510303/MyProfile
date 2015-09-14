@@ -490,7 +490,7 @@
 						<RunTo X="847.6886" Y="-818.2578" Z="-229.775" />
 						<CustomBehavior File="InteractWith" MobId="54404" NumOfTimes="1" WaitTime="1000" /> <!-- Talk to Majordomo to pull Ragnaros -->
 						<CustomBehavior File="RunMacro" Macro="/script SelectGossipOption(1)\n/script CloseGossip()" NumOfTimes="3" WaitTime="1000" />
-						<CustomBehavior File="WaitTimer" WaitTime="180000" />
+						<CustomBehavior File="WaitTimer" WaitTime="120000" />
             <CustomBehavior File="UseItem" ItemId="110560" WaitTime="20000" />
 			<!-- End Molten Core Instance Farm -->
 			
