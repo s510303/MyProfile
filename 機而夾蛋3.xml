@@ -122,7 +122,7 @@
       </While>
    </While>
     <While Condition ="Me.ZoneId == 4075" >
-      <CustomBehavior File="UserSettings" LootMobs="True" PullDistance="50" KillBetweenHotspots="True" />
+      <CustomBehavior File="UserSettings" LootMobs="True" PullDistance="50" KillBetweenHotspots="True" GroundMountFarmingMode="False"/>
       <CustomBehavior File="Message" Text="開始擔刷太陽之井." LogColor="Lime" />
       <MoveTo X="1706.587" Y="873.5855" Z="18.02957" />
       <MoveTo X="1657.903" Y="930.253" Z="17.07755" />
@@ -145,21 +145,21 @@
       <MoveTo X="1705.093" Y="955.2429" Z="53.07642" />
       <If Condition="(Me.Class == WoWClass.Hunter)">
         <CustomBehavior File="InteractWith" MobId="24850" MinRange="10" MobState="Alive" InteractByCastingSpellId="75" WaitForNpcs="false" Range="30"
-                        TerminateWhen="Unit(24850, u =&gt; u.Distance &gt; 40 &amp;&amp; u.HealthPercent &lt; 2) == null" />
+                        TerminateWhen="Unit(24850, u =&gt; u.Distance &gt; 40) != null" />
         <CustomBehavior File="WaitTimer" WaitTime="15000" GoalText="Waiting for Boss {TimeRemaining}" />
         <CustomBehavior File="InteractWith" MobId="24892" MinRange="10" IgnoreCombat="True" MobState="Alive" InteractByCastingSpellId="75" WaitForNpcs="false" Range="30"/>
         <!--<CustomBehavior File="InteractWith"  IgnoreLoSToTarget="True" MinRange="10" IgnoreCombat="True" MobState="Alive" InteractByCastingSpellId="75" WaitForNpcs="false" ObjectType="Npc" Range="15" />-->
       </If>
       <If Condition="(Me.Class == WoWClass.Warrior)">
         <CustomBehavior File="InteractWith" MobId="24850" MinRange="8" InteractByCastingSpellId="57755" WaitForNpcs="false" Range="30"
-                        TerminateWhen="Unit(24850, u =&gt; u.Distance &gt; 40 &amp;&amp; u.HealthPercent &lt; 2) == null"/>
+                        TerminateWhen="Unit(24850, u =&gt; u.Distance &gt; 40) != null"/>
         <CustomBehavior File="WaitTimer" WaitTime="10000" GoalText="Waiting for Boss {TimeRemaining}" />
         <CustomBehavior File="InteractWith" MobId="24892" MinRange="8" IgnoreCombat="True" InteractByCastingSpellId="57755" WaitForNpcs="false" Range="30"/>
         <!--<CustomBehavior File="InteractWith" MobId="24892" IgnoreLoSToTarget="True" MinRange="8" IgnoreCombat="True" MobState="Alive" InteractByCastingSpellId="57755" WaitForNpcs="false" ObjectType="Npc" Range="30" />-->
       </If>
       <If Condition="(Me.Class == WoWClass.Paladin)">
         <CustomBehavior File="InteractWith" MobId="24850" MinRange="8" InteractByCastingSpellId="20271" WaitForNpcs="false" Range="30"
-                        TerminateWhen="Unit(24850, u =&gt; u.Distance &gt; 40 &amp;&amp; u.HealthPercent &lt; 2) == null"/>
+                        TerminateWhen="Unit(24850, u =&gt; u.Distance &gt; 40) != null"/>
         <CustomBehavior File="WaitTimer" WaitTime="10000" GoalText="Waiting for Boss {TimeRemaining}" />
         <CustomBehavior File="InteractWith" MobId="24892" MinRange="8" IgnoreCombat="True" InteractByCastingSpellId="20271" WaitForNpcs="false" Range="30"/>
         <!--<CustomBehavior File="InteractWith" MobId="24892" IgnoreLoSToTarget="True" MinRange="8" IgnoreCombat="True" MobState="Alive" InteractByCastingSpellId="20271" WaitForNpcs="false" ObjectType="Npc" Range="30" />-->
