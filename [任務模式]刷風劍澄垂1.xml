@@ -195,10 +195,10 @@
           <If Condition="Me.MapId == 0" >
             <CustomBehavior File="Message" Text="移動到燃燒平原" LogColor="Lime" />
             <MoveTo X="-11769.78" Y="-3865.596" Z="58.33266" />
-            <MoveTo X="-8092.26" Y="-1025.79" Z="132.2355" />
           </If>
         </If>
       </If>
+      <MoveTo X="-8092.26" Y="-1025.79" Z="132.2355" />
 		</While>
 		<!-- 
 		End transport script credit to Bengan. 
