@@ -33,15 +33,21 @@
 
 <QuestOrder>
   <CustomBehavior File="UserSettings" KillBetweenHotspots="true" LootMobs="True" PullDistance="25"/>
-  <MoveTo X="3979.3" Y="1216.62" Z="164.197"/>
+  <If Condition="Me.IsHorde" >
+    <MoveTo X="3979.3" Y="1216.62" Z="164.197"/>
+  </If>
+  <If Condition="Me.IsAlliance" >
+    <MoveTo X="4077.998" Y="1185.121" Z="160.9271" />
+  </If>
+  
   <UseMount Value="false" />
 
-  <While Condition="HasQuest(38047) &amp;&amp; !IsQuestCompleted(38047)">
+  <While Condition="(HasQuest(38047) &amp;&amp; !IsQuestCompleted(38047)) || (HasQuest(38866) &amp;&amp; !IsQuestCompleted(38866))">
     
       <If Condition="(Me.Class == WoWClass.Paladin)">
       <CustomBehavior File="Message" Text="找怪擊殺." LogColor="Lime" />
-      <CustomBehavior File="InteractWith" MobIds="90483,92873,91251" MinRange="15" MobState="Alive"
-                      InteractByCastingSpellId="20271" ProactiveCombatStrategy=" ClearMobsTargetingUs" PreInteractMountStrategy="DismountOrCancelShapeshift" WaitForNpcs="false" ObjectType="Npc" Range="30">
+      <CustomBehavior File="InteractWith" MobIds="90483,92873,91251" MobState="Alive"
+                      InteractByCastingSpellId="20271" ProactiveCombatStrategy=" ClearMobsTargetingUs" PreInteractMountStrategy="DismountOrCancelShapeshift" WaitForNpcs="false" ObjectType="Npc">
         <HuntingGrounds WaypointVisitStrategy="Random" >
         <Hotspot X="3973.398" Y="1147.4" Z="162.937" />
 				<Hotspot X="3897.893" Y="1019.773" Z="161.0709" />
@@ -52,8 +58,8 @@
     </If>
     <If Condition="(Me.Class == WoWClass.Warrior)">
       <CustomBehavior File="Message" Text="找怪擊殺." LogColor="Lime" />
-      <CustomBehavior File="InteractWith" MobIds="90483,92873,91251" IgnoreLoSToTarget="True" MinRange="25" MobState="Alive"
-                      InteractByCastingSpellId="57755"  PreInteractMountStrategy="DismountOrCancelShapeshift" WaitForNpcs="false" ObjectType="Npc" Range="30">
+      <CustomBehavior File="InteractWith" MobIds="90483,92873,91251" MobState="Alive"
+                      InteractByCastingSpellId="57755"  PreInteractMountStrategy="DismountOrCancelShapeshift" WaitForNpcs="false" ObjectType="Npc">
         <HuntingGrounds WaypointVisitStrategy="Random" >
           <Hotspot X="3973.398" Y="1147.4" Z="162.937" />
           <Hotspot X="3897.893" Y="1019.773" Z="161.0709" />
@@ -64,8 +70,8 @@
     </If>
         <If Condition="(Me.Class == WoWClass.Hunter)">
           <CustomBehavior File="Message" Text="找怪擊殺." LogColor="Lime" />
-          <CustomBehavior File="InteractWith" MobIds="90483,92873,91251" IgnoreLoSToTarget="True" MinRange="25" MobState="Alive"
-                          InteractByCastingSpellId="75"  PreInteractMountStrategy="DismountOrCancelShapeshift" WaitForNpcs="false" ObjectType="Npc" Range="30">
+          <CustomBehavior File="InteractWith" MobIds="90483,92873,91251" MobState="Alive"
+                          InteractByCastingSpellId="75"  PreInteractMountStrategy="DismountOrCancelShapeshift" WaitForNpcs="false" ObjectType="Npc">
             <HuntingGrounds WaypointVisitStrategy="Random" >
               <Hotspot X="3973.398" Y="1147.4" Z="162.937" />
               <Hotspot X="3897.893" Y="1019.773" Z="161.0709" />
@@ -75,6 +81,19 @@
 
           </CustomBehavior>
       </If>
+    <If Condition="(Me.Class == WoWClass.Warlock)">
+      <CustomBehavior File="Message" Text="找怪擊殺." LogColor="Lime" />
+      <CustomBehavior File="InteractWith" MobIds="90483,92873,91251" MobState="Alive"
+                      InteractByCastingSpellId="172"  PreInteractMountStrategy="DismountOrCancelShapeshift" WaitForNpcs="false" ObjectType="Npc">
+        <HuntingGrounds WaypointVisitStrategy="Random" >
+          <Hotspot X="3973.398" Y="1147.4" Z="162.937" />
+          <Hotspot X="3897.893" Y="1019.773" Z="161.0709" />
+          <Hotspot X="3945.316" Y="917.3094" Z="152.7068" />
+          <Hotspot X="3973.105" Y="1025.8" Z="162.672" />
+        </HuntingGrounds>
+
+      </CustomBehavior>
+    </If>
     <If Condition="Unit(90370,  u=&gt; u.Distance &lt; 45) != null">
       <CustomBehavior File="Message" Text="摧毀部落金旗." LogColor="Lime" />
       <CustomBehavior File="InteractWith" WaitTime="3000" MobId="90370" NumOfTimes="100" WaitForNpcs="false" CollectionDistance="45" PreInteractMountStrategy="Dismount" />
@@ -83,6 +102,11 @@
       <CustomBehavior File="Message" Text="拾取醫療補給." LogColor="Lime" />
       <CustomBehavior File="InteractWith" WaitTime="3000" MobId="239971" NumOfTimes="100" WaitForNpcs="false" CollectionDistance="45" PreInteractMountStrategy="Dismount" 
 						TerminateWhen="GetItemCount(122139) != 0 || Object(239971, o =&gt; o.Distance &lt; 45) == null" />
+    </If>
+    <If Condition ="Object(243852, o =&gt; o.Distance &lt; 100)!=null">
+      <CustomBehavior File="Message" Text="拾取頂尖裂片" LogColor="Lime" />
+      <CustomBehavior File="InteractWith" MobId="243852" NumOfTimes="100" WaitTime="2000" WaitForNpcs="false" ProactiveCombatStrategy=" ClearMobsTargetingUs" PreInteractMountStrategy="DismountOrCancelShapeshift"
+                      TerminateWhen="Object(243852, o =&gt; o.Distance &lt; 100) == null"/>
     </If>
     <!--<CustomBehavior File="Hooks\DoWhen" ActivityName="PickUpBandage" 
 					UseWhen="(!Me.Combat) &amp;&amp; (GetItemCount(122139) == 0) &amp;&amp; (Object(239971, o =&gt; o.Distance &lt; 30) != null)" >
@@ -95,6 +119,13 @@
         <CustomBehavior File="Message" Text="治療人." LogColor="Lime" />
         <CustomBehavior File="InteractWith" WaitTime="3000" MobIds="90452" NumOfTimes="100" Range="3" CollectionDistance="45" WaitForNpcs="false" PreInteractMountStrategy="Dismount"
               TerminateWhen="GetItemCount(122139) &lt;= 0 || (Unit(90452, o =&gt; o.Distance &lt; 45 &amp;&amp; o.HealthPercent &lt;= 50) == null)"/>
+      </If>
+    </If>
+    <If Condition="Me.IsAlliance" >
+      <If Condition="GetItemCount(122139) &lt;= 0 || (Unit(90443, u =&gt; u.Distance &lt; 45 &amp;&amp; u.HealthPercent &lt;= 50 ) != null)">
+        <CustomBehavior File="Message" Text="治療人." LogColor="Lime" />
+        <CustomBehavior File="InteractWith" WaitTime="3000" MobIds="90443" NumOfTimes="100" Range="3" CollectionDistance="45" WaitForNpcs="false" PreInteractMountStrategy="Dismount"
+              TerminateWhen="GetItemCount(122139) &lt;= 0 || (Unit(90443, o =&gt; o.Distance &lt; 45 &amp;&amp; o.HealthPercent &lt;= 50) == null)"/>
       </If>
     </If>
 	<!-- if not in combat, and first aid bandages is greater or equal 1 and injured footsoldier or iron horde banner within 30 yard range, pick up medical supplies -->
@@ -134,8 +165,12 @@
 	<CustomBehavior File="Hooks\DoWhen" ActivityName="PickUpBandage" Command="Remove" />
 	<CustomBehavior File="Hooks\DoWhen" ActivityName="InteractWithObject" Command="Remove" />
   <UseMount Value="true" />
-	
-	<CustomBehavior File="FlyTo" X="3979.3" Y="1216.62" Z="164.197"/>
+  <If Condition="Me.IsHorde" >
+    <CustomBehavior File="FlyTo" X="3979.3" Y="1216.62" Z="164.197"/>
+  </If>
+  <If Condition="Me.IsAlliance" >
+    <CustomBehavior File="FlyTo" X="4077.998" Y="1185.121" Z="160.9271" />
+  </If>
 
 	<CustomBehavior File="RunCode" Code="Styx.CommonBot.TreeRoot.Stop(&quot;Profile complete...&quot;)" />
 </QuestOrder>
