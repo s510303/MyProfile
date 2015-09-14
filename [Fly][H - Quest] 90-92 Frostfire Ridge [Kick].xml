@@ -1514,6 +1514,9 @@
 				</HuntingGrounds>
 			</CustomBehavior>
 		</While>
+    <CustomBehavior File="FlyTo" X="6776.587" Y="5916.602" Z="258.8798"/>
+    <CustomBehavior File="ForcedDismount"/>
+    <RunTo X="6894.924" Y="5846.719" Z="258.647"/>
 		<TurnIn Nav="Fly" QuestName="These Colors Don't Run" QuestId="33526" TurnInName="Durotan" TurnInId="74273" X="6894.924" Y="5846.719" Z="258.647" />
 		<PickUp Nav="Fly" QuestName="Deeds Left Undone" QuestId="33546" GiverName="Durotan" GiverId="74273" X="6894.924" Y="5846.719" Z="258.647" />
 		<While Condition="HasQuest(33546) &amp;&amp; !IsQuestCompleted(33546)" > <!-- Deeds Left Undone -->
@@ -1521,17 +1524,18 @@
 			<MoveTo DestName="Deeds Left Undone" X="6795.364" Y="5756.249" Z="258.6879" />
 			<CustomBehavior File="InteractWith" MobId="75167" NonCompeteDistance="0" Range="4" WaitTime="2500" X="6795.364" Y="5756.249" Z="258.6879" />
 		</While>
-		<TurnIn Nav="Fly" QuestName="Deeds Left Undone" QuestId="33546" TurnInName="Durotan" TurnInId="75177" X="6653.87" Y="5914.223" Z="254.1397" />
-		<PickUp Nav="Fly" QuestName="Great Balls of Fire!" QuestId="33408" GiverName="Durotan" GiverId="75177" X="6653.87" Y="5914.223" Z="254.1397" />
-		<MoveTo DestName="Great Balls of Fire 1" QuestId="33408"  X="6627.952" Y="5889.019" Z="257.9761" />
+		<TurnIn QuestName="Deeds Left Undone" QuestId="33546" TurnInName="Durotan" TurnInId="75177" X="6653.87" Y="5914.223" Z="254.1397" />
+		<PickUp QuestName="Great Balls of Fire!" QuestId="33408" GiverName="Durotan" GiverId="75177" X="6653.87" Y="5914.223" Z="254.1397" />
+		<!--<MoveTo DestName="Great Balls of Fire 1" QuestId="33408"  X="6627.952" Y="5889.019" Z="257.9761" />
 		<CustomBehavior File="WaitTimer" QuestId="33408" WaitTime="1337" />
 		<MoveTo DestName="Great Balls of Fire 2" QuestId="33408"  X="6601.545" Y="5848.771" Z="275.1208" />
 		<CustomBehavior File="WaitTimer" QuestId="33408" WaitTime="1337" />
 		<MoveTo DestName="Great Balls of Fire 3" QuestId="33408"  X="6597.322" Y="5836.705" Z="279.8028" />
 		<CustomBehavior File="WaitTimer" QuestId="33408" WaitTime="1337" />
 		<MoveTo DestName="Great Balls of Fire 4" QuestId="33408"  X="6594.563" Y="5815.948" Z="288.703" />
-		<CustomBehavior File="WaitTimer" QuestId="33408" WaitTime="1337" />
-		<MoveTo DestName="Great Balls of Fire" QuestId="33408" X="6592.074" Y="5774.022" Z="306.117" />
+		<CustomBehavior File="WaitTimer" QuestId="33408" WaitTime="1337" />-->
+    <CustomBehavior File="FlyTo" DestName="Great Balls of Fire" QuestId="33408" X="6592.074" Y="5774.022" Z="306.117" />
+    <CustomBehavior File="ForcedDismount"/>
 		<While Condition="HasQuest(33408) &amp;&amp; !IsQuestCompleted(33408)"> <!-- Great Balls of Fire! -->
 			<CustomBehavior File="Hooks\Avoid" AvoidName="AvoidBalls" Command="Add" ObjectId="224636" Radius="5" />
 			<CustomBehavior File="Hooks\Avoid" AvoidName="BallsOfFire" Command="Add" ObjectType="AreaTrigger" ObjectId="5669" Radius="6" 
@@ -1569,9 +1573,9 @@
 			</CustomBehavior>
 		</While>
 		<Objective QuestName="To the Slaughter" QuestId="33622" Type="KillMob" MobId="73469" KillCount="10" />
-		<TurnIn Nav="Fly" QuestName="To the Slaughter" QuestId="33622" TurnInName="Durotan" TurnInId="75177" X="6822.551" Y="5795.463" Z="325.1678" />
-		<TurnIn Nav="Fly" QuestName="Armed and Dangerous" QuestId="33344" TurnInName="Durotan" TurnInId="75177" X="6822.551" Y="5795.463" Z="325.1678" />
-		<PickUp Nav="Fly" QuestName="Last Steps" QuestId="33527" GiverName="Durotan" GiverId="75177" X="6822.551" Y="5795.463" Z="325.1678" />
+		<TurnIn QuestName="To the Slaughter" QuestId="33622" TurnInName="Durotan" TurnInId="75177" X="6822.551" Y="5795.463" Z="325.1678" />
+		<TurnIn QuestName="Armed and Dangerous" QuestId="33344" TurnInName="Durotan" TurnInId="75177" X="6822.551" Y="5795.463" Z="325.1678" />
+		<PickUp QuestName="Last Steps" QuestId="33527" GiverName="Durotan" GiverId="75177" X="6822.551" Y="5795.463" Z="325.1678" />
 		<While Condition="HasQuest(33527) &amp;&amp; !IsQuestCompleted(33527)" > <!-- Last Steps -->
 			<CustomBehavior File="Hooks\Avoid" AvoidName="LastStepsFire" Command="Add" ObjectType="AreaTrigger" ObjectId="5611" Radius="8" />
 			<CustomBehavior File="InteractWith" QuestId="33527" MobId="231902" Range="4" NonCompeteDistance="0" TerminateWhen="IsObjectiveComplete(1, 33527)" X="6825.261" Y="5795.088" Z="326.0741" />
