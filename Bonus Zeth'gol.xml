@@ -67,14 +67,160 @@
   <WoWUnit Name="血之谷傳令官" Entry="91256" X="4164.359" Y="538.0226" Z="169.937" />
   <WoWUnit Name="血之谷秘術師" Entry="90851" X="4084.828" Y="449.3775" Z="140.1978" />
   <WoWUnit Name="魔血監督者" Entry="92706" X="4089.56" Y="576.2882" Z="162.8125" />-->
+  <MoveTo X="3723.544" Y="156.7639" Z="56.12444"  />
   <CustomBehavior File="FlyTo" X="3983.678" Y="612.3217" Z="134.8965" />
   <CustomBehavior File="ForcedDismount" />
-	<CustomBehavior File="UserSettings" KillBetweenHotspots="true" GroundMountFarmingMode="false"/>
-  <While Condition="(HasQuest(39442) &amp;&amp; !IsQuestCompleted(39442))||(HasQuest(38043) &amp;&amp; !IsQuestCompleted(38043))">
+	<CustomBehavior File="UserSettings" KillBetweenHotspots="false" GroundMountFarmingMode="false"/>
+  <UseMount Value="false" />
+  <While Condition="(HasQuest(39442) &amp;&amp; !IsQuestCompleted(39442))||(HasQuest(38043) &amp;&amp; !IsQuestCompleted(38043)) || (HasQuest(38044) &amp;&amp; !IsQuestCompleted(38044))">
     <CustomBehavior File="Message" Text="找怪擊殺." LogColor="Lime" />
     <If Condition="(Me.Class == WoWClass.Paladin)">
-      <CustomBehavior File="InteractWith" MobIds="12118,89699,91256,90851,92706" IgnoreLoSToTarget="True" MinRange="15" IgnoreCombat="True" MobState="Alive" 
-                      InteractByCastingSpellId="20271" PreInteractMountStrategy="DismountOrCancelShapeshift" WaitForNpcs="false" ObjectType="Npc" Range="30">
+      <CustomBehavior File="InteractWith" MobIds="12118,89699,90851,92706" MobState="Alive" 
+                      InteractByCastingSpellId="20271" PreInteractMountStrategy="DismountOrCancelShapeshift" WaitForNpcs="false">
+        <HuntingGrounds WaypointVisitStrategy="Random" >
+          <Hotspot X="4039.532" Y="552.5905" Z="144.3611" />
+          <Hotspot X="4066.949" Y="510.654" Z="140.3789" />
+          <Hotspot X="4112.651" Y="476.4109" Z="140.7307" />
+          <Hotspot X="4161.684" Y="507.2393" Z="153.9762" />
+          <Hotspot X="4193.787" Y="488.9006" Z="159.3718" />
+          <Hotspot X="4251.705" Y="475.1672" Z="163.5509" />
+          <Hotspot X="4298.61" Y="459.5405" Z="174.2034" />
+          <Hotspot X="4314.555" Y="426.3798" Z="175.1043" />
+          <Hotspot X="4317.249" Y="359.7144" Z="176.6517" />
+          <Hotspot X="4303.318" Y="408.233" Z="175.5474" />
+          <Hotspot X="4301.896" Y="414.9223" Z="176.089" />
+          <Hotspot X="4273.771" Y="462.7543" Z="166.3339" />
+          <Hotspot X="4233.065" Y="481.0231" Z="161.1108" />
+          <Hotspot X="4196.424" Y="494.9789" Z="160.4004" />
+          <Hotspot X="4188.731" Y="497.9092" Z="159.5535" />
+          <Hotspot X="4125.643" Y="540.8347" Z="154.03" />
+          <Hotspot X="4058.341" Y="555.6857" Z="147.6552" />
+        </HuntingGrounds>
+      </CustomBehavior>
+    </If>
+    <If Condition="(Me.Class == WoWClass.Hunter)">
+      <CustomBehavior File="InteractWith" MobIds="12118,89699,90851,92706" MobState="Alive"
+                      InteractByCastingSpellId="75" PreInteractMountStrategy="DismountOrCancelShapeshift" WaitForNpcs="false" ObjectType="Npc">
+        <HuntingGrounds WaypointVisitStrategy="Random" >
+          <Hotspot X="4039.532" Y="552.5905" Z="144.3611" />
+          <Hotspot X="4066.949" Y="510.654" Z="140.3789" />
+          <Hotspot X="4112.651" Y="476.4109" Z="140.7307" />
+          <Hotspot X="4161.684" Y="507.2393" Z="153.9762" />
+          <Hotspot X="4193.787" Y="488.9006" Z="159.3718" />
+          <Hotspot X="4251.705" Y="475.1672" Z="163.5509" />
+          <Hotspot X="4298.61" Y="459.5405" Z="174.2034" />
+          <Hotspot X="4314.555" Y="426.3798" Z="175.1043" />
+          <Hotspot X="4317.249" Y="359.7144" Z="176.6517" />
+          <Hotspot X="4303.318" Y="408.233" Z="175.5474" />
+          <Hotspot X="4301.896" Y="414.9223" Z="176.089" />
+          <Hotspot X="4273.771" Y="462.7543" Z="166.3339" />
+          <Hotspot X="4233.065" Y="481.0231" Z="161.1108" />
+          <Hotspot X="4196.424" Y="494.9789" Z="160.4004" />
+          <Hotspot X="4188.731" Y="497.9092" Z="159.5535" />
+          <Hotspot X="4125.643" Y="540.8347" Z="154.03" />
+          <Hotspot X="4058.341" Y="555.6857" Z="147.6552" />
+        </HuntingGrounds>
+      </CustomBehavior>
+    </If>
+    <If Condition="(Me.Class == WoWClass.Warrior)">
+      <CustomBehavior File="InteractWith" MobIds="12118,89699,90851,92706" MobState="Alive"
+                      InteractByCastingSpellId="57755" PreInteractMountStrategy="DismountOrCancelShapeshift" WaitForNpcs="false" ObjectType="Npc">
+        <HuntingGrounds WaypointVisitStrategy="Random" >
+          <Hotspot X="4039.532" Y="552.5905" Z="144.3611" />
+          <Hotspot X="4066.949" Y="510.654" Z="140.3789" />
+          <Hotspot X="4112.651" Y="476.4109" Z="140.7307" />
+          <Hotspot X="4161.684" Y="507.2393" Z="153.9762" />
+          <Hotspot X="4193.787" Y="488.9006" Z="159.3718" />
+          <Hotspot X="4251.705" Y="475.1672" Z="163.5509" />
+          <Hotspot X="4298.61" Y="459.5405" Z="174.2034" />
+          <Hotspot X="4314.555" Y="426.3798" Z="175.1043" />
+          <Hotspot X="4317.249" Y="359.7144" Z="176.6517" />
+          <Hotspot X="4303.318" Y="408.233" Z="175.5474" />
+          <Hotspot X="4301.896" Y="414.9223" Z="176.089" />
+          <Hotspot X="4273.771" Y="462.7543" Z="166.3339" />
+          <Hotspot X="4233.065" Y="481.0231" Z="161.1108" />
+          <Hotspot X="4196.424" Y="494.9789" Z="160.4004" />
+          <Hotspot X="4188.731" Y="497.9092" Z="159.5535" />
+          <Hotspot X="4125.643" Y="540.8347" Z="154.03" />
+          <Hotspot X="4058.341" Y="555.6857" Z="147.6552" />
+        </HuntingGrounds>
+      </CustomBehavior>
+    </If>
+    <If Condition="(Me.Class == WoWClass.Warlock)">
+      <CustomBehavior File="InteractWith" MobIds="12118,89699,90851,92706" MobState="Alive"
+                      InteractByCastingSpellId="172" PreInteractMountStrategy="DismountOrCancelShapeshift" WaitForNpcs="false" ObjectType="Npc">
+        <HuntingGrounds WaypointVisitStrategy="Random" >
+          <Hotspot X="4039.532" Y="552.5905" Z="144.3611" />
+          <Hotspot X="4066.949" Y="510.654" Z="140.3789" />
+          <Hotspot X="4112.651" Y="476.4109" Z="140.7307" />
+          <Hotspot X="4161.684" Y="507.2393" Z="153.9762" />
+          <Hotspot X="4193.787" Y="488.9006" Z="159.3718" />
+          <Hotspot X="4251.705" Y="475.1672" Z="163.5509" />
+          <Hotspot X="4298.61" Y="459.5405" Z="174.2034" />
+          <Hotspot X="4314.555" Y="426.3798" Z="175.1043" />
+          <Hotspot X="4317.249" Y="359.7144" Z="176.6517" />
+          <Hotspot X="4303.318" Y="408.233" Z="175.5474" />
+          <Hotspot X="4301.896" Y="414.9223" Z="176.089" />
+          <Hotspot X="4273.771" Y="462.7543" Z="166.3339" />
+          <Hotspot X="4233.065" Y="481.0231" Z="161.1108" />
+          <Hotspot X="4196.424" Y="494.9789" Z="160.4004" />
+          <Hotspot X="4188.731" Y="497.9092" Z="159.5535" />
+          <Hotspot X="4125.643" Y="540.8347" Z="154.03" />
+          <Hotspot X="4058.341" Y="555.6857" Z="147.6552" />
+        </HuntingGrounds>
+      </CustomBehavior>
+    </If>
+    <If Condition="(Me.Class == WoWClass.Monk)">
+      <CustomBehavior File="InteractWith" MobIds="12118,89699,90851,92706" MobState="Alive"
+                      InteractByCastingSpellId="117952" PreInteractMountStrategy="DismountOrCancelShapeshift" WaitForNpcs="false" ObjectType="Npc">
+        <HuntingGrounds WaypointVisitStrategy="Random" >
+          <Hotspot X="4039.532" Y="552.5905" Z="144.3611" />
+          <Hotspot X="4066.949" Y="510.654" Z="140.3789" />
+          <Hotspot X="4112.651" Y="476.4109" Z="140.7307" />
+          <Hotspot X="4161.684" Y="507.2393" Z="153.9762" />
+          <Hotspot X="4193.787" Y="488.9006" Z="159.3718" />
+          <Hotspot X="4251.705" Y="475.1672" Z="163.5509" />
+          <Hotspot X="4298.61" Y="459.5405" Z="174.2034" />
+          <Hotspot X="4314.555" Y="426.3798" Z="175.1043" />
+          <Hotspot X="4317.249" Y="359.7144" Z="176.6517" />
+          <Hotspot X="4303.318" Y="408.233" Z="175.5474" />
+          <Hotspot X="4301.896" Y="414.9223" Z="176.089" />
+          <Hotspot X="4273.771" Y="462.7543" Z="166.3339" />
+          <Hotspot X="4233.065" Y="481.0231" Z="161.1108" />
+          <Hotspot X="4196.424" Y="494.9789" Z="160.4004" />
+          <Hotspot X="4188.731" Y="497.9092" Z="159.5535" />
+          <Hotspot X="4125.643" Y="540.8347" Z="154.03" />
+          <Hotspot X="4058.341" Y="555.6857" Z="147.6552" />
+        </HuntingGrounds>
+      </CustomBehavior>
+    </If>
+    <If Condition="(Me.Class == WoWClass.DeathKnight)">
+      <CustomBehavior File="InteractWith" MobIds="12118,89699,90851,92706" MobState="Alive"
+                      InteractByCastingSpellId="45477" PreInteractMountStrategy="DismountOrCancelShapeshift" WaitForNpcs="false" ObjectType="Npc">
+        <HuntingGrounds WaypointVisitStrategy="Random" >
+          <Hotspot X="4039.532" Y="552.5905" Z="144.3611" />
+          <Hotspot X="4066.949" Y="510.654" Z="140.3789" />
+          <Hotspot X="4112.651" Y="476.4109" Z="140.7307" />
+          <Hotspot X="4161.684" Y="507.2393" Z="153.9762" />
+          <Hotspot X="4193.787" Y="488.9006" Z="159.3718" />
+          <Hotspot X="4251.705" Y="475.1672" Z="163.5509" />
+          <Hotspot X="4298.61" Y="459.5405" Z="174.2034" />
+          <Hotspot X="4314.555" Y="426.3798" Z="175.1043" />
+          <Hotspot X="4317.249" Y="359.7144" Z="176.6517" />
+          <Hotspot X="4303.318" Y="408.233" Z="175.5474" />
+          <Hotspot X="4301.896" Y="414.9223" Z="176.089" />
+          <Hotspot X="4273.771" Y="462.7543" Z="166.3339" />
+          <Hotspot X="4233.065" Y="481.0231" Z="161.1108" />
+          <Hotspot X="4196.424" Y="494.9789" Z="160.4004" />
+          <Hotspot X="4188.731" Y="497.9092" Z="159.5535" />
+          <Hotspot X="4125.643" Y="540.8347" Z="154.03" />
+          <Hotspot X="4058.341" Y="555.6857" Z="147.6552" />
+        </HuntingGrounds>
+      </CustomBehavior>
+    </If>
+    <If Condition="(Me.Class == WoWClass.Druid)">
+      <CustomBehavior File="InteractWith" MobIds="12118,89699,90851,92706" MobState="Alive"
+                      InteractByCastingSpellId="8921" PreInteractMountStrategy="DismountOrCancelShapeshift" WaitForNpcs="false" ObjectType="Npc">
         <HuntingGrounds WaypointVisitStrategy="Random" >
           <Hotspot X="4039.532" Y="552.5905" Z="144.3611" />
           <Hotspot X="4066.949" Y="510.654" Z="140.3789" />
@@ -101,7 +247,13 @@
       <CustomBehavior File="InteractWith" MobId="90704" NumOfTimes="100" WaitTime="1500" WaitForNpcs="false" ProactiveCombatStrategy=" ClearMobsTargetingUs" PreInteractMountStrategy="DismountOrCancelShapeshift"
                       TerminateWhen="Unit(90704, u =&gt; u.Distance &lt; 30) == null"/>
     </If>
+    <If Condition ="Object(243796, o =&gt; o.Distance &lt; 100)!=null">
+      <CustomBehavior File="Message" Text="發光的可疑箱子" LogColor="Lime" />
+      <CustomBehavior File="InteractWith" MobId="243796" NumOfTimes="100" WaitTime="1500" WaitForNpcs="false" ProactiveCombatStrategy=" ClearMobsTargetingUs" PreInteractMountStrategy="DismountOrCancelShapeshift"
+                      TerminateWhen="Object(243796, o =&gt; o.Distance &lt; 100) == null"/>
+    </If>
   </While>
+  <UseMount Value="true" />
   <!--<If Condition="(HasQuest(39442) &amp;&amp; !IsQuestCompleted(39442))||(HasQuest(38043) &amp;&amp; !IsQuestCompleted(38043))">
     <CustomBehavior File="InteractWith" MobIds="90704,89699,91256,90851,92706,93028,91227,90888" NumOfTimes="100" WaitTime="1500" ProactiveCombatStrategy=" ClearMobsTargetingUs" PreInteractMountStrategy="DismountOrCancelShapeshift" 
                     TerminateWhen="IsQuestCompleted(39442)||IsQuestCompleted(38043)" >
