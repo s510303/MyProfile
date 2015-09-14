@@ -38,7 +38,8 @@
     <CustomBehavior File="FlyTo" X="3499.058" Y="214.5451" Z="144.2225" />
     <CustomBehavior File="ForcedDismount" />
     <UseMount Value="false" />
-    <While Condition="(HasQuest(39450) &amp;&amp; !IsQuestCompleted(39450)) || (HasQuest(38020) &amp;&amp; !IsQuestCompleted(39450))">
+    <While Condition="(HasQuest(39450) &amp;&amp; !IsQuestCompleted(39450)) || (HasQuest(38020) &amp;&amp; !IsQuestCompleted(38020)) || 
+      (HasQuest(37968) &amp;&amp; !IsQuestCompleted(37968)) || (HasQuest(37966) &amp;&amp; !IsQuestCompleted(37966))">
 
       <If Condition="(Me.Class == WoWClass.Warrior)">
         <CustomBehavior File="Message" Text="找怪擊殺." LogColor="Lime" />
