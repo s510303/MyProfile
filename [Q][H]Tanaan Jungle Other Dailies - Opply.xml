@@ -32,6 +32,7 @@
 </Blackspots>
 
 <QuestOrder>
+  <CustomBehavior File="UserSettings" LootMobs="True" PullDistance="30" KillBetweenHotspots="True" GroundMountFarmingMode="false" />
 	<!-- Pick up quest -->
 	<If Condition="!(HasQuest(39519) || HasQuest(39529) || HasQuest(39532) || HasQuest(39433) || HasQuest(39510) || HasQuest(39509) || HasQuest(39511) || HasQuest(39513) || HasQuest(39514) || HasQuest(39512))" >
 		<CustomBehavior File="RunCode" Code="Logging.Write(System.Windows.Media.Colors.DeepSkyBlue, &quot;[Profile]: Moving to Lions Watch to pick up quests.&quot;);"/>
