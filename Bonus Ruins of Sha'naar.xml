@@ -142,7 +142,17 @@
       <CustomBehavior File="Message" Text="拾取加速魔典" LogColor="Lime" />
       <CustomBehavior File="InteractWith" MobId="240165" NumOfTimes="100" WaitTime="2000" WaitForNpcs="false" ProactiveCombatStrategy=" ClearMobsTargetingUs" PreInteractMountStrategy="DismountOrCancelShapeshift"
                       TerminateWhen="Object(240165, o =&gt; o.Distance &lt; 45) == null"/>
-    </If>   
+    </If>
+    <If Condition ="Unit(90501, u =&gt; u.Distance &lt; 45)!=null">
+      <CustomBehavior File="Message" Text="惡魔之塔" LogColor="Lime" />
+      <CustomBehavior File="InteractWith" MobId="90501" NumOfTimes="100" WaitTime="2000" WaitForNpcs="false" ProactiveCombatStrategy=" ClearMobsTargetingUs" PreInteractMountStrategy="DismountOrCancelShapeshift"
+                      TerminateWhen="Unit(90501, u =&gt; u.Distance &lt; 45) == null"/>
+    </If>
+    <If Condition ="Object(243852, o =&gt; o.Distance &lt; 100)!=null">
+      <CustomBehavior File="Message" Text="拾取頂尖裂片" LogColor="Lime" />
+      <CustomBehavior File="InteractWith" MobId="243852" NumOfTimes="100" WaitTime="2000" WaitForNpcs="false" ProactiveCombatStrategy=" ClearMobsTargetingUs" PreInteractMountStrategy="DismountOrCancelShapeshift"
+                      TerminateWhen="Object(243852, o =&gt; o.Distance &lt; 100) == null"/>
+    </If>
   </While>
   <UseMount Value="true" />
   <!--<If Condition="HasQuest(39450) &amp;&amp; !IsQuestCompleted(39450)">
