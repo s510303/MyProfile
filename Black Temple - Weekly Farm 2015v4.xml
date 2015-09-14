@@ -592,12 +592,12 @@
     <CustomBehavior File="InteractWith" MobId="23421" MobState="Alive" WaitForNpcs="false" X="456.4948" Y="413.7039" Z="118.538" />
   </If>
   <If Condition="(Me.Class == WoWClass.Warrior)">
-    <CustomBehavior File="InteractWith" MobId="23421" IgnoreLoSToTarget="True" MinRange="25" IgnoreCombat="True" MobState="Alive" InteractByCastingSpellId="57755" WaitForNpcs="false" ObjectType="Npc" Range="30" X="463.7257" Y="401.5936" Z="118.538"/>
-    <CustomBehavior File="InteractWith" MobId="23421" IgnoreLoSToTarget="True" MinRange="25" IgnoreCombat="True" MobState="Alive" InteractByCastingSpellId="57755" WaitForNpcs="false" ObjectType="Npc" Range="30" X="457.9456" Y="389.6228" Z="118.538"/>
-    <CustomBehavior File="InteractWith" MobId="23421" IgnoreLoSToTarget="True" MinRange="25" IgnoreCombat="True" MobState="Alive" InteractByCastingSpellId="57755" WaitForNpcs="false" ObjectType="Npc" Range="30" X="444.1863" Y="389.1276" Z="118.538"/>
-    <CustomBehavior File="InteractWith" MobId="23421" IgnoreLoSToTarget="True" MinRange="25" IgnoreCombat="True" MobState="Alive" InteractByCastingSpellId="57755" WaitForNpcs="false" ObjectType="Npc" Range="30" X="438.1626" Y="400.9247" Z="118.538"/>
-    <CustomBehavior File="InteractWith" MobId="23421" IgnoreLoSToTarget="True" MinRange="25" IgnoreCombat="True" MobState="Alive" InteractByCastingSpellId="57755" WaitForNpcs="false" ObjectType="Npc" Range="30" X="443.2104" Y="413.9362" Z="118.538"/>
-    <CustomBehavior File="InteractWith" MobId="23421" IgnoreLoSToTarget="True" MinRange="25" IgnoreCombat="True" MobState="Alive" InteractByCastingSpellId="57755" WaitForNpcs="false" ObjectType="Npc" Range="30" X="456.4948" Y="413.7039" Z="118.538"/>
+    <CustomBehavior File="InteractWith" MobId="23421" MobState="Alive" WaitForNpcs="false" X="463.7257" Y="401.5936" Z="118.538"/>
+    <CustomBehavior File="InteractWith" MobId="23421" MobState="Alive" WaitForNpcs="false" X="457.9456" Y="389.6228" Z="118.538"/>
+    <CustomBehavior File="InteractWith" MobId="23421" MobState="Alive" WaitForNpcs="false" X="444.1863" Y="389.1276" Z="118.538"/>
+    <CustomBehavior File="InteractWith" MobId="23421" MobState="Alive" WaitForNpcs="false" X="438.1626" Y="400.9247" Z="118.538"/>
+    <CustomBehavior File="InteractWith" MobId="23421" MobState="Alive" WaitForNpcs="false" X="443.2104" Y="413.9362" Z="118.538"/>
+    <CustomBehavior File="InteractWith" MobId="23421" MobState="Alive" WaitForNpcs="false" X="456.4948" Y="413.7039" Z="118.538"/>
   </If>
   <If Condition="(Me.Class == WoWClass.Hunter)">
     <CustomBehavior File="InteractWith" MobId="23421" IgnoreLoSToTarget="True" MinRange="25" IgnoreCombat="True" MobState="Alive" InteractByCastingSpellId="75" WaitForNpcs="false" ObjectType="Npc" Range="40" X="463.7257" Y="401.5936" Z="118.538"/>
