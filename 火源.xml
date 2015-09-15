@@ -124,9 +124,9 @@
     <While Condition =" Me.ZoneId == 5723">
       <CustomBehavior File="Misc\RunLua" Lua="SetCVar('AutoLootDefault', 1)" />
       <UseMount Value="false" />
-      <CustomBehavior File="UserSettings" LootMobs="True" PullDistance="50" KillBetweenHotspots="True" LogoutForInactivity="False"/>
+      <CustomBehavior File="UserSettings" LootMobs="True" PullDistance="50" KillBetweenHotspots="True" LogoutForInactivity="False" GroundMountFarmingMode="false"/>
       <CustomBehavior File="Message" Text="火源之界副本開始" LogColor="Lime" />
-      <!--<RunTo X="-446.7453" Y="286.0321" Z="83.17886" />
+      <RunTo X="-446.7453" Y="286.0321" Z="83.17886" />
       <RunTo X="-448.8667" Y="282.9909" Z="83.14689" />
       <RunTo X="-432.4067" Y="275.6409" Z="78.01714" />
       <RunTo X="-424.2645" Y="260.2623" Z="71.79881" />
@@ -196,7 +196,7 @@
       <CustomBehavior File="WaitTimer" WaitTime="10000" />
       <CustomBehavior File="InteractWith" MobId="54299" X="152.1858" Y="-78.94618" Z="60.13277" />
       <CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
-      <CustomBehavior File="WaitTimer" WaitTime="60000" />   -->
+      <CustomBehavior File="WaitTimer" WaitTime="60000" />
       <RunTo X="521.9514" Y="-68.67014" Z="83.94699"/>
       <CustomBehavior File="WaitTimer" WaitTime="10000" />
       <CustomBehavior File="WaitTimer" WaitTime="10000" />
