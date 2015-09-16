@@ -35,7 +35,7 @@
     <CustomBehavior File="UserSettings" KillBetweenHotspots="true" LootMobs="True" PullDistance="25"/>
     <MoveTo X="3979.3" Y="1216.62" Z="164.197"/>
     <UseMount Value="false" />
-    <While Condition="HasQuest(38047) &amp;&amp; !IsQuestCompleted(38047) || HasQuest(38865) &amp;&amp; !IsQuestCompleted(38865)">
+    <While Condition="(HasQuest(38047) &amp;&amp; !IsQuestCompleted(38047)) || (HasQuest(38046) &amp;&amp; !IsQuestCompleted(38046)) || (HasQuest(38865) &amp;&amp; !IsQuestCompleted(38865))">
 
       <If Condition="(Me.Class == WoWClass.Paladin)">
         <CustomBehavior File="Message" Text="找怪擊殺." LogColor="Lime" />
@@ -126,6 +126,19 @@
 
         </CustomBehavior>
       </If>
+      <If Condition="(Me.Class == WoWClass.Priest)">
+        <CustomBehavior File="Message" Text="找怪擊殺." LogColor="Lime" />
+        <CustomBehavior File="InteractWith" MobIds="90483,92873,91251,92977" MobState="Alive"
+                        InteractByCastingSpellId="589" ProactiveCombatStrategy=" ClearMobsTargetingUs" PreInteractMountStrategy="DismountOrCancelShapeshift" WaitForNpcs="false">
+          <HuntingGrounds WaypointVisitStrategy="Random" >
+            <Hotspot X="3973.398" Y="1147.4" Z="162.937" />
+            <Hotspot X="3897.893" Y="1019.773" Z="161.0709" />
+            <Hotspot X="3945.316" Y="917.3094" Z="152.7068" />
+            <Hotspot X="3973.105" Y="1025.8" Z="162.672" />
+          </HuntingGrounds>
+
+        </CustomBehavior>
+      </If>
       <If Condition="Unit(90370,  u=&gt; u.Distance &lt; 45) != null">
         <CustomBehavior File="Message" Text="摧毀部落金旗." LogColor="Lime" />
         <CustomBehavior File="InteractWith" WaitTime="3000" MobId="90370" NumOfTimes="100" WaitForNpcs="false" CollectionDistance="45" PreInteractMountStrategy="Dismount" />
@@ -194,8 +207,8 @@
 		</SetGrindArea>
 	<GrindUntil Condition="IsQuestCompleted(38051)" />-->
 
-    <CustomBehavior File="Hooks\DoWhen" ActivityName="PickUpBandage" Command="Remove" />
-    <CustomBehavior File="Hooks\DoWhen" ActivityName="InteractWithObject" Command="Remove" />
+    <!--<CustomBehavior File="Hooks\DoWhen" ActivityName="PickUpBandage" Command="Remove" />
+    <CustomBehavior File="Hooks\DoWhen" ActivityName="InteractWithObject" Command="Remove" />-->
     <UseMount Value="true" />
 
     <CustomBehavior File="FlyTo" X="3979.3" Y="1216.62" Z="164.197"/>
