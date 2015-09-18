@@ -73,7 +73,7 @@
 	<CustomBehavior File="UserSettings" KillBetweenHotspots="false" GroundMountFarmingMode="false"/>
   <UseMount Value="false" />
   <While Condition="(HasQuest(39442) &amp;&amp; !IsQuestCompleted(39442))||(HasQuest(38043) &amp;&amp; !IsQuestCompleted(38043)) || (HasQuest(38044) &amp;&amp; !IsQuestCompleted(38044))
-     || (HasQuest(38871) &amp;&amp; !IsQuestCompleted(38871))">
+     || (HasQuest(38871) &amp;&amp; !IsQuestCompleted(38871)) || (HasQuest(38870) &amp;&amp; !IsQuestCompleted(38870))">
     <CustomBehavior File="Message" Text="找怪擊殺." LogColor="Lime" />
     <If Condition="(Me.Class == WoWClass.Paladin)">
       <CustomBehavior File="InteractWith" MobIds="12118,89699,90851,92706" MobState="Alive" 
