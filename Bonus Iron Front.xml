@@ -40,7 +40,7 @@
       <If Condition="(Me.Class == WoWClass.Paladin)">
         <CustomBehavior File="Message" Text="找怪擊殺." LogColor="Lime" />
         <CustomBehavior File="InteractWith" MobIds="90483,92873,91251,92977" MobState="Alive"
-                        InteractByCastingSpellId="20271" ProactiveCombatStrategy=" ClearMobsTargetingUs" PreInteractMountStrategy="DismountOrCancelShapeshift" WaitForNpcs="false">
+                        InteractByCastingSpellId="20271" ProactiveCombatStrategy="ClearAll" PreInteractMountStrategy="DismountOrCancelShapeshift" WaitForNpcs="false">
           <HuntingGrounds WaypointVisitStrategy="Random" >
             <Hotspot X="3973.398" Y="1147.4" Z="162.937" />
             <Hotspot X="3897.893" Y="1019.773" Z="161.0709" />
@@ -52,7 +52,7 @@
       <If Condition="(Me.Class == WoWClass.Warrior)">
         <CustomBehavior File="Message" Text="找怪擊殺." LogColor="Lime" />
         <CustomBehavior File="InteractWith" MobIds="90483,92873,91251,92977" MobState="Alive"
-                        InteractByCastingSpellId="57755" ProactiveCombatStrategy=" ClearMobsTargetingUs" PreInteractMountStrategy="DismountOrCancelShapeshift" WaitForNpcs="false">
+                        InteractByCastingSpellId="57755" ProactiveCombatStrategy="ClearAll" PreInteractMountStrategy="DismountOrCancelShapeshift" WaitForNpcs="false">
           <HuntingGrounds WaypointVisitStrategy="Random" >
             <Hotspot X="3973.398" Y="1147.4" Z="162.937" />
             <Hotspot X="3897.893" Y="1019.773" Z="161.0709" />
@@ -64,7 +64,7 @@
       <If Condition="(Me.Class == WoWClass.Hunter)">
         <CustomBehavior File="Message" Text="找怪擊殺." LogColor="Lime" />
         <CustomBehavior File="InteractWith" MobIds="90483,92873,91251,92977" MobState="Alive"
-                        InteractByCastingSpellId="75" ProactiveCombatStrategy=" ClearMobsTargetingUs" PreInteractMountStrategy="DismountOrCancelShapeshift" WaitForNpcs="false">
+                        InteractByCastingSpellId="75" ProactiveCombatStrategy="ClearAll" PreInteractMountStrategy="DismountOrCancelShapeshift" WaitForNpcs="false">
           <HuntingGrounds WaypointVisitStrategy="Random" >
             <Hotspot X="3973.398" Y="1147.4" Z="162.937" />
             <Hotspot X="3897.893" Y="1019.773" Z="161.0709" />
@@ -77,7 +77,7 @@
       <If Condition="(Me.Class == WoWClass.Rogue)">
         <CustomBehavior File="Message" Text="找怪擊殺." LogColor="Lime" />
         <CustomBehavior File="InteractWith" MobIds="90483,92873,91251,92977" MobState="Alive"
-                        InteractByCastingSpellId="121733" ProactiveCombatStrategy=" ClearMobsTargetingUs" PreInteractMountStrategy="DismountOrCancelShapeshift" WaitForNpcs="false">
+                        InteractByCastingSpellId="121733" ProactiveCombatStrategy="ClearAll" PreInteractMountStrategy="DismountOrCancelShapeshift" WaitForNpcs="false">
           <HuntingGrounds WaypointVisitStrategy="Random" >
             <Hotspot X="3973.398" Y="1147.4" Z="162.937" />
             <Hotspot X="3897.893" Y="1019.773" Z="161.0709" />
@@ -90,7 +90,7 @@
       <If Condition="(Me.Class == WoWClass.Monk)">
         <CustomBehavior File="Message" Text="找怪擊殺." LogColor="Lime" />
         <CustomBehavior File="InteractWith" MobIds="90483,92873,91251,92977" MobState="Alive"
-                        InteractByCastingSpellId="117952" ProactiveCombatStrategy=" ClearMobsTargetingUs" PreInteractMountStrategy="DismountOrCancelShapeshift" WaitForNpcs="false">
+                        InteractByCastingSpellId="117952" ProactiveCombatStrategy="ClearAll" PreInteractMountStrategy="DismountOrCancelShapeshift" WaitForNpcs="false">
           <HuntingGrounds WaypointVisitStrategy="Random" >
             <Hotspot X="3973.398" Y="1147.4" Z="162.937" />
             <Hotspot X="3897.893" Y="1019.773" Z="161.0709" />
@@ -103,7 +103,7 @@
       <If Condition="(Me.Class == WoWClass.DeathKnight)">
         <CustomBehavior File="Message" Text="找怪擊殺." LogColor="Lime" />
         <CustomBehavior File="InteractWith" MobIds="90483,92873,91251,92977" MobState="Alive"
-                        InteractByCastingSpellId="45477" ProactiveCombatStrategy=" ClearMobsTargetingUs" PreInteractMountStrategy="DismountOrCancelShapeshift" WaitForNpcs="false">
+                        InteractByCastingSpellId="45477" ProactiveCombatStrategy="ClearAll" PreInteractMountStrategy="DismountOrCancelShapeshift" WaitForNpcs="false">
           <HuntingGrounds WaypointVisitStrategy="Random" >
             <Hotspot X="3973.398" Y="1147.4" Z="162.937" />
             <Hotspot X="3897.893" Y="1019.773" Z="161.0709" />
@@ -116,7 +116,7 @@
       <If Condition="(Me.Class == WoWClass.Warlock)">
         <CustomBehavior File="Message" Text="找怪擊殺." LogColor="Lime" />
         <CustomBehavior File="InteractWith" MobIds="90483,92873,91251,92977" MobState="Alive"
-                        InteractByCastingSpellId="172" ProactiveCombatStrategy=" ClearMobsTargetingUs" PreInteractMountStrategy="DismountOrCancelShapeshift" WaitForNpcs="false">
+                        InteractByCastingSpellId="172" ProactiveCombatStrategy="ClearAll" PreInteractMountStrategy="DismountOrCancelShapeshift" WaitForNpcs="false">
           <HuntingGrounds WaypointVisitStrategy="Random" >
             <Hotspot X="3973.398" Y="1147.4" Z="162.937" />
             <Hotspot X="3897.893" Y="1019.773" Z="161.0709" />
@@ -129,7 +129,7 @@
       <If Condition="(Me.Class == WoWClass.Priest)">
         <CustomBehavior File="Message" Text="找怪擊殺." LogColor="Lime" />
         <CustomBehavior File="InteractWith" MobIds="90483,92873,91251,92977" MobState="Alive"
-                        InteractByCastingSpellId="589" ProactiveCombatStrategy=" ClearMobsTargetingUs" PreInteractMountStrategy="DismountOrCancelShapeshift" WaitForNpcs="false">
+                        InteractByCastingSpellId="589" ProactiveCombatStrategy="ClearAll" PreInteractMountStrategy="DismountOrCancelShapeshift" WaitForNpcs="false">
           <HuntingGrounds WaypointVisitStrategy="Random" >
             <Hotspot X="3973.398" Y="1147.4" Z="162.937" />
             <Hotspot X="3897.893" Y="1019.773" Z="161.0709" />
@@ -211,7 +211,14 @@
     <CustomBehavior File="Hooks\DoWhen" ActivityName="InteractWithObject" Command="Remove" />-->
     <UseMount Value="true" />
 
-    <CustomBehavior File="FlyTo" X="3979.3" Y="1216.62" Z="164.197"/>
+    
+
+    <If Condition="Me.IsAlliance">
+      <CustomBehavior File="FlyTo" X="4080.7" Y="1187.979" Z="160.9277"/>
+    </If>
+    <If Condition="Me.IsHorde" >
+      <CustomBehavior File="FlyTo" X="3979.3" Y="1216.62" Z="164.197"/>
+    </If>
 
     <CustomBehavior File="RunCode" Code="Styx.CommonBot.TreeRoot.Stop(&quot;Profile complete...&quot;)" />
   </QuestOrder>
