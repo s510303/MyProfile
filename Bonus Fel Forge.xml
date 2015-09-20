@@ -31,15 +31,62 @@
 <Blackspots>
 </Blackspots>
 
+<Quest Id="35019" Name="Prepare for Battle">
+    <Objective Type="CollectItem" ItemId="241669" CollectCount="1">
+      <CollectFrom>
+        <Mob Name="Blackrock Forgeworker" Id="81367" />
+        <Mob Name="Blackrock Slaghauler" Id="81357" />
+        <Object Name="Iron Horde Weapon Rack" Id="231164" />
+        <Object Name="Iron Horde Weapon Rack" Id="231163" />
+        <Object Name="Iron Horde Weapon Rack" Id="231160" />
+        <Object Name="Iron Horde Weapon" Id="231166" />
+        <Object Name="Iron Horde Weapon" Id="231167" />
+        <Object Name="Iron Horde Weapon" Id="231168" />
+      </CollectFrom>
+      <Hotspots>
+        <Hotspot X="4564.294" Y="-2039.26" Z="-17.96849" />
+        <Hotspot X="4526.458" Y="-2084.793" Z="-17.1782" />
+        <Hotspot X="4533.692" Y="-2185.161" Z="-15.3794" />
+        <Hotspot X="4539.031" Y="-2214.725" Z="-14.58103" />
+        <Hotspot X="4471.87" Y="-2124.049" Z="-15.60532" />
+        <Hotspot X="4564.921" Y="-1976.974" Z="-14.02075" />
+      </Hotspots>
+    </Objective>
+</Quest>
+<!--<Quest Id="34439" Name="The Battle of the Forge">
+    <Objective Type="KillMob" MobId="80786" KillCount="15">
+      <Hotspots>
+        <Hotspot X="4564.294" Y="-2039.26" Z="-17.96849" />
+        <Hotspot X="4526.458" Y="-2084.793" Z="-17.1782" />
+        <Hotspot X="4533.692" Y="-2185.161" Z="-15.3794" />
+        <Hotspot X="4539.031" Y="-2214.725" Z="-14.58103" />
+        <Hotspot X="4471.87" Y="-2124.049" Z="-15.60532" />
+        <Hotspot X="4564.921" Y="-1976.974" Z="-14.02075" />
+      </Hotspots>
+    </Objective>
+    <Objective Type="KillMob" MobId="80775" KillCount="3">
+      <Hotspots>
+        <Hotspot X="4564.294" Y="-2039.26" Z="-17.96849" />
+        <Hotspot X="4526.458" Y="-2084.793" Z="-17.1782" />
+        <Hotspot X="4533.692" Y="-2185.161" Z="-15.3794" />
+        <Hotspot X="4539.031" Y="-2214.725" Z="-14.58103" />
+        <Hotspot X="4471.87" Y="-2124.049" Z="-15.60532" />
+        <Hotspot X="4564.921" Y="-1976.974" Z="-14.02075" />
+      </Hotspots>
+    </Objective>
+</Quest>-->
+
 <QuestOrder>
 
 <!--GameObject Name="Siege Equipment Blueprints" Entry="241669" X="4411.943" Y="-634.5677" Z="31.49386" /-->
 <!--GameObject Name="Ironbound Crate" Entry="241507" X="4309.943" Y="-722.0823" Z="42.04132" /-->
 <!--WoWUnit Name="Hellfire Shell" Entry="91901" X="4410.452" Y="-854.9774" Z="44.54209" / Then click enemy-->
 
+  <CustomBehavior File="UserSettings" KillBetweenHotspots="true" LootMobs="True" PullDistance="25"/>
   <MoveTo X="4455.004" Y="-570.0504" Z="49.80917"  />
   <CustomBehavior File ="FlyTo" X="4293.799" Y="-837.9913" Z="85.58371"/>
   <CustomBehavior File="ForcedDismount" />
+  <CustomBehavior File="Hooks\MountHook" state="false"/>
   <UseMount Value="false" />
   <While Condition="(HasQuest(38441) &amp;&amp; !IsQuestCompleted(38441)) || (HasQuest(37970) &amp;&amp; !IsQuestCompleted(37970)) || 
     (HasQuest(39445) &amp;&amp; !IsQuestCompleted(39445))">
@@ -77,6 +124,57 @@
         </HuntingGrounds>
       </CustomBehavior>
     </If>
+    <If Condition="(Me.Class == WoWClass.Warlock)">
+      <CustomBehavior File="Message" Text="找怪擊殺." LogColor="Lime" />
+      <CustomBehavior File="InteractWith" MobIds="91721,90066,89754,91764" MobState="Alive"
+                        InteractByCastingSpellId="172" ProactiveCombatStrategy="ClearAll" PreInteractMountStrategy="DismountOrCancelShapeshift" WaitForNpcs="false">
+        <HuntingGrounds WaypointVisitStrategy="Random" >
+          <Hotspot X="4431.598" Y="-696.8158" Z="29.25032" />
+          <Hotspot X="4401.309" Y="-634.6718" Z="30.38467" />
+          <Hotspot X="4369.518" Y="-671.563" Z="30.59381" />
+          <Hotspot X="4308.313" Y="-700.6304" Z="42.05642" />
+          <Hotspot X="4308.89" Y="-790.7899" Z="30.06496" />
+          <Hotspot X="4277.179" Y="-879.3702" Z="26.63812" />
+          <Hotspot X="4247.092" Y="-933.0215" Z="20.16998" />
+          <Hotspot X="4317.044" Y="-995.9095" Z="21.85527" />
+          <Hotspot X="4292.503" Y="-1045.243" Z="20.95871" />
+        </HuntingGrounds>
+      </CustomBehavior>
+    </If>
+    <If Condition="(Me.Class == WoWClass.Warrior)">
+      <CustomBehavior File="Message" Text="找怪擊殺." LogColor="Lime" />
+      <CustomBehavior File="InteractWith" MobIds="91721,90066,89754,91764" MobState="Alive"
+                        InteractByCastingSpellId="57755" ProactiveCombatStrategy="ClearAll" PreInteractMountStrategy="DismountOrCancelShapeshift" WaitForNpcs="false">
+        <HuntingGrounds WaypointVisitStrategy="Random" >
+          <Hotspot X="4431.598" Y="-696.8158" Z="29.25032" />
+          <Hotspot X="4401.309" Y="-634.6718" Z="30.38467" />
+          <Hotspot X="4369.518" Y="-671.563" Z="30.59381" />
+          <Hotspot X="4308.313" Y="-700.6304" Z="42.05642" />
+          <Hotspot X="4308.89" Y="-790.7899" Z="30.06496" />
+          <Hotspot X="4277.179" Y="-879.3702" Z="26.63812" />
+          <Hotspot X="4247.092" Y="-933.0215" Z="20.16998" />
+          <Hotspot X="4317.044" Y="-995.9095" Z="21.85527" />
+          <Hotspot X="4292.503" Y="-1045.243" Z="20.95871" />
+        </HuntingGrounds>
+      </CustomBehavior>
+    </If>
+    <If Condition="(Me.Class == WoWClass.Hunter)">
+      <CustomBehavior File="Message" Text="找怪擊殺." LogColor="Lime" />
+      <CustomBehavior File="InteractWith" MobIds="91721,90066,89754,91764" MobState="Alive"
+                        InteractByCastingSpellId="75" ProactiveCombatStrategy="ClearAll" PreInteractMountStrategy="DismountOrCancelShapeshift" WaitForNpcs="false">
+        <HuntingGrounds WaypointVisitStrategy="Random" >
+          <Hotspot X="4431.598" Y="-696.8158" Z="29.25032" />
+          <Hotspot X="4401.309" Y="-634.6718" Z="30.38467" />
+          <Hotspot X="4369.518" Y="-671.563" Z="30.59381" />
+          <Hotspot X="4308.313" Y="-700.6304" Z="42.05642" />
+          <Hotspot X="4308.89" Y="-790.7899" Z="30.06496" />
+          <Hotspot X="4277.179" Y="-879.3702" Z="26.63812" />
+          <Hotspot X="4247.092" Y="-933.0215" Z="20.16998" />
+          <Hotspot X="4317.044" Y="-995.9095" Z="21.85527" />
+          <Hotspot X="4292.503" Y="-1045.243" Z="20.95871" />
+        </HuntingGrounds>
+      </CustomBehavior>
+    </If>
     <If Condition ="Object(241669, o =&gt; o.Distance &lt; 50)!=null">
       <CustomBehavior File="Message" Text="攻城設備藍圖" LogColor="Lime" />
       <CustomBehavior File="InteractWith" MobId="241669" NumOfTimes="100" WaitTime="1500" WaitForNpcs="false" ProactiveCombatStrategy="ClearAll" PreInteractMountStrategy="DismountOrCancelShapeshift"
@@ -87,17 +185,18 @@
       <CustomBehavior File="InteractWith" MobId="241507" NumOfTimes="100" WaitTime="1500" WaitForNpcs="false" ProactiveCombatStrategy="ClearAll" PreInteractMountStrategy="DismountOrCancelShapeshift"
                       TerminateWhen="Object(241507, o =&gt; o.Distance &lt; 50) == null"/>
     </If>
-    <If Condition ="Object(241728, o =&gt; o.Distance &lt; 50)!=null">
+    <!--<If Condition ="Object(241728, o =&gt; o.Distance &lt; 50)!=null">
       <CustomBehavior File="Message" Text="魯莽之力藥劑" LogColor="Lime" />
       <CustomBehavior File="InteractWith" MobId="241728" NumOfTimes="100" WaitTime="1500" WaitForNpcs="false" ProactiveCombatStrategy="ClearAll" PreInteractMountStrategy="DismountOrCancelShapeshift"
                       TerminateWhen="Object(241728, o =&gt; o.Distance &lt; 50) == null"/>
-    </If>
+    </If>-->
     <If Condition ="Object(243796, o =&gt; o.Distance &lt; 100)!=null">
       <CustomBehavior File="Message" Text="發光的可疑箱子" LogColor="Lime" />
       <CustomBehavior File="InteractWith" MobId="243796" NumOfTimes="100" WaitTime="1500" WaitForNpcs="false" ProactiveCombatStrategy="ClearAll" PreInteractMountStrategy="DismountOrCancelShapeshift"
                       TerminateWhen="Object(243796, o =&gt; o.Distance &lt; 100) == null"/>
     </If>
   </While>
+  <CustomBehavior File="Hooks\MountHook" state="true"/>
   <UseMount Value="true" />
   <!--<If Condition="HasQuest(38441) &amp;&amp; !IsQuestCompleted(38441)">
     <CustomBehavior File="InteractWith" WaitTime="3000" MobIds="241669,241507,91721,90066" NumOfTimes="100" CollectionDistance="45" PreInteractMountStrategy="Dismount"
