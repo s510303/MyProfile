@@ -40,7 +40,29 @@
 </Blackspots>
 
 <!-- Quest Ids and Hotspots -->
-<Quest Id="37941" Name="Treasure Contract: The Infected Orc" >
+  <Quest Id="37941" Name="Treasure Contract: The Infected Orc">
+    <Objective Type="CollectItem" ItemId="122147" ItemName="微笑托格的日誌" CollectCount="1">
+      <CollectFrom>
+        <Mob Name="被控制的突變者" Id="88394" />
+        <Mob Name="扭曲的守護者" Id="88279" />
+      </CollectFrom>
+      <Hotspots>
+        <Hotspot X="7139.36" Y="-627.3511" Z="79.6281"/>
+        <Hotspot X="7192.27" Y="-610.566" Z="79.62851"/>
+        <Hotspot X="7177.497" Y="-646.2253" Z="79.62836"/>
+        <Hotspot X="7216.082" Y="-656.72" Z="79.62662"/>
+        <Hotspot X="7228.197" Y="-803.9064" Z="97.79942"/>
+        <Hotspot X="7291.166" Y="-757.9723" Z="98.13392"/>
+        <Hotspot X="7279.775" Y="-817.0422" Z="98.15266" />
+        <Hotspot X="7262.769" Y="-906.6572" Z="105.7028" />
+        <Hotspot X="7515.78" Y="-862.9353" Z="95.65389"/>
+        <Hotspot X="7599.168" Y="-721.3038" Z="114.3117" />
+        <Hotspot X="7850.128" Y="-715.3351" Z="119.1321" />
+        <Hotspot X="7963.497" Y="-578.5462" Z="136.3859" />
+      </Hotspots>
+    </Objective>
+  </Quest>
+<!--<Quest Id="37941" Name="Treasure Contract: The Infected Orc" >
    <Objective Type="KillMob" MobId="90333" KillCount="1" >
 		<Hotspots>
 			<Hotspot X="7971.349" Y="-568.2916" Z="136.15" />
@@ -74,7 +96,7 @@
 			<Hotspot X="7943.52" Y="-539.4052" Z="137.1541" />
 		</Hotspots>
 	</Objective>
-</Quest>
+</Quest>-->
 
 <Quest Id="37848" Name="Treasure Contract: Amulet of Rukhmar">
         <Objective Type="CollectItem" ItemId="121819" ItemName="Research Notes" CollectCount="5">
@@ -127,8 +149,8 @@
  
 <!-- .................................................................................................................................. -->
 <QuestOrder>
+<CustomBehavior File="UserSettings" KillBetweenHotspots="true" LootMobs="True" PullDistance="25" GroundMountFarmingMode="false"/>
 <!-- Settings -->
-<CustomBehavior File="UserSettings" KillBetweenHotspots="True"/>
 <CustomBehavior File="UserSettings" AutoEquip="False"/>
 <CustomBehavior File="Misc\RunLua" Lua="LeaveParty()" WaitTime="500" /> <!-- Quests are not done well in party, also to leave raid -->
 <LootMobs Value="true" />
@@ -172,11 +194,13 @@
 <!-- START Quest Treasure Contract: The Infected Orc-->
 	<!--Part 1 -->
 	<If Condition="HasQuest(37941) &amp;&amp; !IsQuestCompleted(37941)">
-		<Objective QuestName="Treasure Contract: The Infected Orc" QuestId="37941" Type="KillMob" MobId="90333" KillCount="1" />
+		<Objective QuestName="Treasure Contract: The Infected Orc" QuestId="37941" Type="CollectItem" ItemId="122147" CollectCount="1" />
 		<CustomBehavior File="CompleteLogQuest" QuestId="37941" /> 
 	</If>
 	<!--Part 2 -->
 	<While Condition="HasQuest(37942) &amp;&amp; !IsQuestCompleted(37942)">
+    <CustomBehavior File ="FlyTo" X="7638.19" Y="402.5462" Z="127.1583"/>
+    <CustomBehavior File="ForcedDismount" />
 		<CustomBehavior File="InteractWith" QuestId="37942" MobId="239969" ProactiveCombatStrategy="ClearMobsTargetingUs"
 								NonCompeteDistance="0" Range="5" WaitTime="10000" X="7638.19" Y="402.5462" Z="127.1583" /> 
 	</While>
@@ -185,6 +209,8 @@
 	</While> <!-- Duplicate while loop because errors when complete was combined -->
 	<!--Part 3 -->
 	<While Condition="HasQuest(37943) &amp;&amp; !IsQuestCompleted(37943)">
+    <CustomBehavior File ="FlyTo" X="7725.876" Y="-542.9115" Z="155.3342"/>
+    <CustomBehavior File="ForcedDismount" />
 		<CustomBehavior File="InteractWith" QuestId="37943" MobId="239968" ProactiveCombatStrategy="ClearMobsTargetingUs"
 									NonCompeteDistance="0" IgnoreCombat="true" Range="5" WaitTime="10000" X="7725.876" Y="-542.9115" Z="155.3342" />
 	</While>
@@ -193,6 +219,8 @@
 	</While> 
 	<!--Part 4 -->
 	<While Condition="HasQuest(37944) &amp;&amp; !IsQuestCompleted(37944)">
+    <CustomBehavior File ="FlyTo" X="7769.4" Y="188.5342" Z="230.2541"/>
+    <CustomBehavior File="ForcedDismount" />
 		<CustomBehavior File="InteractWith" QuestId="37944" MobId="239977" ProactiveCombatStrategy="ClearMobsThatWillAggro"
 									NonCompeteDistance="0" IgnoreCombat="true" Range="5" WaitTime="10000" X="7769.4" Y="188.5342" Z="230.2541" />
 	</While>
@@ -213,9 +241,9 @@
 								Range="5" WaitTime="500" X="7867.054" Y="166.7907" Z="241.5326" />
 			<If Condition="Me.HasAura(179860)">
 					<CustomBehavior File="Hooks\Avoid" AvoidName="AvoidSkulls" ObjectId="90268" Radius="5" />
-					<MoveTo X="7788.429" Y="129.584" Z="246.2422" />
+					<!--<MoveTo X="7805.188" Y="150.6354" Z="243.1717" />-->
 			</If>
-			<If Condition="Me.HasAura(179860)">
+			<!--<If Condition="Me.HasAura(179860)">
 					<MoveTo X="7769.33" Y="83.39361" Z="258.9515" />
 			</If>
 			<If Condition="Me.HasAura(179860)">
@@ -227,10 +255,13 @@
 			<If Condition="Me.HasAura(179860)">
 					<MoveTo X="7855.704" Y="-9.602155" Z="245.8408" />
 			</If>
-			<CustomBehavior File="Hooks\Avoid" AvoidName="AvoidSkulls" Command="Remove" />
+			<CustomBehavior File="Hooks\Avoid" AvoidName="AvoidSkulls" Command="Remove" />-->
 		</While>
 	</If>
 	<While Condition="Me.HasAura(179860) &amp;&amp; HasQuest(37945) &amp;&amp; !IsQuestCompleted(37945)">
+    <CustomBehavior File ="FlyTo" X="7855.704" Y="-9.602155" Z="245.8408"/>
+    <CustomBehavior File="ForcedDismount" />
+    <CustomBehavior File="WaitTimer" WaitTime="10000"/>
 		<CustomBehavior File="InteractWith" QuestId="37945" MobId="90285" Range="1" PreInteractMountStrategy="DismountOrCancelShapeshift"
 								NonCompeteDistance="0" WaitForNpcs="false" WaitTime="1000" X="7855.704" Y="-9.602155" Z="245.8408"/>
 	</While>
@@ -899,7 +930,7 @@
 								NonCompeteDistance="0" Range="5" X="7178.545" Y="3077.514" Z="164.405" /> <!-- Get Gronnsbane's Weight -->
 	</While>
 	<While Condition="HasQuest(37916) &amp;&amp; !IsQuestCompleted(37916) &amp;&amp; !HasItem(122096) ">
-		<CustomBehavior File="InteractWith" QuestId="37916" MobId="239922" ProactiveCombatStrategy="ClearMobsTargetingUs" 
+		<CustomBehavior File="InteractWith" QuestId="37916" MobId="239922" ProactiveCombatStrategy="ClearMobsTargetingUs"
 								NonCompeteDistance="0" Range="5" X="6910.451" Y="3108.374" Z="124.8076" /> <!-- Get Gronnsbane's Blade -->
 	</While>
 	<While Condition="HasQuest(37916) &amp;&amp; IsQuestCompleted(37916)">
