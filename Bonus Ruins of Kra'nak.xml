@@ -58,7 +58,8 @@
   <CustomBehavior File="FlyTo" X="4534.581" Y="693.6086" Z="180.3226" />
   <CustomBehavior File="ForcedDismount" />
   <UseMount Value="false" />
-  <While Condition="(HasQuest(39447) &amp;&amp; !IsQuestCompleted(39447)) || (HasQuest(38250) &amp;&amp; !IsQuestCompleted(38250))">
+  <While Condition="(HasQuest(39447) &amp;&amp; !IsQuestCompleted(39447)) || (HasQuest(38250) &amp;&amp; !IsQuestCompleted(38250))
+    || (HasQuest(38868) &amp;&amp; !IsQuestCompleted(38868))">
     <CustomBehavior File="Message" Text="找怪擊殺." LogColor="Lime" />
     <If Condition="(Me.Class == WoWClass.Paladin)">
       <CustomBehavior File="InteractWith" MobIds="90649,89748,90312,90654,92706" MinRange="15" MobState="Alive"
@@ -124,17 +125,79 @@
         </HuntingGrounds>
       </CustomBehavior>
     </If>
-    <If Condition ="(Unit(90792, u =&gt; u.Distance &lt; 45)!=null) || (Unit(90795, u =&gt; u.Distance &lt; 45)!=null) || (Unit(90300, u =&gt; u.Distance &lt; 45)!=null)
+    <If Condition="(Me.Class == WoWClass.Mage)">
+      <CustomBehavior File="InteractWith" MobIds="90649,89748,90312,90654,92706" MinRange="15" MobState="Alive"
+                      InteractByCastingSpellId="44614" ProactiveCombatStrategy=" ClearAll" PreInteractMountStrategy="DismountOrCancelShapeshift" WaitForNpcs="false">
+        <HuntingGrounds WaypointVisitStrategy="Random" >
+          <Hotspot X="4546.808" Y="486.0171" Z="226.6106" />
+          <Hotspot X="4639.002" Y="608.1016" Z="204.4243" />
+          <Hotspot X="4523.261" Y="653.3411" Z="175.3183" />
+          <Hotspot X="4409.374" Y="820.7141" Z="175.4831" />
+          <Hotspot X="4515.104" Y="469.4313" Z="229.1057" />
+          <Hotspot X="4500.538" Y="507.5194" Z="230.0457" />
+          <Hotspot X="4505.152" Y="502.1847" Z="229.0659" />
+          <Hotspot X="4538.976" Y="542.1366" Z="229.3318" />
+          <Hotspot X="4593.866" Y="501.5424" Z="229.7197" />
+          <Hotspot X="4659.357" Y="455.587" Z="234.3827" />
+          <Hotspot X="4734.575" Y="439.7563" Z="220.3111" />
+          <Hotspot X="4578.029" Y="457.5912" Z="228.562" />
+          <Hotspot X="4563.624" Y="493.6169" Z="226.5999" />
+          <Hotspot X="4489.297" Y="588.0682" Z="212.2203" />
+          <Hotspot X="4554.3" Y="652.9527" Z="178.2781" />
+          <Hotspot X="4533.156" Y="718.9858" Z="179.5149" />
+          <Hotspot X="4495.958" Y="739.8227" Z="181.2496" />
+          <Hotspot X="4452.718" Y="757.0828" Z="181.2581" />
+          <Hotspot X="4458.912" Y="778.0936" Z="181.2545" />
+          <Hotspot X="4490.401" Y="790.0434" Z="181.256" />
+          <Hotspot X="4456.259" Y="820.0821" Z="175.8477" />
+          <Hotspot X="4418.081" Y="769.6231" Z="174.6499" />
+          <Hotspot X="4376.905" Y="869.6741" Z="175.4833" />
+          <Hotspot X="4442.893" Y="845.3781" Z="174.4148" />
+          <Hotspot X="4462.609" Y="758.6157" Z="181.2561" />
+        </HuntingGrounds>
+      </CustomBehavior>
+    </If>
+    <If Condition ="Unit(90792, u =&gt; u.Distance &lt; 100)!=null">
+      <CustomBehavior File="Message" Text="使用任務道具" LogColor="Lime" />
+      <CustomBehavior File="InteractWith" MobId="90792" NumOfTimes="100" WaitTime="2000" WaitForNpcs="false" ProactiveCombatStrategy=" ClearMobsTargetingUs" PreInteractMountStrategy="DismountOrCancelShapeshift"
+                      TerminateWhen="Unit(90792, u =&gt; u.Distance &lt; 100)==null"/>
+    </If>
+    <If Condition ="Unit(90795, u =&gt; u.Distance &lt; 100)!=null">
+      <CustomBehavior File="Message" Text="使用任務道具" LogColor="Lime" />
+      <CustomBehavior File="InteractWith" MobId="90795" NumOfTimes="100" WaitTime="2000" WaitForNpcs="false" ProactiveCombatStrategy=" ClearMobsTargetingUs" PreInteractMountStrategy="DismountOrCancelShapeshift"
+                      TerminateWhen="Unit(90795, u =&gt; u.Distance &lt; 100)==null"/>
+    </If>
+    <If Condition ="Unit(90300, u =&gt; u.Distance &lt; 100)!=null">
+      <CustomBehavior File="Message" Text="使用任務道具" LogColor="Lime" />
+      <CustomBehavior File="InteractWith" MobId="90300" NumOfTimes="100" WaitTime="2000" WaitForNpcs="false" ProactiveCombatStrategy=" ClearMobsTargetingUs" PreInteractMountStrategy="DismountOrCancelShapeshift"
+                      TerminateWhen="Unit(90300, u =&gt; u.Distance &lt; 100)==null"/>
+    </If>
+    <If Condition ="Unit(90790, u =&gt; u.Distance &lt; 100)!=null">
+      <CustomBehavior File="Message" Text="使用任務道具" LogColor="Lime" />
+      <CustomBehavior File="InteractWith" MobId="90790" NumOfTimes="100" WaitTime="2000" WaitForNpcs="false" ProactiveCombatStrategy=" ClearMobsTargetingUs" PreInteractMountStrategy="DismountOrCancelShapeshift"
+                      TerminateWhen="Unit(90790, u =&gt; u.Distance &lt; 100)==null"/>
+    </If>
+    <If Condition ="Unit(90791, u =&gt; u.Distance &lt; 100)!=null">
+      <CustomBehavior File="Message" Text="使用任務道具" LogColor="Lime" />
+      <CustomBehavior File="InteractWith" MobId="90791" NumOfTimes="100" WaitTime="2000" WaitForNpcs="false" ProactiveCombatStrategy=" ClearMobsTargetingUs" PreInteractMountStrategy="DismountOrCancelShapeshift"
+                      TerminateWhen="Unit(90791, u =&gt; u.Distance &lt; 100)==null"/>
+    </If>
+    <If Condition ="Unit(90796, u =&gt; u.Distance &lt; 100)!=null">
+      <CustomBehavior File="Message" Text="使用任務道具" LogColor="Lime" />
+      <CustomBehavior File="InteractWith" MobId="90796" NumOfTimes="100" WaitTime="2000" WaitForNpcs="false" ProactiveCombatStrategy=" ClearMobsTargetingUs" PreInteractMountStrategy="DismountOrCancelShapeshift"
+                      TerminateWhen="Unit(90796, u =&gt; u.Distance &lt; 100)==null"/>
+    </If>
+    <!--<If Condition ="(Unit(90792, u =&gt; u.Distance &lt; 45)!=null) || (Unit(90795, u =&gt; u.Distance &lt; 45)!=null) || (Unit(90300, u =&gt; u.Distance &lt; 45)!=null)
        || (Unit(90790, u =&gt; u.Distance &lt; 45)!=null) || (Unit(90791, u =&gt; u.Distance &lt; 45)!=null) || (Unit(90796, u =&gt; u.Distance &lt; 45)!=null)">
       <CustomBehavior File="Message" Text="燒毀衝突指南" LogColor="Lime" />
       <CustomBehavior File="InteractWith" MobIds="90792,90795,90300,90790,90791,90796" NumOfTimes="100" WaitTime="2000" WaitForNpcs="false" ProactiveCombatStrategy=" ClearMobsTargetingUs" PreInteractMountStrategy="DismountOrCancelShapeshift"
                       TerminateWhen="(Unit(90792, u =&gt; u.Distance &lt; 45)==null) || (Unit(90795, u =&gt; u.Distance &lt; 45)==null) || (Unit(90300, u =&gt; u.Distance &lt; 45)==null)
        || (Unit(90790, u =&gt; u.Distance &lt; 45)==null) || (Unit(90791, u =&gt; u.Distance &lt; 45)==null) || (Unit(90796, u =&gt; u.Distance &lt; 45)==null)"/>
-    </If>
-    <If Condition ="Object(243852, o =&gt; o.Distance &lt; 45)!=null">
+    </If>-->
+    <If Condition ="Object(243852, o =&gt; o.Distance &lt; 100)!=null">
       <CustomBehavior File="Message" Text="拾取頂尖裂片" LogColor="Lime" />
       <CustomBehavior File="InteractWith" MobId="243852" NumOfTimes="100" WaitTime="2000" WaitForNpcs="false" ProactiveCombatStrategy=" ClearMobsTargetingUs" PreInteractMountStrategy="DismountOrCancelShapeshift"
-                      TerminateWhen="Object(243852, o =&gt; o.Distance &lt; 45) == null"/>
+                      TerminateWhen="Object(243852, o =&gt; o.Distance &lt; 100) == null"/>
     </If>
   </While>
   <UseMount Value="true" />
