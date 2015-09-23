@@ -13,14 +13,14 @@
 <MaxLevel>101</MaxLevel>
 
 <MailGrey>False</MailGrey>
-<MailWhite>True</MailWhite>
-<MailGreen>True</MailGreen>
-<MailBlue>True</MailBlue>
-<MailPurple>True</MailPurple>
+<MailWhite>False</MailWhite>
+<MailGreen>False</MailGreen>
+<MailBlue>False</MailBlue>
+<MailPurple>False</MailPurple>
 
 <SellGrey>True</SellGrey>
-<SellWhite>False</SellWhite>
-<SellGreen>False</SellGreen>
+<SellWhite>True</SellWhite>
+<SellGreen>True</SellGreen>
 <SellBlue>False</SellBlue>
 <SellPurple>False</SellPurple>
 
