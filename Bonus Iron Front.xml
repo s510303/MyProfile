@@ -69,8 +69,8 @@
       </If>
       <If Condition="(Me.Class == WoWClass.Hunter)">
         <CustomBehavior File="Message" Text="找怪擊殺." LogColor="Lime" />
-        <CustomBehavior File="InteractWith" MobIds="90483,92873,91251,92977" MobState="Alive"
-                        InteractByCastingSpellId="75" ProactiveCombatStrategy="ClearAll" PreInteractMountStrategy="DismountOrCancelShapeshift" WaitForNpcs="false" Range="30">
+        <CustomBehavior File="InteractWith" MobIds="90483,92873,91251,92977" MobState="Alive" WaitTime ="2000"
+                        InteractByCastingSpellId="56641" ProactiveCombatStrategy="ClearAll" PreInteractMountStrategy="DismountOrCancelShapeshift" WaitForNpcs="false" Range="30">
           <HuntingGrounds WaypointVisitStrategy="Random" >
             <Hotspot X="3973.398" Y="1147.4" Z="162.937" />
             <Hotspot X="3897.893" Y="1019.773" Z="161.0709" />
