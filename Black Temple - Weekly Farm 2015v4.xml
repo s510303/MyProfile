@@ -645,14 +645,17 @@
 	<MoveTo X="456.4948" Y="413.7039" Z="118.538" />
 	<CustomBehavior File="SwitchTarget" BossId="23421" />-->	
 
-      <MoveTo X="494.00" Y="400.00" Z="112.99" />
+      <!--<MoveTo X="494.00" Y="400.00" Z="112.99" />-->
 
+  <!-- Kill Ashtongue Channeler + Sorcerer -->
+  <!--
   <While Condition="(Object(22841, o => o.Location.Distance(new WoWPoint(512.4877, 400.8283, 112.784)) &gt; 5) != null)" >
-		<CustomBehavior File="InteractWith" MobState="Alive" WaitForNpcs="false" MobIds="23215,23421" /> <!-- Kill Ashtongue Channeler + Sorcerer -->
-	</While>
+		<CustomBehavior File="InteractWith" MobState="Alive" WaitForNpcs="false" MobIds="23215,23421" /> 
+	</While>-->
 	
 	<CustomBehavior File="WaitTimer" WaitTime="300" />    
       <!--<CustomBehavior File="SwitchTarget" BossId="23215" />-->
+  <!--
   <If Condition="(Me.Class == WoWClass.Monk)">
     <CustomBehavior File="InteractWith" MobId="23215" MobState="Alive" WaitForNpcs="false"/>
   </If>
@@ -686,8 +689,9 @@
   <If Condition="(Me.Class == WoWClass.Rogue)">
     <CustomBehavior File="InteractWith" MobId="23215" IgnoreLoSToTarget="True" MinRange="5" IgnoreCombat="True" MobState="Alive" InteractByCastingSpellId="121733" WaitForNpcs="false" ObjectType="Npc" Range="30" />
   </If>
-      <MoveTo X="501.5047" Y="383.7455" Z="112.784" />
+      <MoveTo X="501.5047" Y="383.7455" Z="112.784" />-->
       <!--<CustomBehavior File="SwitchTarget" BossId="23215" />-->
+  <!--
   <If Condition="(Me.Class == WoWClass.Monk)">
     <CustomBehavior File="InteractWith" MobId="23215" MobState="Alive" WaitForNpcs="false"/>
   </If>
@@ -721,9 +725,9 @@
   <If Condition="(Me.Class == WoWClass.Rogue)">
     <CustomBehavior File="InteractWith" MobId="23215" IgnoreLoSToTarget="True" MinRange="5" IgnoreCombat="True" MobState="Alive" InteractByCastingSpellId="121733" WaitForNpcs="false" ObjectType="Npc" Range="30" />
   </If>
-      <MoveTo X="542.0909" Y="400.6063" Z="112.7840"  />
+      <MoveTo X="542.0909" Y="400.6063" Z="112.7840"  />-->
 
-	<CustomBehavior File="WaitTimer" WaitTime="5000" />
+	<CustomBehavior File="WaitTimer" WaitTime="10000" />
 
       <!--<Moveto X="509.3853" Y="400.9065" Z="112.7841" />-->
 	
