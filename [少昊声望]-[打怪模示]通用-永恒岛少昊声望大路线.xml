@@ -1,0 +1,97 @@
+﻿ <HBProfile>
+    <Name>【打怪模示】通用-永恒岛少昊声望大路线</Name>
+   
+   <MinDurability>0.3</MinDurability>
+   <MinFreeBagSlots>2</MinFreeBagSlots>
+   3
+   <MailGrey>False</MailGrey>
+   <MailWhite>False</MailWhite>
+   <MailGreen>False</MailGreen>
+   <MailBlue>False</MailBlue>
+   <MailPurple>False</MailPurple>
+   
+   <SellGrey>True</SellGrey>
+   <SellWhite>False</SellWhite>
+   <SellGreen>False</SellGreen>
+   <SellBlue>False</SellBlue>
+   <SellPurple>False</SellPurple>
+   <Factions>16</Factions>
+   <TargetElites>True</TargetElites>	
+   
+   <AvoidMobs>
+       <Mob Name="Ashleaf Sprite" Entry="72877" />
+	   <Mob Name="Brilliant Windfeather" Entry="72762" />
+	   <Mob Name="Windfeather Nestkeeper" Entry="72761" />
+	   <Mob Name="Death Adder" Entry="72841" />
+	   <Mob Name="Crag Stalker" Entry="72807" />
+	   <Mob Name="Primal Stalker" Entry="72805" />
+	   <Mob Name="Eroded Cliffdweller" Entry="72809" />
+           <Mob Name="Crimsonscale Firestorm" Entry="72876" />
+  <!--      Rar Mobs: -->
+  <!-- <Mob Name="Watcher Osu" Entry="73983" /> -->
+   </AvoidMobs>
+   
+   <Blackspots>
+       <Blackspot X="-8895.609" Y="-428.6633" Z="66.3858" Radius="21.39053" />
+	   	   <Blackspot X="-1100.117" Y="-5262.338" Z="7.137827" Radius="10" />
+
+   </Blackspots>
+   
+   
+   <Mailboxes>
+   </Mailboxes>
+   
+   <Vendors>
+     <Vendor Name="Handwerkerin Kwon" Entry="73656" Type="Repair" X="-511.3785" Y="-5008.7412" Z="2.0568" />
+   </Vendors>
+   
+   <GrindArea>
+       <TargetMinLevel>90</TargetMinLevel>
+       <TargetMaxLevel>92</TargetMaxLevel>
+
+       <MaxDistance>100</MaxDistance>
+       <Hotspots>
+ <Hotspot X="-694.9646" Y="-5788.965" Z="61.72845" />
+<Hotspot X="-636.393" Y="-5822.084" Z="68.74701" />
+<Hotspot X="-587.0403" Y="-5824.607" Z="80.95184" />
+<Hotspot X="-571.9822" Y="-5849.043" Z="82.19464" />
+<Hotspot X="-511.2644" Y="-5820.02" Z="93.35825" />
+<Hotspot X="-464.1466" Y="-5806.018" Z="95.64206" />
+<Hotspot X="-424.9539" Y="-5829.241" Z="90.56329" />
+<Hotspot X="-378.6725" Y="-5792.087" Z="90.07981" />
+<Hotspot X="-417.7815" Y="-5722.823" Z="94.69956" />
+<Hotspot X="-413.2924" Y="-5652.259" Z="95.80651" />
+<Hotspot X="-393.256" Y="-5610.745" Z="93.70869" />
+<Hotspot X="-352.5199" Y="-5672.717" Z="101.9124" />
+<Hotspot X="-343.2658" Y="-5694.131" Z="102.5352" />
+<Hotspot X="-348.2086" Y="-5740.921" Z="103.1831" />
+<Hotspot X="-346.2074" Y="-5765.726" Z="102.3041" />
+<Hotspot X="-323.1669" Y="-5732.177" Z="104.5619" />
+<Hotspot X="-318.728" Y="-5707.313" Z="104.5619" />
+<Hotspot X="-306.2343" Y="-5722.529" Z="104.5619" />
+<Hotspot X="-308.5178" Y="-5739.448" Z="104.5624" />
+<Hotspot X="-321.4979" Y="-5754.786" Z="104.5624" />
+<Hotspot X="-303.54" Y="-5754.54" Z="104.9838" />
+<Hotspot X="-294.6291" Y="-5745.18" Z="105.4809" />
+<Hotspot X="-279.7073" Y="-5726.849" Z="105.5331" />
+<Hotspot X="-279.5728" Y="-5712.936" Z="105.7191" />
+<Hotspot X="-278.5198" Y="-5722.72" Z="105.9255" />
+<Hotspot X="-301.4699" Y="-5694.108" Z="104.2658" />
+<Hotspot X="-323.1183" Y="-5711.228" Z="104.5618" />
+<Hotspot X="-321.8208" Y="-5660.355" Z="104.3235" />
+<Hotspot X="-504.8892" Y="-5726.943" Z="91.40361" />
+<Hotspot X="-547.2982" Y="-5740.692" Z="82.85355" />
+<Hotspot X="-644.0867" Y="-5699.555" Z="56.83345" />
+<Hotspot X="-694.2318" Y="-5750.27" Z="61.55534" />
+<Hotspot X="-698.3491" Y="-5790.625" Z="61.28259" />
+<Hotspot X="-632.9348" Y="-5823.215" Z="69.68125" />
+<Hotspot X="-584.8359" Y="-5817.232" Z="81.50796" />
+<Hotspot X="-566.7124" Y="-5849.992" Z="82.20551" />
+<Hotspot X="-573.4421" Y="-5854.125" Z="82.50024" />
+<Hotspot X="-518.1635" Y="-5823.357" Z="93.51366" />
+<Hotspot X="-458.8213" Y="-5803.988" Z="95.62144" />
+<Hotspot X="-426.6097" Y="-5829.158" Z="90.40918" />
+       </Hotspots>
+   </GrindArea>
+   
+</HBProfile>
