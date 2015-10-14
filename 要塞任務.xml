@@ -48,6 +48,34 @@
       </Hotspots>
     </Objective>
   </Quest>
+
+  <Quest Id="37961" Name="音浪太強">
+    <Objective Type="CollectItem" ItemId="122569" ItemName="古木纜線" CollectCount="1">
+      <CollectFrom>
+        <Mob Name="笨重的古樹" Id="86262" />
+      </CollectFrom>
+      <Hotspots>
+        <Hotspot X="7394.101" Y="327.2216" Z="111.9237" />
+        <Hotspot X="7184.575" Y="388.4589" Z="113.9616" />
+        <Hotspot X="7405.542" Y="296.523" Z="113.9918" />
+        <Hotspot X="7637.331" Y="-59.56098" Z="193.794" />
+        <Hotspot X="7740.892" Y="-822.5805" Z="100.3163" />
+        <Hotspot X="7210.426" Y="-700.3542" Z="86.12899" />
+      </Hotspots>
+    </Objective>
+  </Quest>
+
+  <Quest Id="37961" Name="音浪太強">
+    <Objective Type="CollectItem" ItemId="122567" ItemName="音訊擴大器" CollectCount="1">
+      <CollectFrom>
+        <Mob Name="發光的充能者" Id="83987" />
+      </CollectFrom>
+      <Hotspots>
+        <Hotspot X="957.1493" Y="1565.861" Z="303.138" />
+        <Hotspot X="874.7986" Y="1567.953" Z="313.012" />
+      </Hotspots>
+    </Objective>
+  </Quest>
   <!-- .................................................................................................................................. -->
   <QuestOrder>
     <CustomBehavior File="Message" Text="要塞任務開始" LogColor="Green" />
@@ -59,13 +87,24 @@
     <LootMobs Value="true" />
     
     <!--要塞-->
-
     <If Condition="!HasQuest(37961) &amp;&amp; !IsQuestCompleted(37961)">
       <CustomBehavior File="Message" Text="接任務:音浪太強" LogColor="Green" />
       <If Condition="Me.IsHorde">
         <MoveTo X="5593.605" Y="4598.824" Z="136.6757"/>
         <PickUp Nav="Fly" QuestName="音浪太強" QuestId="37961" GiverName="Drix Bassbolter" GiverId="91072" />
       </If>
+      <If Condition="Me.IsAlliance">
+        <MoveTo X="1922.577" Y="316.097" Z="88.966" />
+        <PickUp Nav="Fly" QuestName="音浪太強" QuestId="38356" GiverName="Fix \Smallie\ Biggswrench" GiverId="91589" />
+      </If>
+    </If>
+    <!--格古隆德-->
+    <If Condition="HasQuest(37961) &amp;&amp; !IsQuestCompleted(37961) &amp;&amp; !HasItem(122569)">
+      <CustomBehavior File="Message" Text="道具:音浪太強-古木纜線" LogColor="Green" />
+      <MoveTo X="7091.485" Y="404.9731" Z="112.0007" />
+      <Objective QuestName="音浪太強" QuestId="37961" Type="CollectItem" Nav="Fly" ItemId="122569" CollectCount="1" />
+      <CustomBehavior File="FlyTo" X="7091.485" Y="404.9731" Z="112.0007" />
+      <CustomBehavior File="ForcedDismount" />
     </If>
     <!--塔拉多爾-->
     <If Condition="HasQuest(37961) &amp;&amp; !IsQuestCompleted(37961) &amp;&amp; !HasItem(122568)">
@@ -87,6 +126,15 @@
       <CustomBehavior File="FlyTo" X="-1579.14" Y="993.09" Z="8.08963"/>
       <CustomBehavior File="ForcedDismount" />
     </If>
+    <If Condition="HasQuest(37961) &amp;&amp; !IsQuestCompleted(37961) &amp;&amp; !HasItem(122567)">
+      <CustomBehavior File="Message" Text="道具:音浪太強-音訊擴大器" LogColor="Green" />
+      <MoveTo X="676.424" Y="701.439" Z="113.96" />
+      <CustomBehavior File="FlyTo" X="957.1493" Y="1565.861" Z="303.138" />
+      <CustomBehavior File="ForcedDismount" />
+      <Objective QuestName="音浪太強" QuestId="37961" Type="CollectItem" Nav="Fly" ItemId="122567" CollectCount="1" />
+      <CustomBehavior File="FlyTo" X="676.424" Y="701.439" Z="113.96" />
+      <CustomBehavior File="ForcedDismount" />
+    </If>
     <!--納葛蘭-->
     <If Condition="HasQuest(37961) &amp;&amp; !IsQuestCompleted(37961) &amp;&amp; !HasItem(122565)">
       <CustomBehavior File="Message" Text="道具:音浪太強-低音喇叭" LogColor="Green" />
@@ -102,6 +150,11 @@
       <If Condition="Me.IsHorde">
         <MoveTo X="5593.605" Y="4598.824" Z="136.6757"/>
         <TurnIn Nav="Fly" QuestName="音浪太強" QuestId="37961" TurnInName="Drix Bassbolter" TurnInId="91072" />
+      </If>
+      <If Condition="Me.IsAlliance">
+        <MoveTo X="1922.577" Y="316.097" Z="88.966" />
+        <TurnIn Nav="Fly" QuestName="音浪太強" QuestId="38356" TurnInName="Fix \Smallie\ Biggswrench" TurnInId="91589" />
+      </If>
         <CustomBehavior File="UseItem" ItemId="122613" WaitTime="5000" />
         <CustomBehavior File="UseItem" ItemId="122210" WaitTime="5000" />
         <CustomBehavior File="UseItem" ItemId="122218" WaitTime="5000" />
@@ -110,7 +163,6 @@
         <CustomBehavior File="UseItem" ItemId="122213" WaitTime="5000" />
         <CustomBehavior File="UseItem" ItemId="122212" WaitTime="5000" />
         <CustomBehavior File="UseItem" ItemId="122219" WaitTime="5000" />
-      </If>
     </If>
     <!--<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(110560)" WaitTime="1000" />-->
   </QuestOrder>
